@@ -16,6 +16,10 @@ const GalleryComponent = () => {
         { id: 2, src: "/assets/img/tow.jpeg", alt: "Aromatherapy oils and herbal compress" },
         { id: 3, src: "/assets/img/three.jpg", alt: "Woman applying facial mask" },
         { id: 4, src: "/assets/img/footer_one.jpg", alt: "Woman getting a relaxing massage" },
+        { id: 5, src: "/public/assets/img/", alt: "Woman getting a relaxing massage" },
+        { id: 6, src: "/assets/img/footer_one.jpg", alt: "Woman getting a relaxing massage" },
+        { id: 7, src: "/assets/img/footer_one.jpg", alt: "Woman getting a relaxing massage" },
+        { id: 8, src: "/assets/img/footer_one.jpg", alt: "Woman getting a relaxing massage" },
     ];
 
     return (
