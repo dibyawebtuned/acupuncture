@@ -1,15 +1,39 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import "./custom.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const testSignifier = localFont({
+  src: [
+    {
+      path: "../../public/fonts/signifier-font-family-1761450363-0/TestSignifier-RegularItalic-BF663d8462d189e.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/signifier-font-family-1761450363-0/TestSignifier-BoldItalic-BF663d84627c436.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-testsignifier",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const ppNeueMontreal = localFont({
+  src: [
+    {
+      path: "../../public/fonts/pp-neue-montreal-cdnfonts/ppneuemontreal-medium.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/pp-neue-montreal-cdnfonts/ppneuemontreal-bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-ppneuemontreal",
 });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${testSignifier.variable} ${ppNeueMontreal.variable} antialiased`}
       >
         {children}
       </body>
