@@ -57,13 +57,18 @@ const ClarityBeforeCare = () => {
                                 </div>
 
                                 {/* Card Image */}
-                                <div className="header84_image-wrapper" style={{ position: "relative", width: "100%", height: "400px" }}>
+                                {/* <div className="header84_image-wrapper" style={{ position: "relative", width: "100%", height: "600px" }}>
                                     <Image
                                         src="/assets/img/clarity.jpg"
                                         alt="Clarity Before Care Visual"
                                         fill
                                         style={{ objectFit: "cover" }}
                                     />
+                                </div> */}
+
+                                <div className="header84_image-wrapper relative w-full h-[300px] md:h-[600px] sm:h-[600px]">
+                                    <Image src="/assets/img/clarity.jpg" alt="Clarity" fill className="object-cover" />
+                                    {/* <div className="absolute inset-0 bg-black/40"></div>  */}
                                 </div>
                             </div>
                         </div>
