@@ -42,7 +42,7 @@ const GalleryComponent = () => {
                     <div
                         key={i}
                         className="overflow-hidden rounded-[20px] shadow-lg shrink-0 cursor-pointer"
-                        style={{ flex: "0 0 calc(25% - 1.5rem)", height: i % 2 === 0 ? 400 : 250 }}
+                        style={{ flex: "0 0 calc(25% - 1.5rem)", height: i % 2 === 0 ? 250 : 400 }}
                         onClick={() => {
                             setIndex(i);
                             setOpen(true);
