@@ -14,7 +14,7 @@ export default function CustomButton({
     return (
         <Link
             href={href}
-            className={`inline-flex items-center gap-2 rounded-md px-5 py-2 font-medium transition-colors duration-300 ${className}`}
+            className={`inline-flex items-center gap-2 rounded-md px-5 py-2 font-medium transition-colors duration-300 no-underline! ${className}`}
             style={{ backgroundColor: bg, color: text }}
             onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = hoverBg;

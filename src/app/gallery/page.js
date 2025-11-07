@@ -30,47 +30,54 @@ const GalleryComponent = () => {
     ];
 
     return (
-        <>
-            {/* Header Section */}
-            <HeaderSection
-                title="Gallery"
-                subtitle={`Last Updated: ${lastUpdated}`}
-                backgroundImage={headerBgImage}
-                heightClass="h-[400px] sm:h-[500px]"
-            />
-
-            {/* Gallery Section */}
-            <div className="container mx-auto px-4 flex flex-wrap justify-center items-center gap-6">
-                {galleryImages.map((image, i) => (
-                    <div
-                        key={i}
-                        className="overflow-hidden rounded-[20px] shadow-lg shrink-0 cursor-pointer"
-                        style={{ flex: "0 0 calc(25% - 1.5rem)", height: i % 3 === 0 ? 400 : 250 }}
-                        onClick={() => {
-                            setIndex(i);
-                            setOpen(true);
-                        }}
-                    >
-                        <Image
-                            src={image.src}
-                            alt={image.alt}
-                            width={600}
-                            height={400}
-                            className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                            priority
-                        />
+        <section className="pt-[130px] bg-[#EAF0F0]">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col">
+                {/* Heading */}
+                <div className="flex flex-col gap-3 text-left mb-10 md:mb-6">
+                    {/* Section Label */}
+                    <div className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest">
+                        gallery
                     </div>
-                ))}
-            </div>
 
-            <Lightbox
-                open={open}
-                close={() => setOpen(false)}
-                slides={galleryImages.map((img) => ({ src: img.src, alt: img.alt }))}
-                index={index}
-                onIndexChange={setIndex}
-            />
-        </>
+                    {/* Heading */}
+                    <div className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal">
+                        Holistic Health <br /> Journey
+                    </div>
+                </div>
+
+                {/* Gallery Section */}
+                <div className="flex flex-wrap justify-center items-center gap-8">
+                    {galleryImages.map((image, i) => (
+                        <div
+                            key={i}
+                            className="overflow-hidden shadow-lg shrink-0 cursor-pointer"
+                            style={{ flex: "0 0 calc(25% - 1.5rem)", height: i % 3 === 0 ? 400 : 250 }}
+                            onClick={() => {
+                                setIndex(i);
+                                setOpen(true);
+                            }}
+                        >
+                            <Image
+                                src={image.src}
+                                alt={image.alt}
+                                width={600}
+                                height={400}
+                                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-none!"
+                                priority
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                <Lightbox
+                    open={open}
+                    close={() => setOpen(false)}
+                    slides={galleryImages.map((img) => ({ src: img.src, alt: img.alt }))}
+                    index={index}
+                    onIndexChange={setIndex}
+                />
+            </div>
+        </section>
     );
 };
 
