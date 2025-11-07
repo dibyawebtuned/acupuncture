@@ -39,31 +39,31 @@ const FaqFooter = ({ showHeader = true, title = "Customers frequently ask", subt
 
     return (
         <section className="">
-            <div className="container mx-auto px-4 flex flex-col gap-[50px]">
+            <div className="container mx-auto flex flex-col gap-[30px] mt-20">
 
                 {/* Optional Header */}
                 {showHeader && (
                     <div>
-                        <p className="text-center text-sm tracking-widest text-gray-600 uppercase mb-2">
+                        <div className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest">
                             {subtitle}
-                        </p>
-                        <h2 className="text-center text-3xl md:text-4xl font-medium text-gray-800 mb-14">
+                        </div>
+                        <div className="text-[36px] lg:text-[42px] text-[#2B2B2B] font-ppneuemontreal font-medium sm:leading-14">
                             {title}
-                        </h2>
+                        </div>
                     </div>
                 )}
 
                 {/* FAQ Flex Layout */}
                 <div className="flex flex-col md:flex-row gap-10">
                     {/* Left Column */}
-                    <div className="md:flex-1 flex flex-col gap-5">
+                    <div className="md:flex-1 flex flex-col gap-7">
                         {leftFaqs.map((item, index) => (
                             <div key={index} className="border-b border-gray-300 pb-4">
                                 <button
                                     onClick={() => toggleFAQ(index)}
                                     className="w-full flex justify-between items-center text-left"
                                 >
-                                    <span className="text-gray-800 text-[17px] leading-tight">
+                                    <span className="font-ppneuemontreal text-gray-800 text-[16px] sm:text-[24px] leading-tight">
                                         {item.question}
                                     </span>
                                     <ChevronDown
@@ -81,14 +81,14 @@ const FaqFooter = ({ showHeader = true, title = "Customers frequently ask", subt
                     </div>
 
                     {/* Right Column */}
-                    <div className="md:flex-1 flex flex-col gap-5">
+                    <div className="md:flex-1 flex flex-col gap-7">
                         {rightFaqs.map((item, index) => (
                             <div key={index + mid} className="border-b border-gray-300 pb-4">
                                 <button
                                     onClick={() => toggleFAQ(index + mid)}
                                     className="w-full flex justify-between items-center text-left"
                                 >
-                                    <span className="text-gray-800 text-[17px] leading-tight">
+                                    <span className="font-ppneuemontreal text-gray-800 text-[16px] sm:text-[24px] leading-tight">
                                         {item.question}
                                     </span>
                                     <ChevronDown

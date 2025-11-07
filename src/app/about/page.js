@@ -24,7 +24,6 @@ const page = () => {
                     </div>
                 </div>
 
-
                 {/* Main Content: Images */}
                 <div className="flex flex-col gap-[60px]">
 
