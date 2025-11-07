@@ -9,23 +9,29 @@ import TailoredPlansSection from "@/component/PlansComponent";
 
 const page = () => {
     return (
-        <div className="pt-[130px] bg-[#EAF0EA]">
-            <div className="container mx-auto py-15 flex flex-col">
+        <div className="pt-[130px] bg-[#EAF0F0]">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col">
                 {/* Heading */}
-                <div className="flex flex-col gap-2.5 text-center md:text-left mb-10">
-                    <div className="text-[#6D6A5F] font-testsignifier uppercase text-sm tracking-widest">
+                <div className="flex flex-col gap-3 text-left mb-10 md:mb-6">
+                    {/* Section Label */}
+                    <div className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest">
                         about us
                     </div>
-                    <div className="font-ppNeueMontreal text-[28px] md:text-[36px] text-[#2B2B2B]">
-                        Experience true relaxation
+
+                    {/* Heading */}
+                    <div className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal">
+                        Experience true <br /> relaxation
                     </div>
                 </div>
 
+
                 {/* Main Content: Images */}
                 <div className="flex flex-col gap-[60px]">
+
+                    {/* Images */}
                     <div className="flex flex-col lg:flex-row gap-6">
-                        {/* First Image: flex-1 */}
-                        <div className="flex-1 h-[400px] relative">
+                        {/* First Image */}
+                        <div className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative">
                             <Image
                                 src="/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg"
                                 alt="About 1"
@@ -34,9 +40,9 @@ const page = () => {
                             />
                         </div>
 
-                        {/* Second and Third Images stacked */}
-                        <div className="flex flex-1  gap-6">
-                            <div className="flex-1 h-[400px] relative">
+                        {/* Second and Third Images */}
+                        <div className="flex flex-1 flex-col sm:flex-row gap-6">
+                            <div className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative">
                                 <Image
                                     src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
                                     alt="About 2"
@@ -44,7 +50,7 @@ const page = () => {
                                     className="object-cover rounded-none!"
                                 />
                             </div>
-                            <div className="flex-1 h-[400px] relative">
+                            <div className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative">
                                 <Image
                                     src="/assets/img/7515-1-Tuning-Forks.jpg"
                                     alt="About 3"
@@ -55,6 +61,7 @@ const page = () => {
                         </div>
                     </div>
 
+                    {/* WhyChooseUs */}
                     <WhyChooseUs />
 
                     <About />

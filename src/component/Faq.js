@@ -56,11 +56,14 @@ const FAQs = () => {
                                         {activeIndex === index ? "−" : "+"}
                                     </span>
                                 </div>
-                                {activeIndex === index && (
-                                    <div className="faq11_answer mt-2 text-gray-700">
-                                        <p>{faq.answer}</p>
-                                    </div>
-                                )}
+
+                                {/* Always render answer container, toggle max-height */}
+                                <div
+                                    className={`faq11_answer mt-2 text-gray-700 overflow-hidden transition-all duration-300 ${activeIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                                        }`}
+                                >
+                                    <p>{faq.answer}</p>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -79,11 +82,14 @@ const FAQs = () => {
                             preload="metadata"
                             poster="/assets/img/extra/trauma-informed-therapist,-somatic-trauma-coaching-and-speaker-abi-blake-9.webp"
                         >
-                            <source src="/assets/video/banner-video.mp4" type="video/mp4" />
+                            <source
+                                src="/assets/img/Videos/keep it somewhere autoplay.mp4"
+                                type="video/mp4"
+                            />
                             Sorry, your browser doesn’t support embedded videos.
                         </video>
                     </div>
-                </div>  
+                </div>
             </div>
         </section>
     );

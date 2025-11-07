@@ -38,34 +38,34 @@ export default function TailoredPlansSection() {
 
                 {/* RIGHT CONTENT */}
                 <div className="w-full lg:w-1/2 bg-black/40 backdrop-blur-md text-white p-8 lg:p-12 flex flex-col justify-center">
-                    <h2 className="text-3xl lg:text-4xl font-semibold mb-6 leading-snug font-testsignifier">
+                    <div className="text-3xl lg:text-4xl font-semibold mb-6 leading-snug font-testsignifier">
                         Tailored plans for <br /> every need
-                    </h2>
+                    </div>
 
                     <div className="space-y-6 font-testsignifier">
 
                         <div>
-                            <h3 className="text-lg font-medium border-b border-white/40 pb-2">
+                            <div className="text-lg font-medium border-b border-white/40 pb-2">
                                 Essential retreat
-                            </h3>
+                            </div>
                             <p className="text-sm opacity-90 mt-2">
                                 A refreshing, short revitalizing treatment to reset your body and mind.
                             </p>
                         </div>
 
                         <div>
-                            <h3 className="text-lg font-medium border-b border-white/40 pb-2">
+                            <div className="text-lg font-medium border-b border-white/40 pb-2">
                                 Serenity package
-                            </h3>
+                            </div>
                             <p className="text-sm opacity-90 mt-2">
                                 A soothing blend of massages and facial therapy for deep relaxation.
                             </p>
                         </div>
 
                         <div>
-                            <h3 className="text-lg font-medium border-b border-white/40 pb-2">
+                            <div className="text-lg font-medium border-b border-white/40 pb-2">
                                 Luxe experience
-                            </h3>
+                            </div>
                             <p className="text-sm opacity-90 mt-2">
                                 A premium body wrap, scrub, and massage for the ultimate spa indulgence.
                             </p>
@@ -73,9 +73,11 @@ export default function TailoredPlansSection() {
 
                     </div>
 
-                    <button className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0B3D91] text-black hover:bg-gray-300 transition">
-                        View all →
-                    </button>
+                    <div className="mt-7">
+                        <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0B3D91] text-black hover:bg-gray-300 transition">
+                            View all →
+                        </button>
+                    </div>
                 </div>
 
             </div>

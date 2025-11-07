@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About = () => {
     return (
-        <div className='flex flex-col gap-[50px]'>
+        <div className='flex flex-col gap-[50px] '>
             {/* LOGO & Paragraph */}
             <div>
                 {/* LOGO */}
@@ -19,7 +19,11 @@ const About = () => {
 
                 {/* Paragraph */}
                 <div>
-                    <p className='text-center w-[50%] mx-auto font-ppNeueMontreal text-[24px]'>Step into a world where tranquility and luxury blend seamlessly. Our spa offers a range of rejuvenating treatments designed to restore balance, calm your mind, and invigorate your body.</p>
+                    <div className="text-center mx-auto font-ppNeueMontreal text-xl md:text-2xl lg:text-[28px] w-full xl:w-2/3 px-4">
+                        Step into a world where tranquility and luxury blend seamlessly.
+                        Our spa offers a range of rejuvenating treatments designed to restore balance,
+                        calm your mind, and invigorate your body.
+                    </div>
                 </div>
             </div>
 
@@ -30,14 +34,14 @@ const About = () => {
 
                     {/* LEFT TEXT CONTENT */}
                     <div className="flex-1 flex justify-center">
-                        <div className="w-full max-w-[600px] px-6 md:px-8 lg:px-10 flex flex-col gap-[20px]">
+                        <div className="w-full max-w-[600px] px-6 md:px-8 lg:px-10 flex flex-col gap-5 mt-10 lg:mt-0">
                             <p className="text-sm tracking-wide text-gray-500 font-ppNeueMontreal mb-4">
                                 ABOUT US
                             </p>
 
-                            <h2 className="font-ppNeueMontreal text-5xl lg:text-6xl font-medium leading-tight mb-8">
+                            <div className="font-ppNeueMontreal text-[36px] lg:text-[42px] font-medium leading-tight">
                                 Where wellness meets tranquility
-                            </h2>
+                            </div>
 
                             <p className="text-gray-600 font-ppNeueMontreal text-lg leading-relaxed mb-6 text-justify">
                                 At our spa, we are dedicated to creating an oasis of peace and relaxation
@@ -49,8 +53,8 @@ const About = () => {
                     </div>
 
                     {/* RIGHT IMAGE */}
-                    <div className="flex-1">
-                        <div className="relative w-full h-[450px] overflow-hidden">
+                    <div className="flex-1 w-full">
+                        <div className="relative w-full h-[450px] overflow-hidden mt-6 m:mt-0">
                             <Image
                                 src="/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg"
                                 alt="Facial treatment"
@@ -59,9 +63,7 @@ const About = () => {
                             />
                         </div>
                     </div>
-
                 </div>
-
             </section>
 
         </div>
