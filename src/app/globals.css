@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   --font-testsignifier: "TestSignifier", serif;
   --font-ppneuemontreal: "PPNeueMontreal", sans-serif;
@@ -13,7 +12,6 @@
 .font-ppNeueMontreal {
   font-family: var(--font-ppneuemontreal);
 }
-
 
 /* :root {
   --background: #ffffff;
@@ -39,3 +37,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
+
+/*  */
+:root {
+  --title: #6d6a5f;
+  --sub-title: #2b2b2b;
+}

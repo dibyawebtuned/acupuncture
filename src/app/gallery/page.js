@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
@@ -12,34 +13,25 @@ const GalleryComponent = () => {
     const lastUpdated = "October 26, 2025";
     const headerBgImage = "/assets/img/five.jpeg";
 
+    // Local gallery images
     const galleryImages = [
-        { id: 1, src: "/assets/img/one.jpeg", alt: "Spa setup with candles and flowers" },
-        { id: 2, src: "/assets/img/tow.jpeg", alt: "Aromatherapy oils and herbal compress" },
-        { id: 3, src: "/assets/img/three.jpg", alt: "Woman applying facial mask" },
-        { id: 4, src: "/assets/img/footer_one.jpg", alt: "Woman getting a relaxing massage" },
-        { id: 5, src: "/public/assets/img/", alt: "Woman getting a relaxing massage" },
-        { id: 6, src: "/assets/img/footer_one.jpg", alt: "Woman getting a relaxing massage" },
-        { id: 7, src: "/assets/img/footer_one.jpg", alt: "Woman getting a relaxing massage" },
-        { id: 8, src: "/assets/img/footer_one.jpg", alt: "Woman getting a relaxing massage" },
+        { src: "/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg", alt: "Bed" },
+        { src: "/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg", alt: "Kitchen" },
+        { src: "/assets/img/7515-1-Tuning-Forks.jpg", alt: "Sink" },
+        { src: "/assets/img/clarity.jpg", alt: "Books" },
+        { src: "/assets/img/facial+acu+copy+3.webp", alt: "Chairs" },
+        { src: "/assets/img/GettyImages-146788068 (1).jpg", alt: "Candle" },
+        { src: "/assets/img/ImageForNews_765936_1701383544529230.webp", alt: "Laptop" },
+        { src: "/assets/img/moxibustion-cones-moxa-treatment-points-top-needles.webp", alt: "Doors" },
+        { src: "/assets/img/Traditional-Chinese-Medicine-is-diagnosing-women's-pulse-.webp", alt: "Coffee" },
+        { src: "/assets/img/trauma-informed-therapist,-somatic-trauma-coaching-and-speaker-abi-blake-9.webp", alt: "Storage" },
+        { src: "/assets/img/TCM article visual_.renditionimage.1700.850.jpg", alt: "Coffee table" },
+        { src: "/assets/img/two.jpg", alt: "Blinds" },
     ];
-
 
     return (
         <>
             {/* Header Section */}
-            {/* <header
-                className="relative bg-cover bg-center h-[400px] sm:h-[500px] flex items-center justify-center text-center text-white"
-                style={{ backgroundImage: `url(${headerBgImage})` }}
-            >
-                <div className="absolute inset-0 bg-black/60"></div>
-                <div className="relative z-10 px-4 md:px-8 pt-10 flex flex-col items-center justify-center h-full">
-                    <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Gallery</h1>
-                    <p className="text-lg italic">Last Updated: {lastUpdated}</p>
-                </div>
-            </header> */}
-
-            {/* Header Section */}
-
             <HeaderSection
                 title="Gallery"
                 subtitle={`Last Updated: ${lastUpdated}`}
@@ -48,12 +40,12 @@ const GalleryComponent = () => {
             />
 
             {/* Gallery Section */}
-            <div className="container mx-auto mt-[100px] px-4 flex flex-wrap justify-center items-center gap-6">
+            <div className="container mx-auto px-4 flex flex-wrap justify-center items-center gap-6">
                 {galleryImages.map((image, i) => (
                     <div
                         key={i}
                         className="overflow-hidden rounded-[20px] shadow-lg shrink-0 cursor-pointer"
-                        style={{ flex: "0 0 calc(25% - 1.5rem)", height: i % 2 === 0 ? 250 : 400 }}
+                        style={{ flex: "0 0 calc(25% - 1.5rem)", height: i % 3 === 0 ? 400 : 250 }}
                         onClick={() => {
                             setIndex(i);
                             setOpen(true);

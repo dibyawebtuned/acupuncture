@@ -1,0 +1,71 @@
+import React from 'react';
+import Image from 'next/image';
+
+const About = () => {
+    return (
+        <div className='flex flex-col gap-[50px]'>
+            {/* LOGO & Paragraph */}
+            <div>
+                {/* LOGO */}
+                <div className="flex items-center w-full">
+                    <span className="grow border-t border-gray-400"></span>
+
+                    <div className="relative w-24 h-24 mx-4">
+                        <Image src="/assets/img/logoo.png" alt="Logo" fill className="object-contain" />
+                    </div>
+
+                    <span className="grow border-t border-gray-400"></span>
+                </div>
+
+                {/* Paragraph */}
+                <div>
+                    <p className='text-center w-[50%] mx-auto font-ppNeueMontreal text-[24px]'>Step into a world where tranquility and luxury blend seamlessly. Our spa offers a range of rejuvenating treatments designed to restore balance, calm your mind, and invigorate your body.</p>
+                </div>
+            </div>
+
+
+            {/* About Us Card */}
+            <section className="bg-white">
+                <div className="flex flex-col lg:flex-row items-center gap-2.5">
+
+                    {/* LEFT TEXT CONTENT */}
+                    <div className="flex-1 flex justify-center">
+                        <div className="w-full max-w-[600px] px-6 md:px-8 lg:px-10 flex flex-col gap-[20px]">
+                            <p className="text-sm tracking-wide text-gray-500 font-ppNeueMontreal mb-4">
+                                ABOUT US
+                            </p>
+
+                            <h2 className="font-ppNeueMontreal text-5xl lg:text-6xl font-medium leading-tight mb-8">
+                                Where wellness meets tranquility
+                            </h2>
+
+                            <p className="text-gray-600 font-ppNeueMontreal text-lg leading-relaxed mb-6 text-justify">
+                                At our spa, we are dedicated to creating an oasis of peace and relaxation
+                                where you can truly unwind. With a passion for wellness and self-care, our
+                                team of skilled therapists and specialists are committed to offering you the
+                                highest quality treatments, tailored to meet your individual needs.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* RIGHT IMAGE */}
+                    <div className="flex-1">
+                        <div className="relative w-full h-[450px] overflow-hidden">
+                            <Image
+                                src="/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg"
+                                alt="Facial treatment"
+                                fill
+                                className="object-cover rounded-none!"
+                            />
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    )
+}
+
+export default About

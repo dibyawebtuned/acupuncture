@@ -38,9 +38,17 @@ const servicesData = [
     },
 ];
 
-const Services = () => {
+const Services = ({
+    bgClass = "bg-[#ebe9e4]",
+    cardTheme = {
+        base: "bg-white text-gray-700",
+        icon: "text-blue-700",
+        hoverBg: "bg-blue-700",
+        hoverText: "text-white",
+    },
+}) => {
     return (
-        <section className="section_services bg-[#ebe9e4] py-10">
+        <section className={` ${bgClass}`}>
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
@@ -55,29 +63,26 @@ const Services = () => {
                             className="w-full xs:w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8"
                         >
                             <div className="service_card group bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all duration-300 flex flex-col justify-between h-full w-full cursor-pointer">
-                                {/* Main content */}
                                 <div className="flex flex-col grow">
-                                    {/* Icon */}
-                                    <div className="service_icon mb-4 text-blue-700 group-hover:text-white transition-colors duration-300">
+
+                                    <div className={`${cardTheme.icon} group-hover:${cardTheme.hoverText} service_icon mb-4 text-blue-700 group-hover:text-white transition-colors duration-300`}>
                                         {service.icon}
                                     </div>
 
-                                    {/* Title & Description */}
                                     <div className="service-title-subtitle mb-4 flex flex-col grow">
-                                        <h3 className="service_title text-lg sm:text-xl font-semibold group-hover:text-white transition-colors duration-300">
+                                        <h3 className={`service_title text-lg sm:text-xl font-semibold group-hover:text-white transition-colors duration-300 group-hover:${cardTheme.hoverText}`}>
                                             {service.title}
                                         </h3>
-                                        <p className="service_desc text-sm sm:text-base text-gray-600 group-hover:text-white transition-colors duration-300">
+                                        <p className={`service_desc text-sm sm:text-base text-gray-600 group-hover:text-white transition-colors duration-300 group-hover:${cardTheme.hoverText}`}>
                                             {service.description}
                                         </p>
                                     </div>
 
-                                    {/* Features */}
                                     <ul className="service_features list-disc pl-5 mb-4 text-gray-700 space-y-1 grow group-hover:text-white">
                                         {service.features.map((feature, idx) => (
                                             <li
                                                 key={idx}
-                                                className="text-sm sm:text-base group-hover:text-white transition-colors duration-300"
+                                                className={`text-sm sm:text-base group-hover:text-white transition-colors duration-300 group-hover:${cardTheme.hoverText}`}
                                             >
                                                 {feature}
                                             </li>
@@ -85,17 +90,15 @@ const Services = () => {
                                     </ul>
                                 </div>
 
-                                {/* View More */}
                                 <div className="service-viewmore mt-auto">
                                     <a
                                         href={service.link}
-                                        className="service_link text-blue-700 font-semibold group-hover:text-white transition-colors duration-300 text-sm sm:text-base"
+                                        className={`service_link text-blue-700 font-semibold group-hover:text-white transition-colors duration-300 text-sm sm:text-base ${cardTheme.icon} group-hover:${cardTheme.hoverText}`}
                                     >
                                         View More →
                                     </a>
                                 </div>
                             </div>
-
                         </div>
                     ))}
                 </div>

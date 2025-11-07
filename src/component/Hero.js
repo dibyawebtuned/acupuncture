@@ -59,7 +59,7 @@ const Hero = () => {
                                             className="button is-tertiary is-icon is-small w-inline-block"
                                             style={{ backgroundColor: "#0b3d91", color: "white" }}
                                         >
-                                            <div>0417 794 279</div>
+                                            <div><a href="tel: 0417794279" className="text-white! no-underline!">0417 794 279</a></div>
                                             <div className="icon-embed-xsmall w-embed">
                                                 <svg
                                                     width="14"

@@ -180,32 +180,32 @@ const Nav = () => {
           <div className="navbar3_container">
             {/* Nav Links */}
             <nav role="navigation" className="navbar3_menu w-nav-menu">
-              <a href="/about" className="navbar3_link dark-on-mobile w-nav-link">About Us</a>
+              <a href="/about" className="navbar3_link dark-on-mobile w-nav-link text-[#0B3D91]!">About Us</a>
 
               <div
                 data-hover="false"
                 data-delay="0"
                 className="navbar3_link dark-on-mobile hide-mobile-portrait w-dropdown"
               >
-                <div className="dropdown-toggle navbar3_link w-dropdown-toggle">
+                <div className="dropdown-toggle navbar3_link w-dropdown-toggle text-[#0B3D91]!">
                   <div className="icon w-icon-dropdown-toggle"></div>
-                  <div className="text-block-3 navbar3_link">Our Treatments</div>
+                  <div className="text-block-3 navbar3_link text-[#0B3D91]!">Our Treatments</div>
                 </div>
-                <nav className="w-dropdown-list">
-                  <a href="/talk-on-track" className="w-dropdown-link">Chinese Herbal Medicine</a>
-                  <a href="/time-to-talk" className="w-dropdown-link">Constitutional Facial Acupuncture</a>
-                  <a href="/tiny-articulators" className="w-dropdown-link">Acupuncture</a>
-                  <a href="/tiny-articulators" className="w-dropdown-link">Women’s Health</a>
-                  <a href="/tiny-articulators" className="w-dropdown-link">Fertility & IVF Support</a>
-                  <a href="/tiny-articulators" className="w-dropdown-link">Musculoskeletal Pain Management</a>
-                  <a href="/tiny-articulators" className="w-dropdown-link">Massage & Cupping</a>
-                  <a href="/tiny-articulators" className="w-dropdown-link">Sound Therapy</a>
+                <nav className="w-dropdown-list text-[#0B3D91]">
+                  <a href="/chinese-herbal" className="w-dropdown-link text-[#0B3D91]!">Chinese Herbal Medicine</a>
+                  <a href="/constitutional-facial" className="w-dropdown-link">Constitutional Facial Acupuncture</a>
+                  <a href="/acupuncture" className="w-dropdown-link">Acupuncture</a>
+                  <a href="/women-health" className="w-dropdown-link">Women’s Health</a>
+                  <a href="/Fertility" className="w-dropdown-link">Fertility & IVF Support</a>
+                  <a href="/pain-management" className="w-dropdown-link">Musculoskeletal Pain Management</a>
+                  <a href="/massage" className="w-dropdown-link">Massage & Cupping</a>
+                  <a href="/sound-therapy" className="w-dropdown-link">Sound Therapy</a>
                 </nav>
               </div>
 
-              <Link href="/gallery" className="navbar3_link dark-on-mobile w-nav-link">Gallery</Link>
-              <a href="/therapy" className="navbar3_link dark-on-mobile w-nav-link">FAQ</a>
-              <a href="/therapy" className="navbar3_link dark-on-mobile w-nav-link">Contact Us</a>
+              <Link href="/gallery" className="navbar3_link dark-on-mobile w-nav-link text-[#0B3D91]!">Gallery</Link>
+              <a href="/faq" className="navbar3_link dark-on-mobile w-nav-link text-[#0B3D91]!">FAQ</a>
+              <a href="/contact" className="navbar3_link dark-on-mobile w-nav-link text-[#0B3D91]!">Contact Us</a>
             </nav>
 
             {/* Logo */}

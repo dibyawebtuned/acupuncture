@@ -7,6 +7,7 @@ import ClarityBeforeCare from "@/component/ClarityBeforeCare";
 import MarqueeSection from "@/component/Marquee";
 import Services from "@/component/Services";
 import SimpleAccess from "@/component/SimpleAccess";
+import TestimonialSlider from "@/component/Testimonial";
 import FAQs from "@/component/Faq";
 import Footer from "@/component/Footer";
 
@@ -19,8 +20,12 @@ export default function Home() {
       <DoYouKnow />
       <ClarityBeforeCare />
       <MarqueeSection />
-      <Services />
+      {/* Services */}
+      <div className="section_services bg-[#ebe9e4]">
+        <Services />
+      </div>
       <SimpleAccess />
+      <TestimonialSlider />
       <FAQs />
       <Footer />
     </>
