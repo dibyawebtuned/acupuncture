@@ -6,19 +6,19 @@ const Faq = () => {
 
     const faqs = [
         {
-            question: "What is acupuncture?",
+            question: "Is acupuncture safe?",
             answer:
-                "Acupuncture is a traditional Chinese medicine practice that involves inserting thin needles into specific points on the body to restore balance and promote healing.",
+                "When performed by a registered practitioner using sterile, single-use needles, acupuncture is generally considered safe. We’ll discuss benefits and risks for you before any treatment.",
         },
         {
-            question: "Is it safe?",
+            question: "How should I prepare for my appointment?",
             answer:
-                "Yes, when performed by a licensed practitioner using sterile needles, acupuncture is safe and has minimal side effects.",
+                "Have a light snack, wear comfortable clothing, and bring a list of medicines, supplements, and allergies.",
         },
         {
-            question: "How many sessions will I need?",
+            question: "What if I’m pregnant or planning pregnancy?",
             answer:
-                "The number of sessions varies depending on your condition. Some people feel results after one session, while others may need several treatments for lasting benefits.",
+                "Please tell us. Techniques and point choices are adjusted, and we’ll check suitability for you. Always follow your maternity care team’s advice.",
         },
     ];
 
@@ -42,22 +42,19 @@ const Faq = () => {
                             {faqs.map((faq, index) => (
                                 <div
                                     key={index}
-                                    className="border-b border-gray-300 pb-3 cursor-pointer"
+                                    className="border-b-[1.6px] border-[#0b3d91] pb-3 cursor-pointer"
                                     onClick={() => toggleFAQ(index)}
                                 >
-                                    <div className="flex justify-between items-center">
-                                        <h4 className="font-medium text-lg">{faq.question}</h4>
+                                    <div className="flex justify-between items-center p-6">
+                                        <div className="text-[28px] font-ppneuemontreal">{faq.question}</div>
                                         <span className="text-gray-500 text-2xl leading-none">
                                             {openIndex === index ? "−" : "+"}
                                         </span>
                                     </div>
 
                                     {/* Animated answer */}
-                                    <div
-                                        className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-40 mt-2" : "max-h-0"
-                                            }`}
-                                    >
-                                        <p className="text-gray-600">{faq.answer}</p>
+                                    <div className={`px-6 overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-40 mt-2" : "max-h-0"}`}>
+                                        <p className="text-[18px] text-gray-600 leading-8 tracking-normal">{faq.answer}</p>
                                     </div>
                                 </div>
                             ))}
