@@ -1,4 +1,3 @@
-// components/Footer.js
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
@@ -18,9 +17,7 @@ const Footer = () => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
 
-    useEffect(() => {
-        setYear(new Date().getFullYear());
-    }, []);
+    const rotations = [-3, 2, -1, 1];
 
     const handleMouseMove = (e) => {
         const rect = containerRef.current.getBoundingClientRect();
@@ -29,17 +26,16 @@ const Footer = () => {
         setMousePos({ x, y });
     };
 
-    const rotations = [-3, 2, -1, 1];
-
     return (
         <footer className="bg-white text-gray-700">
             {/* Instagram Section */}
             <section className="py-16 bg-[#F9F5EE] text-center relative">
-                <div className="container mx-auto px-6 md:px-12">
-                    <h2 className="text-3xl md:text-4xl font-serif mb-4">
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col items-center">
+                    <div className="flex text-[48px] mb-4 font-testSignifier w-[50%]">
                         Welcome to the Vantage Point Acupuncture Community
-                    </h2>
-                    <p className="text-md mb-12">
+                    </div>
+
+                    <div className="text-md mb-12">
                         So nice to have you here—tag us{" "}
                         <a
                             href="https://www.instagram.com/vantagepointacupuncture/"
@@ -58,7 +54,7 @@ const Footer = () => {
                         >
                             @Facebook
                         </a>
-                    </p>
+                    </div>
 
                     <div
                         ref={containerRef}
@@ -72,7 +68,6 @@ const Footer = () => {
                     >
                         {instagramImages.map((img, idx) => {
                             const height = idx % 2 === 0 ? 220 : 180;
-
                             return (
                                 <div
                                     key={idx}
@@ -80,8 +75,9 @@ const Footer = () => {
                                     style={{
                                         width: "220px",
                                         height: `${height}px`,
-                                        transform: `rotate(${hovered ? 0 : rotations[idx]}deg) translateX(${hovered ? mousePos.x : 0
-                                            }px) translateY(${hovered ? mousePos.y : 0}px)`,
+                                        transform: `rotate(${hovered ? 0 : rotations[idx]}deg)
+                      translateX(${hovered ? mousePos.x : 0}px)
+                      translateY(${hovered ? mousePos.y : 0}px)`,
                                     }}
                                 >
                                     {/* Decorative line behind image */}
@@ -95,7 +91,11 @@ const Footer = () => {
                                         />
                                     </div>
 
-                                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                    <a
+                                        href="https://www.instagram.com/vantagepointacupuncture/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <Image
                                             src={img}
                                             alt={`Instagram ${idx + 1}`}
@@ -112,104 +112,128 @@ const Footer = () => {
                 </div>
             </section>
 
-            {/* Top section: Newsletter + Links */}
-            <div className="container mx-auto px-6 md:px-12">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 py-16">
-                    {/* Newsletter */}
-                    <div className="flex-1">
-                        <h3 className="text-2xl md:text-3xl font-serif mb-6">
-                            Expert advice, updates, and perks for your inbox.
-                        </h3>
+            {/* Newsletter + Links Section */}
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 py-16 border-t border-b border-gray-200">
+                    {/* Newsletter (Left Half) */}
+                    <div className="w-full md:w-1/2">
+                        <div className="text-[28px] md:text-[34px] mb-6 font-ppneuemontreal leading-snug">
+                            Expert advice, updates, <br /> and perks for your inbox.
+                        </div>
                         <form className="flex w-full max-w-md">
                             <input
                                 type="email"
                                 placeholder="Enter your email"
                                 required
-                                className="flex-1 p-3 border border-gray-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="flex-1 p-3 border border-gray-300 rounded-l-full"
                             />
+
                             <button
                                 type="submit"
-                                className="bg-blue-600 text-white px-6 rounded-r-full hover:bg-blue-700 transition"
+                                className="px-6 rounded-r-full! border! border-l-0! border-gray-300! text-white"
                             >
                                 Subscribe
                             </button>
                         </form>
                     </div>
 
-                    {/* Footer Links */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 flex-1">
-                        <div>
-                            <h4 className="font-semibold mb-4">Treatments</h4>
-                            <Link href="/time-to-talk" className="block mb-2 hover:underline">
-                                Acupuncture
-                            </Link>
-                            <Link href="/talk-on-track" className="block mb-2 hover:underline">
-                                Chinese Herbal Medicine
-                            </Link>
-                            <Link href="/tiny-articulators" className="block mb-2 hover:underline">
-                                Facial Acupuncture
-                            </Link>
-                            <Link href="/courses" className="block mb-2 hover:underline">
-                                Women’s Health
-                            </Link>
+                    {/* Footer Links (Right Half) */}
+                    <div className="w-full md:w-1/2 flex flex-wrap justify-between gap-8">
+                        {/* Treatments */}
+                        <div className="min-w-[120px] flex-1">
+                            {/* Title */}
+                            <div className="mb-4 text-[20px] font-ppneuemontreal font-normal">Treatments</div>
+
+                            <div className="flex flex-col gap-[7px]">
+                                <Link href="/time-to-talk" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Acupuncture
+                                </Link>
+                                <Link href="/talk-on-track" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Chinese Herbal Medicine
+                                </Link>
+                                <Link href="/tiny-articulators" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Facial Acupuncture
+                                </Link>
+                                <Link href="/courses" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Women’s Health
+                                </Link>
+                            </div>
                         </div>
-                        <div>
-                            <h4 className="font-semibold mb-4">About</h4>
-                            <Link href="/about-us" className="block mb-2 hover:underline">
-                                Our Story
-                            </Link>
-                            <Link href="/therapy" className="block mb-2 hover:underline">
-                                Why Choose Us
-                            </Link>
+
+                        {/* About */}
+                        <div className="min-w-[120px] flex-1">
+                            {/* Title */}
+                            <div className="mb-4 text-[20px] font-ppneuemontreal font-normal">About</div>
+
+                            <div className="flex flex-col gap-[7px]">
+                                <Link href="/about-us" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Our Story
+                                </Link>
+                                <Link href="/therapy" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Why Choose Us
+                                </Link>
+                            </div>
                         </div>
-                        <div>
-                            <h4 className="font-semibold mb-4">Help</h4>
-                            <Link href="/faq" className="block mb-2 hover:underline">
-                                Help & FAQs
-                            </Link>
-                            <Link href="/speech-sound-screener" className="block mb-2 hover:underline">
-                                Appointment
-                            </Link>
-                            <Link href="/free-resources" className="block mb-2 hover:underline">
-                                Free Resources
-                            </Link>
-                            <Link href="/blog" className="block mb-2 hover:underline">
-                                Blog
-                            </Link>
+
+                        {/* Help */}
+                        <div className="min-w-[120px] flex-1">
+                            {/* Title */}
+                            <div className="mb-4 text-[20px] font-ppneuemontreal font-normal">Help</div>
+
+                            <div className="flex flex-col gap-[7px]">
+                                <Link href="/faq" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Help & FAQs
+                                </Link>
+                                <Link href="/speech-sound-screener" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Appointment
+                                </Link>
+                                <Link href="/free-resources" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Free Resources
+                                </Link>
+                                <Link href="/blog" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Blog
+                                </Link>
+                            </div>
                         </div>
-                        <div>
-                            <h4 className="font-semibold mb-4">Social</h4>
-                            <a href="#" target="_blank" className="block mb-2 hover:underline">
-                                Instagram
-                            </a>
-                            <a href="#" target="_blank" className="block mb-2 hover:underline">
-                                Facebook
-                            </a>
-                            <a href="#" target="_blank" className="block mb-2 hover:underline">
-                                Pinterest
-                            </a>
-                            <a href="#" target="_blank" className="block mb-2 hover:underline">
-                                About Marney
-                            </a>
+
+                        {/* Social */}
+                        <div className="min-w-[120px] flex-1">
+                            {/* Title */}
+                            <div className="mb-4 text-[20px] font-ppneuemontreal font-normal">Social</div>
+
+                            <div className="flex flex-col gap-[7px]">
+                                <a href="#" target="_blank" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Instagram
+                                </a>
+                                <a href="#" target="_blank" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Facebook
+                                </a>
+                                <a href="#" target="_blank" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    Pinterest
+                                </a>
+                                <a href="#" target="_blank" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                    About Marney
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Centered logo */}
-                <div className="flex justify-center my-12">
+                {/* Centered Logo */}
+                <div className="flex justify-center mt-3 mb-0">
                     <Link href="/">
                         <Image
                             src="/assets/img/logoo.png"
                             alt="Vantage Point Logo"
-                            width={200}
-                            height={80}
+                            width={256}
+                            height={120}
                             className="object-contain"
                         />
                     </Link>
                 </div>
 
-                {/* Bottom row: copyright + links */}
-                <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-200 py-6 text-sm text-gray-500">
+                {/* Bottom Copyright Row */}
+                <div className="flex flex-col md:flex-row justify-between items-center py-6 text-sm text-gray-500">
                     <div>© {year} Vantage Point Acupuncture</div>
                     <div className="flex gap-4 mt-2 md:mt-0">
                         <Link href="/privacypolicy" className="hover:underline">

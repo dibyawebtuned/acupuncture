@@ -1,98 +1,87 @@
 "use client";
-
 import React, { useState } from "react";
 
-const faqsData = [
-    {
-        question: "Is acupuncture safe?",
-        answer:
-            "When performed by a registered practitioner using sterile, single-use needles, acupuncture is generally considered safe. We’ll discuss benefits and risks for you before any treatment.",
-    },
-    {
-        question: "How should I prepare for my appointment?",
-        answer:
-            "Have a light snack, wear comfortable clothing, and bring a list of medicines, supplements, and allergies.",
-    },
-    {
-        question: "What if I’m pregnant or planning pregnancy?",
-        answer:
-            "Please tell us. Techniques and point choices are adjusted, and we’ll check suitability for you. Always follow your maternity care team’s advice.",
-    },
-    {
-        question: "Do you offer Chinese herbal medicine?",
-        answer:
-            "Yes, where appropriate. Formulas are selected individually. Always tell us about medicines and supplements so we can check for potential interactions.",
-    },
-];
+const Faq = () => {
+    const [openIndex, setOpenIndex] = useState(null);
 
-const FAQs = () => {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const faqs = [
+        {
+            question: "What is acupuncture?",
+            answer:
+                "Acupuncture is a traditional Chinese medicine practice that involves inserting thin needles into specific points on the body to restore balance and promote healing.",
+        },
+        {
+            question: "Is it safe?",
+            answer:
+                "Yes, when performed by a licensed practitioner using sterile needles, acupuncture is safe and has minimal side effects.",
+        },
+        {
+            question: "How many sessions will I need?",
+            answer:
+                "The number of sessions varies depending on your condition. Some people feel results after one session, while others may need several treatments for lasting benefits.",
+        },
+    ];
 
-    const toggleAccordion = (index) => {
-        setActiveIndex(activeIndex === index ? null : index);
+    const toggleFAQ = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
     };
 
     return (
-        <section className="section_faq11 text-teal-900 ss-therapy py-16 bg-white">
-            <div className="faq11_component max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-8">
-                {/* Left Column (FAQs) */}
-                <div className="faq11_left flex-1">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                        Frequently Asked Questions
-                    </h2>
+        <div className="bg-[#f9f7f6]">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-16">
+                {/* Header */}
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-12">
+                    Frequently Asked Questions
+                </h2>
 
-                    <div className="faq11_list space-y-4">
-                        {faqsData.map((faq, index) => (
-                            <div
-                                key={index}
-                                className="faq11_accordion border-b border-gray-300 pb-4"
-                            >
+                {/* FAQ Content */}
+                <div className="flex flex-col md:flex-row gap-10 mt-15">
+                    {/* FAQ Section */}
+                    <div className="w-full md:w-1/2">
+                        <div className="space-y-4">
+                            {faqs.map((faq, index) => (
                                 <div
-                                    className="faq11_question flex justify-between items-center cursor-pointer"
-                                    onClick={() => toggleAccordion(index)}
+                                    key={index}
+                                    className="border-b border-gray-300 pb-3 cursor-pointer"
+                                    onClick={() => toggleFAQ(index)}
                                 >
-                                    <span className="text-lg font-medium">{faq.question}</span>
-                                    <span className="faq11_icon text-2xl">
-                                        {activeIndex === index ? "−" : "+"}
-                                    </span>
-                                </div>
+                                    <div className="flex justify-between items-center">
+                                        <h4 className="font-medium text-lg">{faq.question}</h4>
+                                        <span className="text-gray-500 text-2xl leading-none">
+                                            {openIndex === index ? "−" : "+"}
+                                        </span>
+                                    </div>
 
-                                {/* Always render answer container, toggle max-height */}
-                                <div
-                                    className={`faq11_answer mt-2 text-gray-700 overflow-hidden transition-all duration-300 ${activeIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                                        }`}
-                                >
-                                    <p>{faq.answer}</p>
+                                    {/* Animated answer */}
+                                    <div
+                                        className={`overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-40 mt-2" : "max-h-0"
+                                            }`}
+                                    >
+                                        <p className="text-gray-600">{faq.answer}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
 
-                {/* Right Column (Video) */}
-                <div className="faq11_right flex-1">
-                    <div className="faq11_video-wrapper relative">
-                        <video
-                            className="faq11_video w-full h-auto rounded-lg shadow-lg"
-                            controls
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload="metadata"
-                            poster="/assets/img/extra/trauma-informed-therapist,-somatic-trauma-coaching-and-speaker-abi-blake-9.webp"
-                        >
-                            <source
-                                src="/assets/img/Videos/keep it somewhere autoplay.mp4"
-                                type="video/mp4"
+                    {/* Video Section */}
+                    <div className="w-full md:w-1/2 flex justify-center items-center">
+                        <div className="aspect-video w-full rounded-xl overflow-hidden shadow-md">
+                            <video
+                                src="/assets/video/keep it somewhere autoplay.mp4"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                controls={false}
+                                className="w-full h-full object-cover rounded-xl"
                             />
-                            Sorry, your browser doesn’t support embedded videos.
-                        </video>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
-export default FAQs;
+export default Faq;

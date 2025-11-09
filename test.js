@@ -1,35 +1,56 @@
-<section className="bg-white">
-    <div className="flex flex-col lg:flex-row items-center gap-6 px-4 sm:px-6 md:px-8">
-        {/* LEFT TEXT CONTENT */}
-        <div className="flex-1 flex justify-center">
-            <div className="w-full max-w-[600px] flex flex-col gap-5 mt-10 lg:mt-0">
-                <p className="text-sm tracking-wide text-gray-500 font-ppNeueMontreal mb-2 sm:mb-4">
-                    ABOUT US
-                </p>
+<div
+    ref={containerRef}
+    className="flex justify-center flex-wrap gap-8 relative" // increased gap slightly for spacing
+    onMouseEnter={() => setHovered(true)}
+    onMouseLeave={() => {
+        setHovered(false);
+        setMousePos({ x: 0, y: 0 });
+    }}
+    onMouseMove={handleMouseMove}
+>
+    {instagramImages.map((img, idx) => {
+        // Increased sizes
+        const width = 280;
+        const height = idx % 2 === 0 ? 260 : 220;
 
-                <h2 className="font-ppNeueMontreal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-snug sm:leading-tight mb-4 sm:mb-8">
-                    Where wellness meets tranquility
-                </h2>
+        return (
+            <div
+                key={idx}
+                className="relative transform transition-transform duration-300 rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-lg"
+                style={{
+                    width: `${width}px`,
+                    height: `${height}px`,
+                    transform: `rotate(${hovered ? 0 : rotations[idx]}deg)
+            translateX(${hovered ? mousePos.x : 0}px)
+            translateY(${hovered ? mousePos.y : 0}px)`,
+                }}
+            >
+                {/* Decorative line behind image */}
+                <div className="absolute inset-0 -z-10 flex items-center justify-center">
+                    <div
+                        className="w-full h-1 bg-gray-300"
+                        style={{
+                            transform: `rotate(${rotations[idx]}deg)`,
+                            opacity: 0.4,
+                        }}
+                    />
+                </div>
 
-                <p className="text-gray-600 font-ppNeueMontreal text-base sm:text-lg md:text-xl leading-relaxed mb-4 sm:mb-6 text-justify">
-                    At our spa, we are dedicated to creating an oasis of peace and relaxation
-                    where you can truly unwind. With a passion for wellness and self-care, our
-                    team of skilled therapists and specialists are committed to offering you the
-                    highest quality treatments, tailored to meet your individual needs.
-                </p>
+                <a
+                    href="https://www.instagram.com/vantagepointacupuncture/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Image
+                        src={img}
+                        alt={`Instagram ${idx + 1}`}
+                        width={width}
+                        height={height}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                    />
+                </a>
             </div>
-        </div>
-
-        {/* RIGHT IMAGE */}
-        <div className="flex-1 w-full mt-6 lg:mt-0">
-            <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[450px] overflow-hidden rounded-lg">
-                <Image
-                    src="/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg"
-                    alt="Facial treatment"
-                    fill
-                    className="object-cover"
-                />
-            </div>
-        </div>
-    </div>
-</section>
+        );
+    })}
+</div>

@@ -25,7 +25,7 @@ const SimpleAccess = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-10 px-6 py-24 md:py-28 container mx-auto">
+            <div className="relative z-10 px-6 py-24 md:py-28 max-w-[1440px] mx-auto">
                 {/* Header */}
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-12">
                     What to Expect With Us? A calm, step-by-step approach guided by your goals.

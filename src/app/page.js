@@ -25,9 +25,8 @@ export default function Home() {
         <Services />
       </div>
       <SimpleAccess />
-      <TestimonialSlider />
+      {/* <TestimonialSlider /> */}
       <FAQs />
-      <Footer />
     </>
   );
 }
