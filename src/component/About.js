@@ -1,7 +1,20 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+            offset: 100,
+        });
+    }, []);
+
     return (
         <div className='flex flex-col gap-[50px] '>
             {/* LOGO & Paragraph */}
@@ -31,7 +44,6 @@ const About = () => {
             {/* About Us Card */}
             <section className="bg-white">
                 <div className="flex flex-col lg:flex-row items-center gap-2.5">
-
                     {/* LEFT TEXT CONTENT */}
                     <div className="flex-1 flex justify-center">
                         <div className="w-full max-w-[600px] px-6 md:px-8 lg:px-10 flex flex-col gap-5 mt-10 lg:mt-0">

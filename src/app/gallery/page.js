@@ -69,6 +69,10 @@ const GalleryComponent = () => {
                     ))}
                 </div>
 
+                <div>
+
+                </div>
+
                 <Lightbox
                     open={open}
                     close={() => setOpen(false)}

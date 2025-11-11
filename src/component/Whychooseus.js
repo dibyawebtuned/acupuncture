@@ -1,6 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { Heart, Leaf, ArrowRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 // Example icons as inline SVG
@@ -11,16 +15,36 @@ const icons = {
 };
 
 const WhyChooseUs = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+            offset: 100,
+        });
+    }, []);
+
     return (
         <section className="bg-white pt-15">
             <div className="text-center">
                 <div className="flex flex-col gap-[60px]">
                     {/* Heading */}
                     <div className="flex flex-col gap-[15px]">
-                        <p className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest">
+                        <p className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
+                            data-aos="fade-up"
+                            data-aos-duration="500"
+                            data-aos-easing="ease-out-sine"
+                            data-aos-offset="80"
+                        >
                             THE REASONS WHY CHOOSE US
                         </p>
-                        <div className="text-[36px] lg:text-[42px] text-[#2B2B2B] font-ppneuemontreal font-medium sm:leading-14">
+                        <div className="text-[36px] lg:text-[42px] text-[#2B2B2B] font-ppneuemontreal font-medium sm:leading-14"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                            data-aos-duration="700"
+                            data-aos-easing="ease-out-sine"
+                            data-aos-offset="100"
+                        >
                             Why our SPA <br />center stands out
                         </div>
                     </div>
@@ -28,7 +52,12 @@ const WhyChooseUs = () => {
                     {/* Features */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-[50px] sm:gap-5">
                         <div className="flex flex-col items-center justify-between gap-[30px] sm:gap-20">
-                            <div className="text-center px-[25px]">
+                            <div className="text-center px-[25px]"
+                                data-aos="zoom-out"
+                                data-aos-duration="600"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-offset="100"
+                            >
                                 {icons.treatment}
                                 <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">Personalized Treatments</div>
                                 <div className="text-gray-500 font-ppNeueMontreal text-[16px]">
@@ -48,7 +77,12 @@ const WhyChooseUs = () => {
 
 
                         <div className="flex flex-col items-center justify-between gap-[30px] sm:gap-20">
-                            <div className="text-center px-[25px]">
+                            <div className="text-center px-[25px]"
+                                data-aos="zoom-out"
+                                data-aos-duration="600"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-offset="100"
+                            >
                                 {icons.environment}
                                 <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">Tranquil Environment</div>
                                 <div className="text-gray-500 font-ppNeueMontreal text-[16px]">
@@ -68,7 +102,12 @@ const WhyChooseUs = () => {
 
 
                         <div className="flex flex-col items-center justify-between gap-[30px] sm:gap-20">
-                            <div className="text-center px-[25px]">
+                            <div className="text-center px-[25px]"
+                                data-aos="zoom-out"
+                                data-aos-duration="600"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-offset="100"
+                            >
                                 {icons.therapist}
                                 <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">Expert Therapists</div>
                                 <div className="text-gray-500 font-ppNeueMontreal text-[16px]">

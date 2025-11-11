@@ -1,56 +1,66 @@
-import React from "react";
-import Image from "next/image";
-import CustomButton from "@/component/Button";
+import ServiceSection from "@/component/ServicesPage";
 
-const page = () => {
+export default function ConstitutionalFacialAcupuncturePage() {
     return (
-        <section className="pt-[130px] bg-[#EAF0F0] pb-15">
-            <div className="max-w-[1440px] mx-auto px-5 sm:px-10 flex flex-col gap-[50px]">
-                {/* Responsivenss */}
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 pt-8 lg:pt-16">
-                    {/* LEFT IMAGE */}
-                    <div className="w-full lg:w-1/2">
-                        <div className="relative w-full h-[250px] sm:h-[350px] lg:h-[500px] overflow-hidden shadow-lg rounded-none!">
-                            <Image
-                                src="/assets/img/facial+acu+copy+3.webp"
-                                alt="Chinese Herbal Medicine"
-                                fill
-                                className="object-cover rounded-none!"
-                                priority
-                            />
-                        </div>
-                    </div>
-
-                    {/* RIGHT CONTENT */}
-                    <div className="w-full lg:w-1/2 text-[#2D2D2D] flex flex-col gap-5">
-                        <div className="flex flex-col gap-2 sm:gap-3">
-                            <div className="text-2xl sm:text-3xl lg:text-5xl font-medium font-ppneuemontreal">
-                                Constitutional Facial Acupuncture
-                            </div>
-
-                            <div className="text-sm sm:text-base lg:text-lg leading-relaxed sm:leading-7 opacity-80 font-ppneuemontreal">
-                                Chinese Herbal Medicine is an ancient healing practice that uses natural plant, mineral, and sometimes
-                                animal-based ingredients to restore balance and promote wellness. Each formula is carefully tailored to
-                                support your body’s unique needs, helping to strengthen immunity, improve digestion, and enhance overall vitality.
-                            </div>
-                        </div>
-
-                        {/* Button */}
-                        <div className="mt-4">
-                            <CustomButton
-                                href="tel:0417794279"
-                                label="0417 794 279"
-                                bg="#0b3d91"
-                                text="#ffffff"
-                                hoverBg="#0a316f"
-                                hoverText="#ffffff"
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
+        <ServiceSection
+            title="Constitutional Facial Acupuncture"
+            description="Constitutional Facial Acupuncture is a holistic, non-surgical treatment that rejuvenates your face while balancing the body from within. It enhances natural radiance, improves skin tone, and promotes overall wellness by stimulating collagen production and harmonizing the body's energy flow."
+            image="/assets/img/facial+acu+copy+3.webp"
+            phone="0417 794 279"
+            howItWorks={[
+                {
+                    title: "Comprehensive Consultation",
+                    text: "Your treatment begins with a full-body health assessment to identify internal imbalances that may affect your skin and vitality.",
+                },
+                {
+                    title: "Acupuncture Session",
+                    text: "Fine, sterile needles are gently inserted into facial and body points to increase circulation, stimulate collagen, and release tension.",
+                },
+                {
+                    title: "Energy Balancing",
+                    text: "Beyond skin rejuvenation, the session promotes balance in the body’s energy (Qi), supporting internal organs and emotional harmony.",
+                },
+                {
+                    title: "Natural Glow Activation",
+                    text: "Increased blood flow nourishes the skin, softens fine lines, and enhances your natural complexion without chemicals or injections.",
+                },
+                {
+                    title: "Follow-Up & Maintenance",
+                    text: "Ongoing sessions help sustain results, improve tone, and maintain youthful, radiant skin over time.",
+                },
+            ]}
+            whyChooseUs={[
+                {
+                    title: "Holistic Anti-Aging",
+                    text: "Addresses both external appearance and internal wellness for long-lasting radiance.",
+                },
+                {
+                    title: "Non-Invasive & Natural",
+                    text: "A safe, chemical-free alternative to cosmetic procedures like Botox or fillers.",
+                },
+                {
+                    title: "Experienced Practitioners",
+                    text: "Performed by certified acupuncturists with expertise in both facial and constitutional acupuncture.",
+                },
+                {
+                    title: "Enhanced Wellbeing",
+                    text: "Promotes relaxation, better sleep, and reduced stress while revitalizing your skin.",
+                },
+                {
+                    title: "Customized Treatment Plan",
+                    text: "Tailored sessions based on your skin condition, health goals, and energy balance.",
+                },
+            ]}
+            details={{
+                description:
+                    "This rejuvenating therapy combines ancient Chinese medicine with modern beauty care, helping you achieve a naturally youthful glow from the inside out.",
+                duration: "75 min",
+                price: "from $160 per session",
+                schedule: {
+                    weekday: "Mon - Sat: 8:00 AM – 10:00 PM",
+                    weekend: "Sun: 9:00 AM – 8:00 PM",
+                },
+            }}
+        />
+    );
 }
-
-export default page

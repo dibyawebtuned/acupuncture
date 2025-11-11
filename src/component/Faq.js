@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const Faq = () => {
+const Faq = ({ showHeader = true }) => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const faqs = [
@@ -32,12 +32,14 @@ const Faq = () => {
     };
 
     return (
-        <div className="bg-[#f9f7f6]">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-16">
-                {/* Header */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-12">
-                    Frequently Asked Questions
-                </h2>
+        <div className="bg-[#EAF0F0]">
+            <div className="max-w-[1440px] mx-auto">
+                {/* Header (conditionally rendered) */}
+                {showHeader && (
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-12">
+                        Frequently Asked Questions
+                    </h2>
+                )}
 
                 {/* FAQ Content */}
                 <div className="flex flex-col md:flex-row gap-10 mt-15">
@@ -48,17 +50,27 @@ const Faq = () => {
                                 <div
                                     key={index}
                                     className="border-b-[1.6px] border-[#0b3d91] pb-3 cursor-pointer"
-                                    onClick={() => toggleFAQ(index)}>
+                                    onClick={() => toggleFAQ(index)}
+                                >
                                     <div className="flex justify-between items-center p-6">
-                                        <div className="text-[28px] font-ppneuemontreal">{faq.question}</div>
+                                        <div className="text-[28px] font-ppneuemontreal">
+                                            {faq.question}
+                                        </div>
                                         <span className="text-gray-500 text-2xl leading-none">
                                             {openIndex === index ? "−" : "+"}
                                         </span>
                                     </div>
 
                                     {/* Animated answer */}
-                                    <div className={`px-6 overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-40 mt-2" : "max-h-0"}`}>
-                                        <p className="text-[18px] text-gray-600 leading-8 tracking-wide">{faq.answer}</p>
+                                    <div
+                                        className={`px-6 overflow-hidden transition-all duration-300 ${openIndex === index
+                                            ? "max-h-40 mt-2"
+                                            : "max-h-0"
+                                            }`}
+                                    >
+                                        <p className="text-[18px] text-gray-600 leading-8 tracking-wide">
+                                            {faq.answer}
+                                        </p>
                                     </div>
                                 </div>
                             ))}
