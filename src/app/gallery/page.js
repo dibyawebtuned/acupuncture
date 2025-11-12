@@ -29,7 +29,7 @@ const GalleryDesktop = ({ galleryImages }) => {
                     {galleryImages.map((image, i) => (
                         <div
                             key={i}
-                            className="overflow-hidden shadow-lg shrink-0 cursor-pointer"
+                            className="relative overflow-hidden shadow-lg shrink-0 cursor-pointer group"
                             style={{
                                 flex: "0 0 calc(25% - 1.5rem)",
                                 height: i % 3 === 0 ? 400 : 250,
@@ -39,14 +39,24 @@ const GalleryDesktop = ({ galleryImages }) => {
                                 setOpen(true);
                             }}
                         >
+                            {/* Image */}
                             <Image
                                 src={image.src}
                                 alt={image.alt}
                                 width={600}
                                 height={400}
-                                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-none!"
+                                className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110 rounded-none!"
                                 priority
                             />
+
+                            {/* Overlay */}
+                            <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+
+                            {/* Soft light reflection (spa-like effect) */}
+                            <div className="absolute inset-0 bg-linear-to-t from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+
+                            {/* Border glow */}
+                            <div className="absolute inset-0 border border-white/40 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
                         </div>
                     ))}
                 </div>
@@ -89,20 +99,30 @@ const GalleryMobile = ({ galleryImages }) => {
                 {galleryImages.map((image, i) => (
                     <div
                         key={i}
-                        className="overflow-hidden rounded-xl shadow-md cursor-pointer"
+                        className="relative overflow-hidden rounded-md shadow-md cursor-pointer group"
                         onClick={() => {
                             setIndex(i);
                             setOpen(true);
                         }}
                     >
+                        {/* Image */}
                         <Image
                             src={image.src}
                             alt={image.alt}
                             width={500}
                             height={400}
-                            className="object-cover w-full h-[180px] transition-transform duration-300 hover:scale-105"
+                            className="object-cover w-full h-[180px] transition-transform duration-700 ease-in-out group-hover:scale-110"
                             priority
                         />
+
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+
+                        {/* Soft reflection */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+
+                        {/* Border glow */}
+                        <div className="absolute inset-0 border border-white/40 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
                     </div>
                 ))}
             </div>
