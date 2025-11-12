@@ -83,7 +83,7 @@ export default function ServiceSection({
                         </div>
 
                         {/* Why Choose Us */}
-                        <div data-aos="fade-up" data-aos-delay="200">
+                        <div className="" data-aos="fade-up" data-aos-delay="200">
                             <div className="text-2xl sm:text-3xl lg:text-[32px] text-[#2B2B2B] font-ppneuemontreal font-medium mb-4">
                                 Why Choose Us:
                             </div>
