@@ -39,7 +39,7 @@ const FaqFooter = ({ showHeader = true, title = "Customers frequently ask", subt
 
     return (
         <section className="">
-            <div className="container mx-auto flex flex-col gap-[30px] mt-20">
+            <div className="container mx-auto flex flex-col gap-[30px]">
 
                 {/* Optional Header */}
                 {showHeader && (
