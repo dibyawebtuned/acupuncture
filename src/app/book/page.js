@@ -48,7 +48,7 @@ const BookAppointment = () => {
                             <div className="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px]">
                                 {/* Name */}
                                 <div className="flex-1">
-                                    <label className="block text-gray-700 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
+                                    <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
                                         Full Name
                                     </label>
                                     <input
@@ -60,7 +60,7 @@ const BookAppointment = () => {
 
                                 {/* Email */}
                                 <div className="flex-1">
-                                    <label className="block text-gray-700 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
+                                    <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
                                         Email Address
                                     </label>
                                     <input
@@ -75,7 +75,7 @@ const BookAppointment = () => {
                             <div className="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px]">
                                 {/* Phone */}
                                 <div className="flex-1">
-                                    <label className="block text-gray-700 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
+                                    <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
                                         Phone Number
                                     </label>
                                     <input
@@ -87,7 +87,7 @@ const BookAppointment = () => {
 
                                 {/* Preferred Date */}
                                 <div className="flex-1">
-                                    <label className="block text-gray-700 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
+                                    <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
                                         Preferred Date
                                     </label>
                                     <input
@@ -99,7 +99,7 @@ const BookAppointment = () => {
 
                             {/* Message */}
                             <div>
-                                <label className="block text-gray-700 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
+                                <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
                                     Message / Notes
                                 </label>
                                 <textarea
