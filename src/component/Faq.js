@@ -33,16 +33,16 @@ const Faq = ({ showHeader = true }) => {
 
     return (
         <div className="bg-[#EAF0F0]">
-            <div className="max-w-[1440px] mx-auto">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15">
                 {/* Header (conditionally rendered) */}
                 {showHeader && (
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-12">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
                         Frequently Asked Questions
                     </h2>
                 )}
 
                 {/* FAQ Content */}
-                <div className="flex flex-col md:flex-row gap-10 mt-15">
+                <div className="flex flex-col md:flex-row gap-10">
                     {/* FAQ Section */}
                     <div className="w-full md:w-1/2">
                         <div className="space-y-4">

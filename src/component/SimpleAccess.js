@@ -19,7 +19,7 @@ const SimpleAccess = () => {
                     alt="TCM Treatment"
                     fill
                     priority
-                    className="object-cover object-center"
+                    className="object-cover object-center rounded-none!"
                 />
                 <div className="absolute inset-0 bg-black/30" />
             </div>

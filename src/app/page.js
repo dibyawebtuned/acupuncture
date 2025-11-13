@@ -19,11 +19,11 @@ export default function Home() {
       <Hero />
       <DoYouKnow />
       <ClarityBeforeCare />
-      <MarqueeSection />
       {/* Services */}
       <div className="section_services bg-[#ebe9e4]">
         <Services />
       </div>
+      <MarqueeSection />
       <SimpleAccess />
       {/* <TestimonialSlider /> */}
       <FAQs />

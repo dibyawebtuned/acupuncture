@@ -119,7 +119,6 @@ const BookAppointment = () => {
 
                         </form>
                     </div>
-
                 </div>
 
                 {/* Contact Info Footer */}
