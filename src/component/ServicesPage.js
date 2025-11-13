@@ -28,7 +28,7 @@ export default function ServiceSection({
                                 src={image}
                                 alt={title}
                                 fill
-                                className="object-cover"
+                                className="object-cover rounded-none!"
                                 priority
                             />
                         </div>
