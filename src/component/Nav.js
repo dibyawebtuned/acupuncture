@@ -14,7 +14,7 @@ const Nav = () => {
           }
 
           @media screen and (max-width: 1920px) {
-            html {
+            html {  
               font-size: calc(0.625rem + 0.41666666666666674vw);
             }
           }

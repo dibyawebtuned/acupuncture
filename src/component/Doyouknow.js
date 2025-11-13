@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import Script from "next/script";
+import Link from "next/link";
 
 const WEBFLOW_SRC =
     "https://cdn.prod.website-files.com/6508af1b0b60370d434c9417/js/webflow.da86215c7.js";
@@ -63,7 +64,10 @@ const DoYouKnow = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
+
         <header className="section_header80 background-color-whitesmoke">
             <Script
                 src={WEBFLOW_SRC}
@@ -131,9 +135,11 @@ const DoYouKnow = () => {
                             <h2 className="heading-style-h5">
                                 Cupping marks are temporary and usually fade over several days.
                             </h2>
-                            <a href="/courses" className="button is-tertiary is-icon w-inline-block make-an-appointment">
+                            <Link
+                                href="/book"
+                                className="button is-tertiary is-icon w-inline-block make-an-appointment">
                                 <div>Make an Appointment</div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
