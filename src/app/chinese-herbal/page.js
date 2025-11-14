@@ -298,7 +298,7 @@ const Page = () => {
 
                     {/* Right (4/12 on large screens) wewe */}
                     <div className="w-full lg:w-4/12 flex items-center justify-center">
-                        {/* Sticky Sidebar with Hover Animation */}
+                        {/* Sticky Sidebar with Hover Animations */}
                         <div className="lg:sticky lg:top-28 self-start transition-transform duration-300 ease-out">
                             <div className="bg-[#0B3D91] text-white rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                                 {/* Decorative Leaf */}
