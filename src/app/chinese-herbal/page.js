@@ -79,7 +79,9 @@ const Page = () => {
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15">
                     <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
                         {/* Left Image */}
-                        <div className="flex-1 w-full">
+                        <div className="flex-1 w-full"
+                            data-aos="fade-right"
+                        >
                             <div className="relative w-full min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden rounded-md shadow-md">
                                 <Image
                                     src="/assets/img/facial+acu+copy+3.webp"
@@ -102,10 +104,16 @@ const Page = () => {
                                 >
                                     services
                                 </div>
-                                <div className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[56px] text-gray-700 font-medium mb-3 font-ppneuemontreal leading-tight">
+                                <div className="text-[28px] sm:text-[36px] md:text-[40px] lg:text-[56px] text-gray-700 font-medium mb-3 font-ppneuemontreal leading-tight"
+                                    data-aos="fade-up"
+                                    data-aos-delay="150"
+                                >
                                     Chinese Herbal <span className="font-testSignifier"> Medicine </span>
                                 </div>
-                                <div className="font-ppNeueMontreal text-gray-500 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed">
+                                <div className="font-ppNeueMontreal text-gray-500 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
+                                >
                                     Rather than simply masking symptoms, Chinese Herbal Medicine targets the root causes of imbalance — helping your body return to a natural state of wellness. Each herbal formula is carefully crafted and customized to your individual constitution, lifestyle, and condition using pure, natural ingredients such as roots, bark, flowers, leaves, and minerals.
                                 </div>
                             </div>
@@ -133,7 +141,10 @@ const Page = () => {
                                         text: "Enhances immune function",
                                     },
                                 ].map((item, index) => (
-                                    <div key={index} className="w-full sm:w-1/2 px-5 mb-5 flex gap-4">
+                                    <div key={index} className="w-full sm:w-1/2 px-5 mb-5 flex gap-4"
+                                        data-aos="fade-up"
+                                        data-aos-delay={250 + index * 100}
+                                    >
                                         {/* Square icon */}
                                         <div className="w-10 h-10 flex items-center justify-center rounded-md shrink-0 bg-[#0B3D91]">
                                             {item.icon}
@@ -168,12 +179,16 @@ const Page = () => {
                                     <div
                                         className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppNeueMontreal font-medium leading-snug"
                                         data-aos="fade-up"
-                                        data-aos-delay="150"
+                                        data-aos-delay="100"
                                     >
                                         What to expect your <span className="font-testSignifier "> Chinese Herbal </span>
                                     </div>
+
                                     <div>
-                                        <div className="text-gray-500 font-ppNeueMontreal text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed">
+                                        <div className="text-gray-500 font-ppNeueMontreal text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                            data-aos="fade-up"
+                                            data-aos-delay="150"
+                                        >
                                             Rediscover your natural glow with our Signature Facials, expertly designed to cleanse, hydrate, and rejuvenate your skin.
                                             Each facial is tailored to your unique skin type and concerns, combining high-performance skincare with gentle, therapeutic techniques.
                                             From deep pore cleansing to collagen-boosting serums, we bring out your skin's healthiest, most radiant version.
@@ -193,9 +208,11 @@ const Page = () => {
                                                 <li
                                                     key={index}
                                                     className="flex items-start gap-3 font-ppNeueMontreal text-gray-500 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed pl-0!"
+                                                    data-aos="fade-up"
+                                                    data-aos-delay={200 + index * 100}
                                                 >
                                                     <div className="flex items-center justify-center w-7 h-7 rounded-full mt-0.5 shrink-0">
-                                                        <BadgeCheck size={18} className="text-[#0B3D91]" />
+                                                        <BadgeCheck size={20} className="text-[#0B3D91]" />
                                                     </div>
                                                     <span className="leading-relaxed">{item}</span>
                                                 </li>
@@ -203,7 +220,10 @@ const Page = () => {
                                         </ul>
 
 
-                                        <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-md shadow-md">
+                                        <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-md shadow-md"
+                                            data-aos="fade-up"
+                                            data-aos-delay="400"
+                                        >
                                             <Image
                                                 src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
                                                 alt="Chinese Herbal Medicine"
@@ -212,7 +232,6 @@ const Page = () => {
                                                 priority
                                             />
                                         </div>
-
                                     </div>
 
                                 </div>
@@ -224,20 +243,17 @@ const Page = () => {
                             <div className="flex flex-col gap-[20px]">
                                 {/* Heading */}
                                 <div className="flex flex-col gap-[15px]">
-                                    {/* <p
-                                    className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
-                                    data-aos="fade-up"
-                                >
-                                    WHY CHOOSE HERBAL MEDICINE
-                                </p> */}
                                     <div
                                         className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppneuemontreal font-medium leading-snug"
                                         data-aos="fade-up"
-                                        data-aos-delay="150"
+                                        data-aos-delay="100"
                                     >
                                         Why Chinese <span className="font-testSignifier"> Herbal Medicine</span>
                                     </div>
-                                    <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed">
+                                    <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                        data-aos="fade-up"
+                                        data-aos-delay="150"
+                                    >
                                         Our formulas use pure herbs, roots, and minerals — each selected for their natural healing properties and prepared with traditional care.
                                         Rediscover your natural glow with our Signature Facials, expertly designed to cleanse, hydrate, and rejuvenate your skin.
                                         Each facial is tailored to your unique skin type and concerns, combining high-performance skincare with gentle, therapeutic techniques.
@@ -245,70 +261,36 @@ const Page = () => {
                                     </div>
                                 </div>
 
+
                                 {/* Features */}
                                 <div className="flex flex-col gap-[20px]">
-                                    {/* Item 1 */}
-                                    <div
-                                        className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
-                                        data-aos="zoom-out"
-                                    >
-                                        <div className="flex items-start gap-5">
-                                            {/* Icon Circle */}
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
-                                                <Leaf className="w-5 h-5 text-white" />
-                                            </div>
-
-                                            {/* Text */}
-                                            <div>
-                                                <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
-                                                    Natural Ingredients
+                                    {[1, 2, 3].map((i) => (
+                                        <div
+                                            key={i}
+                                            className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                                            data-aos="zoom-out"
+                                            data-aos-delay={200 + i * 150} // staggered zoom-out
+                                        >
+                                            <div className="flex items-start gap-5">
+                                                {/* Icon Circle */}
+                                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
+                                                    {i % 2 === 0 ? <Leaf className="w-5 h-5 text-white" /> : <Heart className="h-5 w-5 text-white" />}
                                                 </div>
-                                                <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
-                                                    Our formulas use pure herbs, roots, and minerals — each selected for their natural healing properties and prepared with traditional care.
+
+                                                {/* Text */}
+                                                <div>
+                                                    <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
+                                                        {i === 1 ? "Natural Ingredients" : "Holistic Healing"}
+                                                    </div>
+                                                    <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
+                                                        {i === 1
+                                                            ? "Our formulas use pure herbs, roots, and minerals — each selected for their natural healing properties and prepared with traditional care."
+                                                            : "Rather than treating symptoms, our approach addresses the root causes of imbalance, helping the body heal from within."}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    {/* Item 2 */}
-                                    <div
-                                        className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
-                                        data-aos="zoom-out"
-                                    >
-                                        <div className="flex items-start gap-5">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
-                                                <Heart className="h-5 w-5 text-white" />
-                                            </div>
-                                            <div>
-                                                <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
-                                                    Holistic Healing
-                                                </div>
-                                                <div className="text-gray-500 font-ppNeueMontreal text-[16px]">
-                                                    Rather than treating symptoms, our approach addresses the root causes of imbalance, helping the body heal from within.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Item 3 */}
-                                    <div
-                                        className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
-                                        data-aos="zoom-out"
-                                    >
-                                        <div className="flex items-start gap-5">
-                                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
-                                                <Heart className="h-5 w-5 text-white" />
-                                            </div>
-                                            <div>
-                                                <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
-                                                    Holistic Healing
-                                                </div>
-                                                <div className="text-gray-500 font-ppNeueMontreal text-[16px]">
-                                                    Rather than treating symptoms, our approach addresses the root causes of imbalance, helping the body heal from within.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
