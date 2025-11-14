@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // -------------------- Desktop Gallery --------------------
 const GalleryDesktop = ({ galleryImages }) => {
@@ -15,11 +17,15 @@ const GalleryDesktop = ({ galleryImages }) => {
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col">
                 {/* Heading */}
                 <div className="flex flex-col gap-3 text-left mb-10 md:mb-6">
-                    <div className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest">
+                    <div className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
                         gallery
                     </div>
 
-                    <div className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal">
+                    <div className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
                         Holistic Health <br /> Journey
                     </div>
                 </div>
@@ -34,6 +40,9 @@ const GalleryDesktop = ({ galleryImages }) => {
                                 flex: "0 0 calc(25% - 1.5rem)",
                                 height: i % 3 === 0 ? 400 : 250,
                             }}
+                            data-aos="zoom-in"
+                            data-aos-duration="900"
+                            data-aos-delay={i * 50}
                             onClick={() => {
                                 setIndex(i);
                                 setOpen(true);
@@ -86,10 +95,14 @@ const GalleryMobile = ({ galleryImages }) => {
         <section className="pt-[100px] bg-[#EAF0F0] px-5 pb-12">
             {/* Heading */}
             <div className="flex flex-col gap-2 mt-15">
-                <div className="text-[#6D6A5F] uppercase text-xs tracking-widest">
+                <div className="text-[#6D6A5F] uppercase text-xs tracking-widest"
+                    data-aos="fade-right"
+                    data-aos-duration="900">
                     gallery
                 </div>
-                <h2 className="font-ppNeueMontreal text-[28px] sm:text-[32px] text-[#2B2B2B] leading-[1.2]">
+                <h2 className="font-ppNeueMontreal text-[28px] sm:text-[32px] text-[#2B2B2B] leading-[1.2]"
+                    data-aos="fade-up"
+                    data-aos-duration="1000">
                     Holistic Health Journey
                 </h2>
             </div>
@@ -100,6 +113,9 @@ const GalleryMobile = ({ galleryImages }) => {
                     <div
                         key={i}
                         className="relative overflow-hidden rounded-md shadow-md cursor-pointer group"
+                        data-aos="fade-up"
+                        data-aos-duration="900"
+                        data-aos-delay={i * 60}
                         onClick={() => {
                             setIndex(i);
                             setOpen(true);
@@ -145,6 +161,11 @@ const GalleryMobile = ({ galleryImages }) => {
 // -------------------- Main Component --------------------
 const GalleryComponent = () => {
     const [isMobile, setIsMobile] = useState(false);
+
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({ duration: 900, once: true });
+    }, []);
 
     // Detect screen width
     useEffect(() => {

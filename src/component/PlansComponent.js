@@ -23,9 +23,7 @@ export default function TailoredPlansSection() {
             <div className="absolute bottom-0 left-0 w-full h-[400px] bg-[#0B3D91]/90"></div>
 
             {/* FLOATING CARD CONTENT */}
-            <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2
-                      container flex flex-col lg:flex-row rounded-xl overflow-hidden shadow-2xl">
-
+            <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 container flex flex-col lg:flex-row rounded-xl overflow-hidden shadow-2xl">
                 {/* LEFT IMAGE */}
                 <div className="relative w-full lg:w-1/2 h-auto">
                     <Image
@@ -33,6 +31,8 @@ export default function TailoredPlansSection() {
                         alt="Spa relaxation"
                         fill
                         className="object-cover rounded-none!"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
                     />
                 </div>
 
@@ -44,7 +44,10 @@ export default function TailoredPlansSection() {
 
                     <div className="space-y-6 font-testsignifier">
 
-                        <div>
+                        <div data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-delay="300"
+                        >
                             <div className="text-lg font-medium border-b border-white/40 pb-2">
                                 Essential retreat
                             </div>
@@ -53,7 +56,11 @@ export default function TailoredPlansSection() {
                             </p>
                         </div>
 
-                        <div>
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-delay="200"
+                        >
                             <div className="text-lg font-medium border-b border-white/40 pb-2">
                                 Serenity package
                             </div>
@@ -62,7 +69,11 @@ export default function TailoredPlansSection() {
                             </p>
                         </div>
 
-                        <div>
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-delay="300"
+                        >
                             <div className="text-lg font-medium border-b border-white/40 pb-2">
                                 Luxe experience
                             </div>
@@ -73,7 +84,7 @@ export default function TailoredPlansSection() {
 
                     </div>
 
-                    <div className="mt-7">
+                    <div className="mt-7" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0B3D91] text-black hover:bg-gray-300 transition">
                             View all →
                         </button>

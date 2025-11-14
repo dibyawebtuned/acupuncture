@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from 'next/image';
 import FaqFooter from '@/component/FaqFooter';
 import Faq from '@/component/Faq';
@@ -36,18 +38,33 @@ const page = ({ showHeader = true }) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
+
     return (
         <div className='pt-[130px] bg-[#EAF0F0]'>
             <div className='max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15'>
                 {/* Heading */}
                 <div className="flex flex-col gap-3 text-left">
                     {/* Section Label */}
-                    <div className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest">
+                    <div className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
                         faq
                     </div>
 
                     {/* Heading */}
-                    <div className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal">
+                    <div className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
                         Customers Queries
                     </div>
                 </div>
@@ -55,9 +72,9 @@ const page = ({ showHeader = true }) => {
                 {/* <Faq showHeader={false} /> */}
 
                 {/* FAQ Content */}
-                <div className="flex flex-col md:flex-row gap-10">
+                <div className="flex flex-col md:flex-row gap-10 pt-7 sm:pt-15">
                     {/* FAQ Section */}
-                    <div className="w-full md:w-1/2">
+                    <div className="w-full md:w-1/2" data-aos="fade-right">
                         <div className="space-y-4">
                             {faqs.map((faq, index) => (
                                 <div
@@ -91,7 +108,7 @@ const page = ({ showHeader = true }) => {
                     </div>
 
                     {/* Video Section */}
-                    <div className="w-full md:w-1/2 flex justify-center items-center">
+                    <div className="w-full md:w-1/2 flex justify-center items-center" data-aos="fade-left">
                         <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-md">
                             <video
                                 src="/assets/video/keep it somewhere autoplay.mp4"
@@ -108,7 +125,7 @@ const page = ({ showHeader = true }) => {
             </div>
 
             {/* Banner */}
-            <Banner />
+            {/* <Banner /> */}
         </div>
     )
 }

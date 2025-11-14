@@ -1,7 +1,7 @@
 // components/Services.js
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { FaLeaf, FaSpa, FaGem, FaCircleNotch } from "react-icons/fa";
 
 const servicesData = [

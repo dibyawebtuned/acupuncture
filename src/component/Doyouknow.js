@@ -1,155 +1,154 @@
 "use client";
 
-import React, { useEffect, useCallback, useState } from "react";
+import React, { useEffect } from "react";
 import Script from "next/script";
-import Link from "next/link";
 
-const WEBFLOW_SRC =
+const WEBFLOW_JS =
     "https://cdn.prod.website-files.com/6508af1b0b60370d434c9417/js/webflow.da86215c7.js";
 
-const DoYouKnow = () => {
-    // Initialize Webflow interactions
-    const initWebflow = useCallback(() => {
-        if (typeof window === "undefined") return;
-        const W = window;
-        if (!W.Webflow) return;
-
-        try {
-            if (typeof W.Webflow.destroy === "function") W.Webflow.destroy();
-        } catch { }
-
-        try {
-            if (typeof W.Webflow.ready === "function") W.Webflow.ready();
-        } catch { }
-
-        try {
-            if (W.Webflow?.require) {
-                const ix2 = W.Webflow.require("ix2");
-                ix2?.init?.();
-            }
-        } catch { }
-    }, []);
-
-    useEffect(() => {
-        const t = setTimeout(() => initWebflow(), 100);
-        return () => {
-            clearTimeout(t);
-            if (window.Webflow?.destroy) {
-                try {
-                    window.Webflow.destroy();
-                } catch { }
-            }
-        };
-    }, [initWebflow]);
-
-    // Parallax scroll effect with initial upper offset
+export default function DoYouKnowSection() {
     useEffect(() => {
         const elements = document.querySelectorAll(".header80_image-wrapper");
-        const initialOffset = 30; // px, adjust how high images start
 
-        // Apply initial offset when component mounts
-        elements.forEach((el) => {
-            el.style.transform = `translateY(-${initialOffset}px)`;
-        });
-
-        const handleScroll = () => {
+        const onScroll = () => {
             const scrollY = window.scrollY;
+
             elements.forEach((el, index) => {
-                const movement = -(scrollY * (index + 1)) * 0.03;
-                el.style.transform = `translateY(${-initialOffset + movement}px)`;
+                // Each image moves upward slightly differently
+                const speed = 0.05 + index * 0.02;
+
+                // Moves UP (negative translateY)
+                el.style.transform = `translateY(${-scrollY * speed}px)`;
+                el.style.transition = "transform 0.1s ease-out"; // Smooth motion
             });
         };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
     return (
-
         <header className="section_header80 background-color-whitesmoke">
-            <Script
-                src={WEBFLOW_SRC}
-                strategy="afterInteractive"
-                onLoad={() => setTimeout(initWebflow, 50)}
-            />
+            {/* Load Webflow IX script */}
+            <Script src={WEBFLOW_JS} strategy="afterInteractive" />
 
             <div className="header80_component">
                 <div className="header80_content-wrapper">
 
-                    {/* LEFT IMAGE LIST */}
+                    {/* LEFT STACK */}
                     <div className="header80_images-wrapper">
                         <div className="header80_image-list">
+
                             <div className="header80_image-wrapper is-image-1">
-                                <img src="/assets/img/one.jpeg" alt="Did you know 1" className="header80_image" />
+                                <img
+                                    src="/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg"
+                                    className="header80_image"
+                                    alt=""
+                                />
                             </div>
+
                             <div className="header80_image-wrapper is-image-2">
-                                <img src="/assets/img/one.jpeg" alt="Did you know 2" className="header80_image" />
+                                <img
+                                    src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
+                                    className="header80_image"
+                                    alt=""
+                                />
                             </div>
+
                             <div className="header80_image-wrapper is-image-3">
-                                <img src="/assets/img/one.jpeg" alt="Did you know 3" className="header80_image" />
+                                <img
+                                    src="/assets/img/7515-1-Tuning-Forks.jpg"
+                                    className="header80_image"
+                                    alt=""
+                                />
                             </div>
+
                             <div className="header80_image-wrapper is-image-4">
-                                <img src="/assets/img/one.jpeg" alt="Did you know 4" className="header80_image" />
+                                <img
+                                    src="/assets/img/clarity.jpg"
+                                    className="header80_image"
+                                    alt=""
+                                />
                             </div>
-                            {/* NEW LEFT IMAGE */}
-                            <div className="header80_image-wrapper is-image-9">
-                                <img src="/assets/img/left-new.jpeg" alt="Did you know 9" className="header80_image" />
-                            </div>
+
                         </div>
                     </div>
 
-                    {/* RIGHT IMAGE LIST */}
+                    {/* RIGHT STACK 1 */}
                     <div className="header80_images-wrapper images-wrapper-right">
                         <div className="header80_image-list image-list-right">
+
                             <div className="header80_image-wrapper is-image-5">
-                                <img src="/assets/img/one.jpeg" alt="Did you know 5" className="header80_image" />
+                                <img
+                                    src="/assets/img/facial+acu+copy+3.webp"
+                                    className="header80_image"
+                                    alt=""
+                                />
                             </div>
+
                             <div className="header80_image-wrapper is-image-6">
-                                <img src="/assets/img/one.jpeg" alt="Did you know 6" className="header80_image" />
+                                <img
+                                    src="/assets/img/GettyImages-146788068 (1).jpg"
+                                    className="header80_image"
+                                    alt=""
+                                />
                             </div>
-                            {/* NEW RIGHT IMAGE */}
-                            <div className="header80_image-wrapper is-image-10">
-                                <img src="/assets/img/right-new.jpeg" alt="Did you know 10" className="header80_image" />
-                            </div>
+
                         </div>
                     </div>
 
-                    {/* LEFT IMAGE LIST AGAIN */}
+                    {/* RIGHT STACK 2 */}
                     <div className="header80_images-wrapper images-wrapper-right">
                         <div className="header80_image-list image-list-left">
+
                             <div className="header80_image-wrapper is-image-7">
-                                <img src="/assets/img/one.jpeg" alt="Did you know 7" className="header80_image" />
+                                <img
+                                    src="/assets/img/trauma-informed-therapist,-somatic-trauma-coaching-and-speaker-abi-blake-9.webp"
+                                    className="header80_image"
+                                    alt=""
+                                />
                             </div>
+
                             <div className="header80_image-wrapper is-image-8">
-                                <img src="/assets/img/one.jpeg" alt="Did you know 8" className="header80_image" />
+                                <img
+                                    src="/assets/img/Traditional-Chinese-Medicine-is-diagnosing-women's-pulse-.webp"
+                                    className="header80_image"
+                                    alt=""
+                                />
                             </div>
+
                         </div>
                     </div>
 
                     {/* CONTENT SECTION */}
                     <div className="header80_content">
                         <div className="text-align-center max-width-small align-center">
-                            <p className="heading-style-h3">Did You Know?</p>
-                            <h2 className="heading-style-h5">
-                                Cupping marks are temporary and usually fade over several days.
-                            </h2>
-                            <Link
-                                href="/book"
-                                className="button is-tertiary is-icon w-inline-block make-an-appointment">
-                                <div>Make an Appointment</div>
-                            </Link>
+                            <div className="section_gallery6-content">
+
+                                <p className="heading-style-h3">Did You Know?</p>
+
+                                <h2 className="heading-style-h5">
+                                    Cupping marks are temporary and usually fade over several days.
+                                </h2>
+
+                                <a
+                                    href="/courses"
+                                    className="button is-tertiary is-icon w-inline-block make-an-appointment"
+                                >
+                                    <div>Make an Appointment</div>
+                                </a>
+
+                            </div>
                         </div>
                     </div>
 
-                    {/* Webflow trigger */}
-                    <div data-w-id="trigger" className="header80_ix-trigger"></div>
-
+                    {/* Webflow IX Trigger */}
+                    <div
+                        data-w-id="c1e95d59-826e-5b17-4b4a-0e5bccac428f"
+                        className="header80_ix-trigger"
+                    ></div>
                 </div>
             </div>
         </header>
     );
-};
-
-export default DoYouKnow;
+}

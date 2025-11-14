@@ -142,19 +142,19 @@ const Footer = () => {
                         {/* Treatments */}
                         <div className="min-w-[120px] flex-1">
                             {/* Title */}
-                            <div className="mb-4 text-[20px] font-ppneuemontreal font-normal">Treatments</div>
+                            <div className="mb-4 text-[16px] font-ppneuemontreal font-normal">Treatments</div>
 
                             <div className="flex flex-col gap-[7px]">
-                                <Link href="/time-to-talk" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/time-to-talk" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Acupuncture
                                 </Link>
-                                <Link href="/talk-on-track" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/talk-on-track" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Chinese Herbal Medicine
                                 </Link>
-                                <Link href="/tiny-articulators" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/tiny-articulators" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Facial Acupuncture
                                 </Link>
-                                <Link href="/courses" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/courses" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Women’s Health
                                 </Link>
                             </div>
@@ -163,13 +163,13 @@ const Footer = () => {
                         {/* About */}
                         <div className="min-w-[120px] flex-1">
                             {/* Title */}
-                            <div className="mb-4 text-[20px] font-ppneuemontreal font-normal">About</div>
+                            <div className="mb-4 text-[16px] font-ppneuemontreal font-normal">About</div>
 
                             <div className="flex flex-col gap-[7px]">
-                                <Link href="/about-us" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/about-us" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Our Story
                                 </Link>
-                                <Link href="/therapy" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/therapy" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Why Choose Us
                                 </Link>
                             </div>
@@ -178,19 +178,19 @@ const Footer = () => {
                         {/* Help */}
                         <div className="min-w-[120px] flex-1">
                             {/* Title */}
-                            <div className="mb-4 text-[20px] font-ppneuemontreal font-normal">Help</div>
+                            <div className="mb-4 text-[16px] font-ppneuemontreal font-normal">Help</div>
 
                             <div className="flex flex-col gap-[7px]">
-                                <Link href="/faq" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/faq" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Help & FAQs
                                 </Link>
-                                <Link href="/speech-sound-screener" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/speech-sound-screener" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Appointment
                                 </Link>
-                                <Link href="/free-resources" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/free-resources" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Free Resources
                                 </Link>
-                                <Link href="/blog" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <Link href="/blog" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Blog
                                 </Link>
                             </div>
@@ -199,19 +199,19 @@ const Footer = () => {
                         {/* Social */}
                         <div className="min-w-[120px] flex-1">
                             {/* Title */}
-                            <div className="mb-4 text-[20px] font-ppneuemontreal font-normal">Social</div>
+                            <div className="mb-4 text-[16px] font-ppneuemontreal font-normal">Social</div>
 
                             <div className="flex flex-col gap-[7px]">
-                                <a href="#" target="_blank" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <a href="#" target="_blank" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Instagram
                                 </a>
-                                <a href="#" target="_blank" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <a href="#" target="_blank" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Facebook
                                 </a>
-                                <a href="#" target="_blank" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <a href="#" target="_blank" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     Pinterest
                                 </a>
-                                <a href="#" target="_blank" className="font-ppneuemontreal text-[16px] block mb-2 no-underline!">
+                                <a href="#" target="_blank" className="font-ppneuemontreal text-[14px] block mb-2 no-underline!">
                                     About Marney
                                 </a>
                             </div>

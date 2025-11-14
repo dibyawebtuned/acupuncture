@@ -43,3 +43,27 @@ body {
   --title: #6d6a5f;
   --sub-title: #2b2b2b;
 }
+
+/* Custom reveal-up animation for AOS */
+[data-aos="reveal-up"] {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1s ease-in-out;
+}
+
+[data-aos="reveal-up"].aos-animate {
+  clip-path: inset(0 0 0 0);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+[data-scroll-container] {
+  scroll-behavior: smooth;
+}
+
+.cursor-dot.hovered {
+  transform: translate(-50%, -50%) scale(2);
+  background-color: #fff;
+}

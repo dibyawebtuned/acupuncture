@@ -1,12 +1,14 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import WhyChooseUs from "@/component/Whychooseus";
 import About from "@/component/About";
 import Services from "@/component/Services";
 import Banner from "@/component/Banner";
 import TailoredPlansSection from "@/component/PlansComponent";
+// import SmoothScrollWrapper from "@/component/SmoothScrollWrapper";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -19,7 +21,14 @@ const Page = () => {
             once: true,
             offset: 100,
         });
+
+        setTimeout(() => AOS.refresh(), 500);
     }, []);
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.2,
+    });
 
     // refs for the three images
     const ref1 = useRef(null);
@@ -42,7 +51,7 @@ const Page = () => {
         <div className="pt-[130px] bg-[#EAF0F0]">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col">
                 {/* Heading */}
-                <div className="flex flex-col gap-3 text-left mb-10 md:mb-6">
+                <div data-scroll-section className="flex flex-col gap-3 text-left mb-10 md:mb-6">
                     {/* Section Label (AOS) */}
                     <div
                         className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
@@ -65,13 +74,12 @@ const Page = () => {
                 {/* Main Content: Images */}
                 <div className="flex flex-col gap-[60px]">
                     {/* Images */}
-                    <div className="flex flex-col lg:flex-row gap-6">
+                    <div data-scroll-section className="flex flex-col lg:flex-row gap-6">
                         {/* First Image (bottom -> top) */}
-                        <motion.div
+                        <div
                             ref={ref1}
                             className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
-                            initial={initial}
-                            animate={getAnimate(inView1, 0)}
+                            data-aos="reveal-up"
                         >
                             <Image
                                 src="/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg"
@@ -79,15 +87,14 @@ const Page = () => {
                                 fill
                                 className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
                             />
-                        </motion.div>
+                        </div>
 
                         {/* Second and Third Images */}
                         <div className="flex flex-1 flex-col sm:flex-row gap-6">
-                            <motion.div
+                            <div
                                 ref={ref2}
                                 className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
-                                initial={initial}
-                                animate={getAnimate(inView2, 0.15)}
+                                data-aos="reveal-up"
                             >
                                 <Image
                                     src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
@@ -95,13 +102,12 @@ const Page = () => {
                                     fill
                                     className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
                                 />
-                            </motion.div>
+                            </div>
 
-                            <motion.div
+                            <div
                                 ref={ref3}
                                 className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
-                                initial={initial}
-                                animate={getAnimate(inView3, 0.3)}
+                                data-aos="reveal-up"
                             >
                                 <Image
                                     src="/assets/img/7515-1-Tuning-Forks.jpg"
@@ -109,31 +115,43 @@ const Page = () => {
                                     fill
                                     className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
                                 />
-                            </motion.div>
+                            </div>
                         </div>
                     </div>
 
                     {/* WhyChooseUs */}
-                    <WhyChooseUs />
+                    <section data-scroll-section>
+                        <WhyChooseUs />
+                    </section>
 
-                    <About />
+                    <section>
+                        <About />
+                    </section>
                 </div>
             </div>
 
-            {/* Services */}
-            <Services
-                bgClass="bg-[#e8f2ec]"
-                cardTheme={{
-                    baseBg: "bg-white",
-                    baseText: "text-[#355342]",
-                    icon: "text-[#5b8a6e]",
-                    hoverBg: "hover:bg-[#5b8a6e]",
-                    hoverText: "group-hover:text-white",
-                }}
-            />
+            <section>
+                <div data-aos="fade-up"
+                    data-aos-duration="1200"
+                    data-aos-delay="200">
+                    {/* Services */}
+                    <Services
+                        bgClass="bg-[#e8f2ec]"
+                        cardTheme={{
+                            baseBg: "bg-white",
+                            baseText: "text-[#355342]",
+                            icon: "text-[#5b8a6e]",
+                            hoverBg: "hover:bg-[#5b8a6e]",
+                            hoverText: "group-hover:text-white",
+                        }}
+                    />
+                </div>
+            </section>
 
-            {/* TailoredPlansSection */}
-            <TailoredPlansSection />
+            <section>
+                {/* TailoredPlansSection */}
+                <TailoredPlansSection />
+            </section>
 
             {/* Banner */}
             {/* <Banner /> */}

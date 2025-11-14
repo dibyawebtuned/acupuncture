@@ -65,7 +65,9 @@ const WhyChooseUs = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full h-64 relative">
+                            <div className="w-full h-64 relative"
+                                data-aos="reveal-up"
+                            >
                                 <Image
                                     src="/assets/img/clarity.jpg"
                                     alt="Spa Treatment"
@@ -90,7 +92,9 @@ const WhyChooseUs = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full h-64 relative">
+                            <div className="w-full h-64 relative"
+                                data-aos="reveal-up"
+                            >
                                 <Image
                                     src="/assets/img/facial+acu+copy+3.webp"
                                     alt="Spa Environment"
@@ -115,7 +119,9 @@ const WhyChooseUs = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full h-64 relative">
+                            <div className="w-full h-64 relative"
+                                data-aos="reveal-up"
+                            >
                                 <Image
                                     src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
                                     alt="Expert Therapist"
