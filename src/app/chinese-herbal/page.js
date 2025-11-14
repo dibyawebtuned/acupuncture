@@ -296,7 +296,7 @@ const Page = () => {
                         </div>
                     </div>
 
-                    {/* Right (4/12 on large screens) */}
+                    {/* Right (4/12 on large screens) wewe */}
                     <div className="w-full lg:w-4/12 flex items-center justify-center">
                         {/* Sticky Sidebar with Hover Animation */}
                         <div className="lg:sticky lg:top-28 self-start transition-transform duration-300 ease-out">
