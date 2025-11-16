@@ -36,8 +36,8 @@ const Footer = () => {
                     setHoveredIndex(null);
                 }}
             >
-                <div className="padding-global text-center">
-                    <h2 className="heading-style-h3 text-balance mb-4">
+                <div className="padding-global text-center flex flex-col items-center">
+                    <h2 className="heading-style-h3 text-balance mb-4 w-[50%]">
                         Welcome to the Vantage Point Acupuncture Community
                     </h2>
                     <p className="text-size-medium text-gray-600 mb-10">
@@ -75,16 +75,16 @@ const Footer = () => {
                             "/assets/img/facial+acu+copy+3.webp",
                         ].map((src, idx) => {
                             const isEven = (idx + 1) % 2 === 0;
-                            const cardHeight = isEven ? 320 : 260; // taller for even-numbered images
+                            const cardHeight = isEven ? 400 : 300;
 
                             return (
                                 <div
                                     key={idx}
                                     onMouseEnter={() => setHoveredIndex(idx)}
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    className="relative rounded-[24px] overflow-hidden cursor-pointer transition-transform duration-500 shadow-[0_6px_18px_rgba(0,0,0,0.1)] hover:scale-[1.02]"
+                                    className="relative rounded-[24px] overflow-hidden cursor-pointer transition-transform duration-500 shadow-[0_6px_18px_rgba(0,0,0,0.1)]"
                                     style={{
-                                        width: "280px",
+                                        width: "300px",
                                         height: `${cardHeight}px`,
                                         transform: `rotate(${hoveredIndex === idx ? 0 : rotations[idx]}deg)`,
                                         transition: "transform 0.4s ease, height 0.4s ease",
