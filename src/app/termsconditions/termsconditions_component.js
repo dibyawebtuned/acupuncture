@@ -12,7 +12,7 @@ const TermsConditionsComponent = () => {
             title: "1. Introduction",
             content: (
                 <>
-                    <p className="leading-relaxed text-lg">
+                    <p className="leading-relaxed text-[16px]">
                         Welcome to our website. By accessing or using our Service, you agree
                         to be bound by these Terms and Conditions. Please read them
                         carefully before using the Service.
@@ -20,17 +20,18 @@ const TermsConditionsComponent = () => {
                 </>
             ),
         },
+
         {
             id: 2,
             title: "2. Use of Service",
             content: (
                 <>
-                    <p className="leading-relaxed mb-4">
+                    <p className="leading-relaxed mb-4 text-[16px]">
                         You agree to use the Service only for lawful purposes and in a way
                         that does not infringe upon the rights of, restrict, or inhibit
                         anyone else use of the Service.
                     </p>
-                    <ul className="list-disc ml-6 space-y-2 text-lg">
+                    <ul className="list-disc ml-6 space-y-2 text-[16px]">
                         <li>Do not attempt to gain unauthorized access to our systems.</li>
                         <li>
                             Do not engage in activities that may damage or disrupt the Service.
@@ -43,33 +44,36 @@ const TermsConditionsComponent = () => {
                 </>
             ),
         },
+
         {
             id: 3,
             title: "3. Intellectual Property",
             content: (
-                <p className="leading-relaxed text-lg">
+                <p className="leading-relaxed text-[16px]">
                     All content, trademarks, logos, and materials provided on the Service
                     are the property of the Company or its licensors. You may not reuse,
                     reproduce, or distribute this content without permission.
                 </p>
             ),
         },
+
         {
             id: 4,
             title: "4. Limitation of Liability",
             content: (
-                <p className="leading-relaxed text-lg">
+                <p className="leading-relaxed text-[16px]">
                     We are not liable for any damages resulting from your use or inability
                     to use the Service. The Service is provided on an “as is” and “as
                     available” basis without any warranties of any kind.
                 </p>
             ),
         },
+
         {
             id: 5,
             title: "5. Governing Law",
             content: (
-                <p className="leading-relaxed text-lg">
+                <p className="leading-relaxed text-[16px]">
                     These Terms shall be governed by and construed in accordance with the
                     laws of your jurisdiction. Any disputes arising under these Terms will
                     be subject to the exclusive jurisdiction of the courts located in your
@@ -77,16 +81,17 @@ const TermsConditionsComponent = () => {
                 </p>
             ),
         },
+
         {
             id: 6,
             title: "6. Contact Us",
             content: (
                 <>
-                    <p className="leading-relaxed mb-4 text-lg">
+                    <p className="leading-relaxed mb-4 text-[16px]">
                         If you have any questions about these Terms and Conditions, please
                         contact us:
                     </p>
-                    <ul className="list-disc ml-6 space-y-2 text-lg">
+                    <ul className="list-disc ml-6 space-y-2">
                         <li>
                             By email:{" "}
                             <a
@@ -109,35 +114,42 @@ const TermsConditionsComponent = () => {
     ];
 
     return (
-        <>
-            {/* Header Section */}
-            <header
-                className="relative bg-cover bg-center h-[400px] sm:h-[500px] flex items-center justify-center text-center text-white"
-                style={{ backgroundImage: `url(${headerBgImage})` }}
-            >
-                <div className="absolute inset-0 bg-black/60"></div>
-                <div className="relative z-10 px-4 md:px-8 flex flex-col items-center justify-center h-full">
-                    <h1 className="text-4xl md:text-5xl font-extrabold mb-2">
+        <div className="pt-[130px] bg-[#EAF0F0]">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col">
+                {/* Heading */}
+                <div data-scroll-section className="flex flex-col gap-3 text-left mb-10 md:mb-6">
+                    {/* Section Label (AOS) */}
+                    <div
+                        className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
                         Terms & Conditions
-                    </h1>
-                    <p className="text-lg italic">Last Updated: {lastUpdated}</p>
-                </div>
-            </header>
+                    </div>
 
-            {/* Main Content */}
-            <main className="p-6 md:p-10 bg-[#f6f0e8] rounded-lg shadow-lg text-gray-800 font-ppNeueMontreal">
-                <div className="container mx-auto">
+                    {/* Heading (AOS) */}
+                    <div
+                        className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        Terms & Conditions
+                    </div>
+                </div>
+
+                {/* Main Content */}
+                <main className="text-gray-800 font-ppNeueMontreal">
                     {sections.map((section) => (
                         <section key={section.id} className="mb-10">
-                            <div className="text-2xl md:text-3xl text-[#0b3d91] border-b border-gray-300 pb-2 mb-4 mt-6 font-ppNeueMontreal">
+                            <div className="text-2xl md:text-3xl text-gray-700 border-b border-gray-300 pb-2 mb-4 mt-6 font-testSignifier font-medium">
                                 {section.title}
                             </div>
-                            <div className="font-ppNeueMontreal">{section.content}</div>
+                            <div className="font-ppNeueMontreal text-gray-600 ">{section.content}</div>
                         </section>
                     ))}
-                </div>
-            </main>
-        </>
+                </main>
+            </div>
+        </div>
     );
 };
 
