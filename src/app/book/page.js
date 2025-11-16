@@ -1,11 +1,42 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const BookAppointment = () => {
     const router = useRouter();
+
+    useEffect(() => {
+        // Respect reduced motion
+        const reduce = typeof window !== "undefined" &&
+            window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (!reduce) {
+            AOS.init({
+                duration: 700,
+                easing: "ease-out-cubic",
+                once: true,
+                offset: 80,
+                anchorPlacement: "top-bottom",
+            });
+        }
+
+        // Optional: refresh on resize to recalc positions
+        const onResize = () => {
+            try {
+                AOS.refresh();
+            } catch { }
+        };
+        window.addEventListener("resize", onResize);
+        return () => window.removeEventListener("resize", onResize);
+    }, []);
+
+
 
     return (
         <div className="pt-[130px] bg-[#EAF0F0]">
@@ -15,11 +46,13 @@ const BookAppointment = () => {
                     <div
                         className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
                         data-aos="fade-up"
-                        data-aos-delay="100"
-                    >
+                        data-aos-delay="100">
                         Book now
                     </div>
-                    <div className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal">
+
+                    <div className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
                         Book an Appointment
                     </div>
                     {/* <p className="text-gray-600 mt-2 text-[15px]">
@@ -27,10 +60,12 @@ const BookAppointment = () => {
                     </p> */}
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-[30px] items-stretch">
 
+                <div className="flex flex-col lg:flex-row gap-[30px] items-stretch">
                     {/* Image */}
-                    <div className="flex-1 relative rounded-2xl overflow-hidden min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
+                    <div className="flex-1 relative rounded-2xl overflow-hidden min-h-[300px] md:min-h-[400px] lg:min-h-[500px]"
+                        data-aos="fade-right"
+                        data-aos-delay="150">
                         <Image
                             src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
                             alt="Book Appointment"
@@ -41,72 +76,58 @@ const BookAppointment = () => {
                     </div>
 
                     {/* Booking Form */}
-                    <div className="flex-1 bg-white p-6 sm:p-8 lg:p-12 rounded-2xl">
+                    <div className="flex-1 bg-white p-6 sm:p-8 lg:p-12 rounded-2xl"
+                        data-aos="fade-left"
+                        data-aos-delay="250">
                         <form className="space-y-5">
-
                             {/* Name & Email */}
-                            <div className="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px]">
+                            <div className="flex flex-col sm:flex-row gap-5 sm:gap-[30px]">
                                 {/* Name */}
-                                <div className="flex-1">
-                                    <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
-                                        Full Name
-                                    </label>
+                                <div className="flex-1 ">
                                     <input
                                         type="text"
                                         placeholder="Enter your full name"
-                                        className="font-ppNeueMontreal w-full border border-gray-300 rounded-lg px-3 py-2.5 text-[15px] focus:ring-2 focus:ring-[#0B3D91] focus:outline-none"
+                                        className="form-input w-full border! border-gray-300! rounded-lg! px-3! py-2.5! text-[15px]! focus:ring-2 focus:ring-[#0B3D91] focus:outline-none"
                                     />
                                 </div>
 
                                 {/* Email */}
                                 <div className="flex-1">
-                                    <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
-                                        Email Address
-                                    </label>
                                     <input
                                         type="email"
                                         placeholder="Enter your email"
-                                        className="font-ppNeueMontreal w-full border border-gray-300 rounded-lg px-3 py-2.5 text-[15px] focus:ring-2 focus:ring-[#0B3D91] focus:outline-none"
+                                        className="form-input w-full border! border-gray-300! rounded-lg! px-3! py-2.5! text-[15px]! focus:ring-2 focus:ring-[#0B3D91] focus:outline-none"
                                     />
                                 </div>
                             </div>
 
                             {/* Phone & Preferred Date */}
-                            <div className="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px]">
+                            <div className="flex flex-col sm:flex-row gap-5 sm:gap-[30px]">
                                 {/* Phone */}
                                 <div className="flex-1">
-                                    <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
-                                        Phone Number
-                                    </label>
                                     <input
                                         type="tel"
                                         placeholder="Enter your phone number"
-                                        className="font-ppNeueMontreal w-full border border-gray-300 rounded-lg px-3 py-2.5 text-[15px] focus:ring-2 focus:ring-[#0B3D91] focus:outline-none"
+                                        className="form-input w-full border! border-gray-300! rounded-lg! px-3! py-2.5! text-[15px]! focus:ring-2 focus:ring-[#0B3D91] focus:outline-none"
                                     />
                                 </div>
 
                                 {/* Preferred Date */}
                                 <div className="flex-1">
-                                    <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
-                                        Preferred Date
-                                    </label>
                                     <input
                                         type="date"
-                                        className="font-ppNeueMontreal w-full border border-gray-300 rounded-lg px-3 py-2.5 text-[15px] text-gray-700 focus:ring-2 focus:ring-[#0B3D91] focus:outline-none"
+                                        className="form-input w-full border! border-gray-300! rounded-lg! px-3! py-2.5! text-[15px]! focus:ring-2 focus:ring-[#0B3D91] focus:outline-none"
                                     />
                                 </div>
                             </div>
 
                             {/* Message */}
                             <div>
-                                <label className="block text-gray-600 mb-1 text-[15px] sm:text-[16px] font-medium font-ppNeueMontreal">
-                                    Message / Notes
-                                </label>
                                 <textarea
                                     placeholder="Tell us about your concern or request..."
                                     rows={4}
-                                    className="font-ppNeueMontreal w-full border border-gray-300 rounded-lg px-3 py-2.5 text-[15px] focus:ring-2 focus:ring-[#0B3D91] focus:outline-none resize-none"
-                                ></textarea>
+                                    className="form-input w-full border! border-gray-300! rounded-lg! px-3! py-2.5! text-[15px]! focus:ring-2 focus:ring-[#0B3D91] focus:outline-none">
+                                </textarea>
                             </div>
 
                             {/* Submit Button */}
@@ -122,10 +143,10 @@ const BookAppointment = () => {
                 </div>
 
                 {/* Contact Info Footer */}
-                <div className="mt-8 text-center text-gray-600 text-sm">
+                {/* <div className="mt-8 text-center text-gray-600 text-sm">
                     <p>Need help? Call us at <span className="text-[#0B3D91] font-semibold">0417 794 279</span></p>
                     <p>Email: <span className="text-[#0B3D91] font-semibold">vantage@gmail.com</span></p>
-                </div>
+                </div> */}
             </div>
         </div>
     );

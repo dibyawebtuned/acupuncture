@@ -23,7 +23,9 @@ const Nav = () => {
   return (
     <div className="nav-wrapper">
       <div className="global-styles w-embed">
-        <style>{`
+
+        <style>
+          {`
           html { font-size: 1.125rem; }
           @media screen and (max-width: 1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
           @media screen and (max-width: 1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
@@ -158,7 +160,9 @@ const Nav = () => {
               display: block; white-space: nowrap; padding: .6rem 1rem;
             }
           }
-        `}</style>
+        `}
+        </style>
+
       </div>
 
       {/* Top Nav Banner */}
@@ -205,25 +209,6 @@ const Nav = () => {
         <div className="container-large">
           <div className="navbar3_container">
             {/* Hamburger (mobile/tablet only) */}
-            {/* <button
-              type="button"
-              className="navbar3_hamburger"
-              aria-controls="primary-navigation"
-              aria-expanded={mobileOpen ? "true" : "false"}
-              aria-label={mobileOpen ? "Close menu" : "Open menu"}
-              onClick={toggleMobile}
-            >
-              {!mobileOpen ? (
-                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              ) : (
-                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                </svg>
-              )}
-            </button> */}
-
             <button
               aria-label="Menu"
               aria-expanded={mobileOpen}
@@ -319,13 +304,13 @@ const Nav = () => {
             </Link>
 
             {/* Book Online Button */}
-            <a
+            <Link
               id="w-node-faa13c98-fd3f-2e52-c5d1-270e9e23b296-9e23b273"
-              href="/courses"
+              href="/book"
               className="button is-navbar3-button w-button"
             >
               Book An Appointment
-            </a>
+            </Link>
 
             <div className="navbar3_menu-background">
               <Image
