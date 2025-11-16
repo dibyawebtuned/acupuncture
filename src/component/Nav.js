@@ -176,7 +176,7 @@ const Nav = () => {
           <Link
             data-w-id="806e85be-9c57-a40c-eb51-68a25033def0"
             href="/"
-            className="banner10_close-button w-inline-block"
+            className="banner10_close-button w-inline-block "
           >
             <Image
               src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316246b84aee82_icon_close-banner.svg"
@@ -353,8 +353,9 @@ const Nav = () => {
           transform:
             "translate3d(0, -8rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
         }}
-        className="nav-island-wrapper"
-      ></div>
+        className="nav-island-wrapper">
+
+      </div>
     </div>
   );
 };

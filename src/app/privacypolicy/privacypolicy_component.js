@@ -113,17 +113,17 @@ const PrivacyPolicyComponent = () => {
                         {/* Dynamic Sections */}
                         {sections.map((section, index) => (
                             <section key={index} className="mb-8">
-                                <div className={`text-2xl md:text-3xl text-gray-700 pb-2 border-b border-gray-300 mb-4 mt-6 font-ppneuemontreal font-medium`}>
+                                <div className={`text-2xl md:text-3xl text-gray-600 pb-2 border-b border-gray-300 mb-4 mt-6 font-ppneuemontreal font-medium`}>
                                     {section.title}
                                 </div>
 
                                 {section.description && (
-                                    <p className="leading-relaxed mb-4 font-ppNeueMontreal text-gray-700">{section.description}</p>
+                                    <p className="leading-relaxed mb-4 font-ppNeueMontreal text-gray-600">{section.description}</p>
                                 )}
 
                                 {/* List Items */}
                                 {section.list && (
-                                    <ul className="list-disc ml-6 space-y-2 mb-4 font-ppNeueMontreal">
+                                    <ul className="list-disc ml-6 space-y-2 mb-4 font-ppNeueMontreal text-gray-600">
                                         {section.list.map((item, i) => (
                                             <li key={i} className="leading-relaxed">
                                                 <strong>{item.label}</strong> {item.detail}

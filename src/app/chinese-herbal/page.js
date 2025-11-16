@@ -5,6 +5,7 @@ import MarqueeSection from "@/component/Marquee";
 import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ServiceGallery from "@/component/ServiceGallery";
 
 const Page = () => {
 
@@ -361,6 +362,10 @@ const Page = () => {
             </div>
 
             <div className="cursor-dot fixed top-0 left-0 w-3 h-3 bg-[#0B3D91] rounded-full pointer-events-none mix-blend-difference z-[9999]"></div>
+
+
+            {/* ServiceGallery */}
+            <ServiceGallery />
         </div>
     );
 };
