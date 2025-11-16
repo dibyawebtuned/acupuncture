@@ -13034,3 +13034,15 @@ footer,
     color: #0B3D91 !important;
   }
 }
+
+
+
+
+
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .header5_background-video {
+    display: block !important;
+  }
+}

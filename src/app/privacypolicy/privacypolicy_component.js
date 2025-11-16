@@ -76,24 +76,36 @@ const PrivacyPolicyComponent = () => {
     ];
 
     return (
-        <>
-            {/* Header */}
-            <header className="relative bg-cover bg-center h-[400px] sm:h-[500px] flex items-center justify-center text-center text-white" style={{ backgroundImage: `url(${headerBgImage})` }}>
-                <div className="absolute inset-0 bg-black/60"></div>
-                <div className="relative z-10 px-4 md:px-8 pt-10 flex flex-col items-center justify-center h-full">
-                    <h1 className="text-4xl md:text-5xl font-extrabold mb-2">Privacy Policy</h1>
-                    <p className="text-lg italic">Last Updated: {lastUpdated}</p>
-                </div>
-            </header>
+        <div className="pt-[130px] bg-[#EAF0F0]">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col">
+                {/* Heading */}
+                <div data-scroll-section className="flex flex-col gap-3 text-left mb-10 md:mb-6">
+                    {/* Section Label (AOS) */}
+                    <div
+                        className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        Simple & transparent
+                    </div>
 
-            {/* Main Content */}
-            <div className="p-6 md:p-8 bg-[#f6f0e8] rounded-lg shadow-lg text-gray-800">
-                <div className="container mx-auto">
+                    {/* Heading (AOS) */}
+                    <div
+                        className="font-ppNeueMontreal text-[40px] sm:text-[40px] md:text-[64px] lg:text-[80px] text-[#2B2B2B] leading-[1.15] sm:leading-[1.1] md:leading-[1.2] tracking-normal"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        Privacy Policy
+                    </div>
+                </div>
+
+                {/* Main Content */}
+                <div className="">
                     <div className="policy-content space-y-10">
 
                         {/* Introduction */}
                         <section className="text-lg leading-relaxed">
-                            <p className="font-ppNeueMontreal text-[#234041]">
+                            <p className="text-gray-600 font-ppNeueMontreal text-[16px]">
                                 This Privacy Policy describes our policies and procedures on the collection, use, and disclosure of your information when you use the Service and tells you about your privacy rights and how the law protects you.
                             </p>
                         </section>
@@ -101,12 +113,12 @@ const PrivacyPolicyComponent = () => {
                         {/* Dynamic Sections */}
                         {sections.map((section, index) => (
                             <section key={index} className="mb-8">
-                                <div className={`text-2xl md:text-3xl text-[#0b3d91] pb-2 border-b border-gray-300 mb-4 mt-6 font-ppNeueMontreal`}>
+                                <div className={`text-2xl md:text-3xl text-gray-700 pb-2 border-b border-gray-300 mb-4 mt-6 font-ppneuemontreal font-medium`}>
                                     {section.title}
                                 </div>
 
                                 {section.description && (
-                                    <p className="leading-relaxed mb-4 font-ppNeueMontreal">{section.description}</p>
+                                    <p className="leading-relaxed mb-4 font-ppNeueMontreal text-gray-700">{section.description}</p>
                                 )}
 
                                 {/* List Items */}
@@ -123,7 +135,7 @@ const PrivacyPolicyComponent = () => {
                                 {/* Paragraphs */}
                                 {section.paragraphs &&
                                     section.paragraphs.map((para, i) => (
-                                        <p key={i} className="leading-relaxed mb-4 font-ppNeueMontreal">
+                                        <p key={i} className="leading-relaxed mb-4 font-ppNeueMontreal text-gray-600">
                                             {para}
                                         </p>
                                     ))}
@@ -148,13 +160,13 @@ const PrivacyPolicyComponent = () => {
                                 {section.subSections &&
                                     section.subSections.map((sub, si) => (
                                         <div key={si}>
-                                            <span className="text-xl md:text-2xl font-medium text-[#0b3d91] mb-3 mt-5">
+                                            <span className="text-xl md:text-2xl font-medium text-gray-700 mb-3 mt-5 font-testSignifier">
                                                 {sub.subtitle}
                                             </span>
 
                                             {sub.content.map((item, ci) => (
-                                                <div key={ci} className="mb-4">
-                                                    <span className="text-lg md:text-xl font-medium text-[#0b3d91] mb-2 mt-4">
+                                                <div key={ci} className="mb-4 px-9">
+                                                    <span className="text-lg md:text-xl font-medium text-gray-700 mb-2 mt-4 font-testSignifier">
                                                         {item.subtitle}
                                                     </span>
                                                     <p className="leading-relaxed mb-2 font-ppNeueMontreal">{item.text}</p>
@@ -176,7 +188,7 @@ const PrivacyPolicyComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

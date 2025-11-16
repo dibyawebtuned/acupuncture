@@ -7,13 +7,13 @@ import PrivacyPolicy from "./privacypolicy_component";
 const page = () => {
     return (
         <div className="flex flex-col min-h-screen">
-            <Nav />
+            {/* <Nav /> */}
 
             <main className="grow">
                 <PrivacyPolicy />
             </main>
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

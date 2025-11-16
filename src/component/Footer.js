@@ -3,6 +3,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const instagramImages = [
     "/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg",
@@ -26,7 +28,16 @@ const Footer = () => {
         setMousePos({ x, y });
     };
 
+    useEffect(() => {
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: true,
+        });
+    }, []);
+
     return (
+
         <footer className="bg-white text-gray-700">
             {/* Instagram Section */}
             <section className="py-16 bg-[#F9F5EE] text-center relative">
@@ -114,9 +125,9 @@ const Footer = () => {
 
             {/* Newsletter + Links Section */}
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 py-16 border-t border-b border-gray-200">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10 border-t border-b border-gray-200">
                     {/* Newsletter (Left Half) */}
-                    <div className="w-full md:w-1/2">
+                    <div className="w-full md:w-1/2 py-16">
                         <div className="text-[28px] md:text-[34px] mb-6 font-ppneuemontreal leading-snug">
                             Expert advice, updates, <br /> and perks for your inbox.
                         </div>
@@ -125,20 +136,27 @@ const Footer = () => {
                                 type="email"
                                 placeholder="Enter your email"
                                 required
-                                className="flex-1 p-3 border border-gray-300 rounded-l-full"
+                                className="flex-1 p-5 border border-r-0! border-gray-300 rounded-l-full text-[14px]! tracking-wider font-normal! outline-none focus:outline-none focus:ring-0 focus:border-gray-300"
                             />
 
                             <button
                                 type="submit"
-                                className="px-6 rounded-r-full! border! border-l-0! border-gray-300! text-white"
+                                className="px-6 rounded-r-full! border! border-l-0! border-gray-300! text-[14px]! tracking-wider text-[#878787]!"
                             >
                                 Subscribe
                             </button>
                         </form>
                     </div>
 
+                    <div className="w-px self-stretch bg-gray-200"
+                        data-aos="fade-down"
+                        data-aos-delay="200"
+                        data-aos-duration="900"
+                    >
+                    </div>
+
                     {/* Footer Links (Right Half) */}
-                    <div className="w-full md:w-1/2 flex flex-wrap justify-between gap-8">
+                    <div className="w-full md:w-1/2 flex flex-wrap justify-between gap-8 py-16">
                         {/* Treatments */}
                         <div className="min-w-[120px] flex-1">
                             {/* Title */}
