@@ -63,7 +63,7 @@ const Footer = () => {
 
                     {/* --- Interactive Image Grid --- */}
                     <div
-                        className="flex flex-wrap justify-center gap-8 transition-transform duration-300"
+                        className="flex flex-wrap justify-center gap-8 transition-transform duration-300 pt-15"
                         style={{
                             transform: `translate(${mousePos.x}px, ${mousePos.y}px)`,
                         }}
