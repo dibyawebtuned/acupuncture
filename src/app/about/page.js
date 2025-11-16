@@ -78,7 +78,7 @@ const Page = () => {
                         {/* First Image (bottom -> top) */}
                         <div
                             ref={ref1}
-                            className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
+                            className="flex-1 w-full h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
                             data-aos="reveal-up"
                         >
                             <Image
@@ -130,6 +130,7 @@ const Page = () => {
                 </div>
             </div>
 
+            {/* Services */}
             <section>
                 <div data-aos="fade-up"
                     data-aos-duration="1200"
@@ -148,6 +149,7 @@ const Page = () => {
                 </div>
             </section>
 
+            {/* TailoredPlansSection */}
             <section>
                 {/* TailoredPlansSection */}
                 <TailoredPlansSection />

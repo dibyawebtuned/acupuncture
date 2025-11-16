@@ -12,6 +12,7 @@ const servicesData = [
         features: ["Fine, sterile needles", "Comfort-first approach"],
         link: "/signature-facials",
     },
+
     {
         icon: <FaSpa size={32} />,
         title: "Chinese Herbal Medicine",
@@ -20,6 +21,7 @@ const servicesData = [
         features: ["Individually selected herbs", "Safety-checked with meds"],
         link: "/body-scrubs",
     },
+
     {
         icon: <FaGem size={32} />,
         title: "Facial Acupuncture",
@@ -28,6 +30,7 @@ const servicesData = [
         features: ["Needle-only (no fillers)", "Whole-person focus"],
         link: "/body-scrubs",
     },
+
     {
         icon: <FaCircleNotch size={32} />,
         title: "Massage & Cupping",
