@@ -10,6 +10,12 @@ const Nav = () => {
   const [treatmentsOpen, setTreatmentsOpen] = useState(false);
   const pathname = usePathname();
 
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "auto";
+  }, [mobileOpen]);
+
+
   // Close menus on route change
   useEffect(() => {
     setMobileOpen(false);
@@ -21,7 +27,7 @@ const Nav = () => {
   const toggleTreatments = useCallback(() => setTreatmentsOpen((v) => !v), []);
 
   return (
-    <div className="nav-wrapper">
+    <div className="nav-wrapper relative z-[3000]">
       <div className="global-styles w-embed">
 
         <style>
@@ -169,7 +175,7 @@ const Nav = () => {
       <div className="site-notification-banner">
         <div className="banner10_content-wrapper">
 
-          <a href="/functional-words" className="banner10_content w-inline-block">
+          <a href="/functional-words" className="banner10_content w-inline-block py-2">
             <div className="banner10-text">
               Acupuncture in Gold Coast | <span className="text-span-16">Vantage Point Acupuncture</span>
               <span className="text-span-15"></span>
@@ -177,10 +183,10 @@ const Nav = () => {
           </a>
 
           {/* LOGO */}
-          <Link
+          {/* <Link
             data-w-id="806e85be-9c57-a40c-eb51-68a25033def0"
             href="/"
-            className="banner10_close-button w-inline-block "
+            className="banner10_close-button w-inline-block"
           >
             <Image
               src="https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316246b84aee82_icon_close-banner.svg"
@@ -190,14 +196,14 @@ const Nav = () => {
               width={10}
               height={10}
             />
-          </Link>
+          </Link> */}
         </div>
       </div>
 
       {/* Nav Menus */}
       <div
         data-animation="over-left"
-        className="navbar3_component w-nav"
+        className="navbar3_component w-nav  bg-white shadow-sm sticky top-0 z-[3000]"
         data-easing2="ease"
         fs-scrolldisable-element="smart-nav"
         data-easing="ease"
@@ -207,7 +213,7 @@ const Nav = () => {
         data-duration="400"
       >
         <div className="container-large">
-          <div className="navbar3_container">
+          <div className="navbar3_containe flex items-center justify-between py-3">
             {/* Hamburger (mobile/tablet only) */}
             <button
               aria-label="Menu"
@@ -302,6 +308,131 @@ const Nav = () => {
             <Link href="/" aria-current="page" className="navbar3_logo-link w-nav-brand w--current">
               <Image src="/assets/img/logoo.png" alt="" style={{ width: "280px", height: "auto" }} width={280} height={10} />
             </Link>
+
+
+            {/* === Mobile View Navigation (≤991px) === */}
+            <div className="navbar3_mobile lg:hidden">
+              {/* Hamburger Button */}
+              <button
+                aria-label="Toggle menu"
+                aria-expanded={mobileOpen}
+                onClick={toggleMobile}
+                className="navbar3_hamburger"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  {mobileOpen ? (
+                    <path
+                      d="M6 6L18 18M6 18L18 6"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  ) : (
+                    <path
+                      d="M3 6h18M3 12h18M3 18h18"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  )}
+                </svg>
+              </button>
+
+              {/* Drawer Menu */}
+              <nav
+                role="navigation"
+                className={`navbar3_menu w-nav-menu ${mobileOpen ? "is-open" : ""}`}
+              >
+                {/* Close Drawer Button */}
+                <button
+                  type="button"
+                  className="navbar3_close-drawer"
+                  onClick={closeMobile}
+                  aria-label="Close menu"
+                >
+                  ✕
+                </button>
+
+                <Link href="/about" onClick={closeMobile} className="w-nav-link text-[#0B3D91]">
+                  About Us
+                </Link>
+
+                {/* Treatments Dropdown */}
+                <div className="w-dropdown">
+                  <button
+                    className="w-dropdown-toggle text-[#0B3D91] flex justify-between items-center w-full"
+                    onClick={toggleTreatments}
+                  >
+                    Our Treatments
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`h-4 w-4 transition-transform ${treatmentsOpen ? "rotate-180" : ""
+                        }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  <div
+                    className={`w-dropdown-list ${treatmentsOpen ? "is-open" : ""
+                      } pl-2 flex flex-col`}
+                  >
+                    <Link href="/chinese-herbal" onClick={closeMobile} className="w-dropdown-link">
+                      Chinese Herbal Medicine
+                    </Link>
+                    <Link href="/constitutional-facial" onClick={closeMobile} className="w-dropdown-link">
+                      Constitutional Facial Acupuncture
+                    </Link>
+                    <Link href="/acupuncture" onClick={closeMobile} className="w-dropdown-link">
+                      Acupuncture
+                    </Link>
+                    <Link href="/women-health" onClick={closeMobile} className="w-dropdown-link">
+                      Women’s Health
+                    </Link>
+                    <Link href="/Fertility" onClick={closeMobile} className="w-dropdown-link">
+                      Fertility & IVF Support
+                    </Link>
+                    <Link href="/pain-management" onClick={closeMobile} className="w-dropdown-link">
+                      Musculoskeletal Pain Management
+                    </Link>
+                    <Link href="/massage" onClick={closeMobile} className="w-dropdown-link">
+                      Massage & Cupping
+                    </Link>
+                    <Link href="/sound-therapy" onClick={closeMobile} className="w-dropdown-link">
+                      Sound Therapy
+                    </Link>
+                  </div>
+                </div>
+
+                <Link href="/gallery" onClick={closeMobile} className="w-nav-link text-[#0B3D91]">
+                  Gallery
+                </Link>
+                <Link href="/faq" onClick={closeMobile} className="w-nav-link text-[#0B3D91]">
+                  FAQ
+                </Link>
+                <Link href="/contact" onClick={closeMobile} className="w-nav-link text-[#0B3D91]">
+                  Contact Us
+                </Link>
+
+                <Link
+                  href="/book"
+                  onClick={closeMobile}
+                  className="button is-navbar3-button w-button mt-4"
+                >
+                  Book An Appointment
+                </Link>
+              </nav>
+
+              {/* Overlay */}
+              <div
+                className={`mobile-nav-overlay ${mobileOpen ? "is-open" : ""}`}
+                onClick={closeMobile}
+              />
+            </div>
+
 
             {/* Book Online Button */}
             <Link
