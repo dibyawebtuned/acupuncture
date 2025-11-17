@@ -9,24 +9,28 @@ const WEBFLOW_JS =
 export default function DoYouKnow() {
     useEffect(() => {
         const elements = document.querySelectorAll(".header80_image-wrapper");
-        let ticking = false;
 
         const handleScroll = () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrollY = window.scrollY;
-                    elements.forEach((el, i) => {
-                        const speed = 0.05 + i * 0.02;
-                        el.style.transform = `translateY(${-scrollY * speed}px)`;
-                    });
-                    ticking = false;
-                });
-                ticking = true;
-            }
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+
+            elements.forEach((el, i) => {
+                const rect = el.getBoundingClientRect();
+                const elementCenter = rect.top + rect.height / 2;
+                const progress = (windowHeight / 2 - elementCenter) / windowHeight;
+                const speed = 30 + i * 10;
+                el.style.transform = `translateY(${progress * speed}px)`;
+            });
         };
 
+        handleScroll();
         window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleScroll);
+        };
     }, []);
 
     const imageGroups = [
@@ -40,10 +44,7 @@ export default function DoYouKnow() {
             "/assets/img/moxibustion-cones-moxa-treatment-points-top-needles.webp",
             "/assets/img/ImageForNews_765936_1701383544529230.webp",
         ],
-        [
-            "/assets/img/facial+acu+copy+3.webp",
-            "/assets/img/clarity.jpg",
-        ],
+        ["/assets/img/facial+acu+copy+3.webp", "/assets/img/clarity.jpg"],
     ];
 
     return (
@@ -51,30 +52,27 @@ export default function DoYouKnow() {
             className="section_header80 background-color-whitesmoke"
             style={{
                 margin: 0,
-                padding: "4rem 0", // reduce top/bottom spacing
+                padding: "6rem 0",
                 overflow: "hidden",
+                position: "relative",
+                minHeight: "100vh",
             }}
         >
             <Script src={WEBFLOW_JS} strategy="afterInteractive" />
 
-            <div
-                className="header80_component"
-                style={{
-                    marginBottom: 0,
-                    paddingBottom: 0,
-                }}
-            >
-                <div
-                    className="header80_content-wrapper"
-                    style={{ marginBottom: 0, paddingBottom: 0 }}
-                >
-                    {/* LEFT COLUMN */}
+            <div className="header80_component" style={{ position: "relative" }}>
+                <div className="header80_content-wrapper">
+
                     <div className="header80_images-wrapper">
                         <div className="header80_image-list">
                             {imageGroups[0].map((src, i) => (
                                 <div
                                     key={i}
                                     className={`header80_image-wrapper is-image-${i + 1}`}
+                                    style={{
+                                        transition: "transform 0.3s ease-out",
+                                        willChange: "transform",
+                                    }}
                                 >
                                     <img
                                         src={src}
@@ -86,13 +84,17 @@ export default function DoYouKnow() {
                         </div>
                     </div>
 
-                    {/* RIGHT COLUMN 1 */}
+
                     <div className="header80_images-wrapper images-wrapper-right">
                         <div className="header80_image-list image-list-right">
                             {imageGroups[1].map((src, i) => (
                                 <div
                                     key={i + 5}
                                     className={`header80_image-wrapper is-image-${i + 5}`}
+                                    style={{
+                                        transition: "transform 0.3s ease-out",
+                                        willChange: "transform",
+                                    }}
                                 >
                                     <img
                                         src={src}
@@ -104,13 +106,17 @@ export default function DoYouKnow() {
                         </div>
                     </div>
 
-                    {/* RIGHT COLUMN 2 */}
+
                     <div className="header80_images-wrapper images-wrapper-right">
                         <div className="header80_image-list image-list-left">
                             {imageGroups[2].map((src, i) => (
                                 <div
                                     key={i + 7}
                                     className={`header80_image-wrapper is-image-${i + 7}`}
+                                    style={{
+                                        transition: "transform 0.3s ease-out",
+                                        willChange: "transform",
+                                    }}
                                 >
                                     <img
                                         src={src}
@@ -122,14 +128,8 @@ export default function DoYouKnow() {
                         </div>
                     </div>
 
-                    {/* TEXT CONTENT */}
-                    <div
-                        className="header80_content"
-                        style={{
-                            marginBottom: 0,
-                            paddingBottom: 0,
-                        }}
-                    >
+
+                    <div className="header80_content" style={{ zIndex: 2 }}>
                         <div className="text-align-center max-width-small align-center">
                             <div className="section_gallery6-content">
                                 <p className="heading-style-h3">Did You Know?</p>
@@ -160,13 +160,6 @@ export default function DoYouKnow() {
                             </div>
                         </div>
                     </div>
-
-                    {/* IX Trigger for Webflow */}
-                    <div
-                        data-w-id="c1e95d59-826e-5b17-4b4a-0e5bccac428f"
-                        className="header80_ix-trigger"
-                        style={{ display: "none" }}
-                    ></div>
                 </div>
             </div>
         </header>
