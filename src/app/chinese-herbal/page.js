@@ -17,7 +17,9 @@ const Page = () => {
         let y = 0;
         let targetX = 0;
         let targetY = 0;
-        let ease = 0.12; // Adjust to control the smoothness (0.08–0.2 recommended)
+        let ease = 0.12;
+
+
 
         const updateCursor = () => {
             // Lerp (linear interpolation)
@@ -85,7 +87,7 @@ const Page = () => {
                         >
                             <div className="relative w-full min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden rounded-md shadow-md">
                                 <Image
-                                    src="/assets/img/facial+acu+copy+3.webp"
+                                    src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
                                     alt="Facial Acupuncture"
                                     fill
                                     className="object-cover"
@@ -226,7 +228,7 @@ const Page = () => {
                                             data-aos-delay="400"
                                         >
                                             <Image
-                                                src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
+                                                src="/assets/img/footer_one.jpg"
                                                 alt="Chinese Herbal Medicine"
                                                 fill
                                                 className="object-cover"
