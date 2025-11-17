@@ -15,7 +15,7 @@ import Footer from "@/component/Footer";
 export default function Home() {
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Hero />
       <DoYouKnow />
       <ClarityBeforeCare />

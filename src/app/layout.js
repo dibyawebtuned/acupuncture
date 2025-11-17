@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${testSignifier.variable} ${ppNeueMontreal.variable} antialiased flex flex-col min-h-screen`}
       >
-        <LenisSmoothScroll/>
+        <LenisSmoothScroll />
         {/* Header at the top */}
         <Nav />
 
