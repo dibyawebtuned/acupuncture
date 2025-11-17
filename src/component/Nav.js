@@ -75,13 +75,13 @@ const Nav = () => {
             </div>
 
             {/* CENTER LOGO */}
-            <div className="flex justify-center">
+            <Link href="/" className="flex justify-center">
               <img
                 src="/assets/img/logoo.png"
                 alt="Vantage Point Acupuncture Logo"
                 className="w-[280px] h-auto"
               />
-            </div>
+            </Link>
 
             {/* RIGHT BUTTON */}
             <div className="flex justify-end">
@@ -98,7 +98,9 @@ const Nav = () => {
       {/* MOBILE + TABLET NAV */}
       <nav className="lg:hidden! w-full bg-white/25 border border-[#e5e3d580] backdrop-blur-md px-4 py-3 flex justify-between items-center">
         <div className="flex justify-between items-center w-full">
-          <img src="/assets/img/logoo.png" alt="Vantage Point Acupuncture Logo" className="w-[180px] h-auto" />
+          <Link href="/">
+            <img src="/assets/img/logoo.png" alt="Vantage Point Acupuncture Logo" className="w-[180px] h-auto" />
+          </Link>
 
           <button onClick={() => setMobileOpen(true)}
             className="flex items-center">
@@ -132,7 +134,7 @@ const Nav = () => {
 
           {/* Menu items */}
           <ul className="mt-10 space-y-4! text-[#0b3d91]! text-lg font-ppNeueMontreal pl-0!">
-            <li><a href="#" className="no-underline! text-[#0b3d91]!">About Us</a></li>
+            <li><a href="/about" className="no-underline! text-[#0b3d91]!">About Us</a></li>
 
             {/* Mobile dropdown */}
             <li>
@@ -160,10 +162,14 @@ const Nav = () => {
           ${mobileDropdown ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0"}`}
               >
                 <ul className="ml-4 space-y-2! text-md pl-0!">
-                  <li className="pl-0!"><a href="#" className="no-underline! text-[#0b3d91]!">Acupuncture</a></li>
-                  <li className="pl-0!"><a href="#" className="no-underline! text-[#0b3d91]!">Chinese Medicine</a></li>
-                  <li className="pl-0!"><a href="#" className="no-underline! text-[#0b3d91]!">Cupping Therapy</a></li>
-                  <li className="pl-0!"><a href="#" className="no-underline! text-[#0b3d91]!">Pain Management</a></li>
+                  <li className="pl-0!"><a href="/chinese-herbal" className="no-underline! text-[#0b3d91]!">Chinese Herbal Medicine</a></li>
+                  <li className="pl-0!"><a href="/constitutional-facial" className="no-underline! text-[#0b3d91]!">Constitutional Facial Acupuncture</a></li>
+                  <li className="pl-0!"><a href="/acupuncture" className="no-underline! text-[#0b3d91]!">Acupuncture</a></li>
+                  <li className="pl-0!"><a href="/women-health" className="no-underline! text-[#0b3d91]!">Women’s Health</a></li>
+                  <li className="pl-0!"><a href="/Fertility" className="no-underline! text-[#0b3d91]!">Fertility & IVF Support</a></li>
+                  <li className="pl-0!"><a href="/pain-management" className="no-underline! text-[#0b3d91]!">Musculoskeletal Pain Management</a></li>
+                  <li className="pl-0!"><a href="/massage" className="no-underline! text-[#0b3d91]!">Massage & Cupping</a></li>
+                  <li className="pl-0!"><a href="/sound-therapy" className="no-underline! text-[#0b3d91]!">Sound Therapy</a></li>
                 </ul>
               </div>
             </li>
@@ -184,7 +190,6 @@ const Nav = () => {
 };
 
 export default Nav;
-
 
 
 
