@@ -19,33 +19,34 @@ const SimpleAccess = () => {
                     alt="TCM Treatment"
                     fill
                     priority
-                    className="object-cover object-center rounded-none!"
+                    className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-black/30" />
             </div>
 
             {/* Content */}
-            <div className="relative z-10 py-24 md:py-28 max-w-[1440px] mx-auto px-4 sm:px-6">
-                <div className="w-[80%]">
+            <div className="relative z-10 py-16 sm:py-20 md:py-28 max-w-[1440px] mx-auto px-4 sm:px-6">
+                <div className="w-full sm:w-[90%] md:w-[80%]">
+
                     {/* Header */}
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-12 leading-20!">
+                    <h2 className="text-xl sm:text-2xl md:text-4xl font-semibold mb-10 sm:mb-12 leading-snug sm:leading-normal">
                         What to Expect With Us? A calm, step-by-step approach guided by your goals.
                     </h2>
 
-                    {/* Steps - Styled like screenshot */}
-                    <div className="space-y-6 mt-10">
+                    {/* Steps */}
+                    <div className="space-y-5 sm:space-y-6 mt-6 sm:mt-10">
                         {steps.map((step) => (
                             <div
                                 key={step.number}
-                                className="flex items-center gap-4 rounded-md"
+                                className="flex items-start sm:items-center gap-3 sm:gap-4 rounded-md"
                             >
-                                {/* Blue Circle Number */}
-                                <div className="shrink-0 w-6 h-6 md:w-8 md:h-8 rounded-full bg-[#0B3D91] flex items-center justify-center text-white text-sm md:text-base font-normal">
+                                {/* Number Circle */}
+                                <div className="shrink-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-[#0B3D91] flex items-center justify-center text-white text-xs sm:text-sm md:text-base">
                                     {step.number}
                                 </div>
 
                                 {/* Text */}
-                                <span className="text-[28px] font-normal leading-snug text-left">
+                                <span className="text-lg sm:text-xl md:text-[28px] font-normal leading-snug text-left">
                                     {step.title}
                                 </span>
                             </div>
@@ -53,16 +54,16 @@ const SimpleAccess = () => {
                     </div>
 
                     {/* Button */}
-                    <div className="mt-12">
+                    <div className="mt-10 sm:mt-12">
                         <a
                             href="/courses"
-                            className="inline-flex items-center px-6 py-3 border border-white rounded-full hover:bg-white text-white transition"
+                            className="inline-flex items-center px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 border border-white rounded-full hover:bg-white text-white transition"
                         >
-                            <span className="text-white">Find a Course</span>
-                            <span className="ml-2">
+                            <span className="text-base sm:text-lg md:text-[20px] text-white underline-none!">Find a Course</span>
+                            <span className="ml-2 text-white">
                                 <svg
-                                    width="14"
-                                    height="5"
+                                    width="18"
+                                    height="8"
                                     viewBox="0 0 14 5"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
@@ -75,6 +76,7 @@ const SimpleAccess = () => {
                             </span>
                         </a>
                     </div>
+
                 </div>
             </div>
         </section>
