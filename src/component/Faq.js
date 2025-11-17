@@ -25,6 +25,11 @@ const Faq = ({ showHeader = true }) => {
             answer:
                 "Yes, where appropriate. Formulas are selected individually. Always tell us about medicines and supplements so we can check for potential interactions.",
         },
+        {
+            question: "Do you offer Chinese herbal medicine?",
+            answer:
+                "Yes, where appropriate. Formulas are selected individually. Always tell us about medicines and supplements so we can check for potential interactions.",
+        },
     ];
 
     const toggleFAQ = (index) => {
@@ -32,7 +37,7 @@ const Faq = ({ showHeader = true }) => {
     };
 
     return (
-        <div className="bg-[#EAF0F0]">
+        <div className="bg-[#f9f7f6]">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15">
                 {/* Header (conditionally rendered) */}
                 {showHeader && (
@@ -42,7 +47,7 @@ const Faq = ({ showHeader = true }) => {
                 )}
 
                 {/* FAQ Content */}
-                <div className="flex flex-col md:flex-row gap-10">
+                <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start md:items-center pt-5">
                     {/* FAQ Section */}
                     <div className="w-full md:w-1/2">
                         <div className="space-y-4">
@@ -52,23 +57,23 @@ const Faq = ({ showHeader = true }) => {
                                     className="border-b-[1.6px] border-[#0b3d91] pb-3 cursor-pointer"
                                     onClick={() => toggleFAQ(index)}
                                 >
-                                    <div className="flex justify-between items-center p-6">
-                                        <div className="text-[28px] font-ppneuemontreal">
+                                    <div className="flex justify-between items-center p-4 sm:p-6">
+                                        <div className="text-[20px] sm:text-[24px] md:text-[28px] font-ppneuemontreal">
                                             {faq.question}
                                         </div>
-                                        <span className="text-gray-500 text-2xl leading-none">
+                                        <span className="text-gray-500 text-xl sm:text-2xl leading-none">
                                             {openIndex === index ? "−" : "+"}
                                         </span>
                                     </div>
 
                                     {/* Animated answer */}
                                     <div
-                                        className={`px-6 overflow-hidden transition-all duration-300 ${openIndex === index
-                                            ? "max-h-40 mt-2"
+                                        className={`px-4 sm:px-6 overflow-hidden transition-all duration-300 ${openIndex === index
+                                            ? "max-h-40 mt-1 sm:mt-2"
                                             : "max-h-0"
                                             }`}
                                     >
-                                        <p className="text-[18px] text-gray-600 leading-8 tracking-wide">
+                                        <p className="text-[14px] sm:text-[16px] md:text-[18px] text-gray-600 leading-6 sm:leading-7 md:leading-8 tracking-wide">
                                             {faq.answer}
                                         </p>
                                     </div>
@@ -78,8 +83,8 @@ const Faq = ({ showHeader = true }) => {
                     </div>
 
                     {/* Video Section */}
-                    <div className="w-full md:w-1/2 flex justify-center items-center">
-                        <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-md">
+                    <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center">
+                        <div className="w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] rounded-xl overflow-hidden shadow-md">
                             <video
                                 src="/assets/video/keep it somewhere autoplay.mp4"
                                 autoPlay
