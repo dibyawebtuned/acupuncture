@@ -31,18 +31,18 @@ export default function DoYouKnow() {
 
     const imageGroups = [
         [
-            "/assets/img/Did you know/445924522_1622363088324010_4634835349362051632_n.jpeg",
-            "/assets/img/Did you know/446102539_849171883697846_635424378600788041_n.jpeg",
-            "/assets/img/Did you know/458718998_17866329201197064_5882197061821357098_n.jpeg",
-            "/assets/img/Did you know/601af11b01504a00197fb72d-1024x768.webp",
+            "/assets/img/trauma-informed-therapist,-somatic-trauma-coaching-and-speaker-abi-blake-9.webp",
+            "/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg",
+            "/assets/img/Traditional-Chinese-Medicine-is-diagnosing-women's-pulse-.webp",
+            "/assets/img/TCM article visual_.renditionimage.1700.850.jpg",
         ],
         [
-            "/assets/img/Did you know/94b91f7b-3522-4c12-86c4-1762f321d087.jpg",
-            "/assets/img/Did you know/acupuncture-needle-depth.webp",
+            "/assets/img/moxibustion-cones-moxa-treatment-points-top-needles.webp",
+            "/assets/img/ImageForNews_765936_1701383544529230.webp",
         ],
         [
-            "/assets/img/Did you know/ACUPUNCTURE-optimized.jpg",
-            "/assets/img/Did you know/ttf-128-l-meinl-sonic-energy-sound-therapy-tuning-forks-973356_1067x1600.webp",
+            "/assets/img/facial+acu+copy+3.webp",
+            "/assets/img/clarity.jpg",
         ],
     ];
 

@@ -37,7 +37,7 @@ const Footer = () => {
                 }}
             >
                 <div className="padding-global text-center flex flex-col items-center">
-                    <h2 className="heading-style-h3 text-balance mb-4 w-[50%]">
+                    <h2 className="heading-style-h3 text-balance mb-4 sm:w-[50%]">
                         Welcome to the Vantage Point Acupuncture Community
                     </h2>
                     <p className="text-size-medium text-gray-600 mb-10">
@@ -63,7 +63,7 @@ const Footer = () => {
 
                     {/* --- Interactive Image Grid --- */}
                     <div
-                        className="flex flex-wrap justify-center gap-8 transition-transform duration-300 pt-15"
+                        className="flex flex-wrap justify-center gap-4 sm:gap-8 transition-transform duration-300 pt-15"
                         style={{
                             transform: `translate(${mousePos.x}px, ${mousePos.y}px)`,
                         }}
@@ -75,17 +75,23 @@ const Footer = () => {
                             "/assets/img/facial+acu+copy+3.webp",
                         ].map((src, idx) => {
                             const isEven = (idx + 1) % 2 === 0;
-                            const cardHeight = isEven ? 400 : 300;
+
+                            // Desktop heights stay the same
+                            const desktopHeight = isEven ? 400 : 300;
 
                             return (
                                 <div
                                     key={idx}
                                     onMouseEnter={() => setHoveredIndex(idx)}
                                     onMouseLeave={() => setHoveredIndex(null)}
-                                    className="relative rounded-[24px] overflow-hidden cursor-pointer transition-transform duration-500 shadow-[0_6px_18px_rgba(0,0,0,0.1)]"
+                                    className="relative rounded-[24px] overflow-hidden cursor-pointer transition-transform duration-500 shadow-[0_6px_18px_rgba(0,0,0,0.1)]
+                                    w-[47%]             /* → two per row mobile */
+                                h-[200px]           /* → same height for both in row on mobile */
+                                sm:w-[300px]        /* → desktop size */
+                                sm:h-[unset]        /* → release mobile height */
+        "
                                     style={{
-                                        width: "300px",
-                                        height: `${cardHeight}px`,
+                                        height: ` ${desktopHeight}px`,     // desktop height override
                                         transform: `rotate(${hoveredIndex === idx ? 0 : rotations[idx]}deg)`,
                                         transition: "transform 0.4s ease, height 0.4s ease",
                                     }}
@@ -99,7 +105,7 @@ const Footer = () => {
                                             src={src}
                                             alt={`Instagram ${idx + 1}`}
                                             width={400}
-                                            height={cardHeight}
+                                            height={desktopHeight}
                                             className="w-full h-full object-cover rounded-[24px] transition-transform duration-500"
                                         />
                                     </a>
@@ -107,9 +113,10 @@ const Footer = () => {
                             );
                         })}
                     </div>
+
+
                 </div>
             </section>
-
 
 
             {/* --- Main Footer --- */}
@@ -118,6 +125,7 @@ const Footer = () => {
                     <div className="container-extended">
                         <div className="padding-vertical padding-footer">
                             <div className="container-large">
+                                {/*  */}
                                 <div className="padding-bottom padding-xxlarge">
                                     <div className="w-layout-grid footer2_top-wrapper">
                                         {/* Newsletter */}

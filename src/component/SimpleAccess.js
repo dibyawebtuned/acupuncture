@@ -11,7 +11,7 @@ const steps = [
 
 const SimpleAccess = () => {
     return (
-        <section className="relative text-white">
+        <section className="relative text-white rounded-2xl overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 -z-10">
                 <Image
@@ -76,7 +76,6 @@ const SimpleAccess = () => {
                             </span>
                         </a>
                     </div>
-
                 </div>
             </div>
         </section>

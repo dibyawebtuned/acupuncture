@@ -68,9 +68,9 @@ const Nav = () => {
                   </ul>
                 </li>
 
-                <li><a href="#" className="no-underline! text-[#0b3d91]!">Gallery</a></li>
-                <li><a href="#" className="no-underline! text-[#0b3d91]!">FAQ</a></li>
-                <li><a href="#" className="no-underline! text-[#0b3d91]!">Contact Us</a></li>
+                <li><a href="/gallery" className="no-underline! text-[#0b3d91]!">Gallery</a></li>
+                <li><a href="/faq" className="no-underline! text-[#0b3d91]!">FAQ</a></li>
+                <li><a href="/contact" className="no-underline! text-[#0b3d91]!">Contact Us</a></li>
               </ul>
             </div>
 
@@ -159,7 +159,7 @@ const Nav = () => {
               {/* DROPDOWN ANIMATION */}
               <div
                 className={`overflow-hidden transition-all duration-300 
-          ${mobileDropdown ? "max-h-40 opacity-100 mt-2" : "max-h-0 opacity-0"}`}
+          ${mobileDropdown ? "max-h-auto opacity-100 mt-2" : "max-h-0 opacity-0"}`}
               >
                 <ul className="ml-4 space-y-2! text-md pl-0!">
                   <li className="pl-0!"><a href="/chinese-herbal" className="no-underline! text-[#0b3d91]!">Chinese Herbal Medicine</a></li>
@@ -174,14 +174,14 @@ const Nav = () => {
               </div>
             </li>
 
-            <li><a href="#" className="no-underline! text-[#0b3d91]!">Gallery</a></li>
-            <li><a href="#" className="no-underline! text-[#0b3d91]!">FAQ</a></li>
-            <li><a href="#" className="no-underline! text-[#0b3d91]!">Contact Us</a></li>
+            <li><a href="/gallery" className="no-underline! text-[#0b3d91]!">Gallery</a></li>
+            <li><a href="/faq" className="no-underline! text-[#0b3d91]!">FAQ</a></li>
+            <li><a href="/contact" className="no-underline! text-[#0b3d91]!">Contact Us</a></li>
           </ul>
 
-          <button className="mt-6 w-full bg-[#0b3d91] text-white! py-2 rounded font-medium">
+          <Link href="/book" className="mt-6 w-full bg-[#0b3d91] text-white! py-2 rounded font-medium">
             Book an Appointment
-          </button>
+          </Link>
         </div>
       </div>
 
