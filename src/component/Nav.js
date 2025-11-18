@@ -56,15 +56,15 @@ const Nav = () => {
                     </svg>
                   </button>
 
-                  <ul className="absolute pl-0! left-0 mt-2 w-72 bg-white text-[#0b3d91] rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <li className="pl-0!"><a href="/chinese-herbal" className="no-underline! block px-4 py-2 hover:bg-blue-50">Chinese Herbal Medicine</a></li>
-                    <li className="pl-0!"><a href="/constitutional-facial" className="no-underline! block px-4 py-2 hover:bg-blue-50">Constitutional Facial Acupuncture</a></li>
-                    <li className="pl-0!"><a href="/acupuncture" className="no-underline! block px-4 py-2 hover:bg-blue-50">Acupuncture</a></li>
-                    <li className="pl-0!"><a href="/women-health" className="no-underline! block px-4 py-2 hover:bg-blue-50">Women’s Health</a></li>
-                    <li className="pl-0!"><a href="/Fertility" className="no-underline! block px-4 py-2 hover:bg-blue-50">Fertility & IVF Support</a></li>
-                    <li className="pl-0!"><a href="/pain-management" className="no-underline! block px-4 py-2 hover:bg-blue-50">Musculoskeletal Pain Management</a></li>
-                    <li className="pl-0!"><a href="/massage" className="no-underline! block px-4 py-2 hover:bg-blue-50">Massage & Cupping</a></li>
-                    <li className="pl-0!"><a href="/sound-therapy" className="no-underline! block px-4 py-2 hover:bg-blue-50">Sound Therapy</a></li>
+                  <ul className="absolute pl-0! left-0 mt-2 w-72 bg-white text-[#0b3d91]! rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <li className="group pl-0!"><a href="/chinese-herbal" className="no-underline! block px-4 py-2 hover:bg-blue-50!">Chinese Herbal Medicine</a></li>
+                    <li className="pl-0!"><a href="/constitutional-facial" className="no-underline! block px-4 py-2 hover:bg-blue-50!">Constitutional Facial Acupuncture</a></li>
+                    <li className="pl-0!"><a href="/acupuncture" className="no-underline! block px-4 py-2 hover:bg-blue-50!">Acupuncture</a></li>
+                    <li className="pl-0!"><a href="/women-health" className="no-underline! block px-4 py-2 hover:bg-blue-50!">Women’s Health</a></li>
+                    <li className="pl-0!"><a href="/Fertility" className="no-underline! block px-4 py-2 hover:bg-blue-50!">Fertility & IVF Support</a></li>
+                    <li className="pl-0!"><a href="/pain-management" className="no-underline! block px-4 py-2 hover:bg-blue-50!">Musculoskeletal Pain Management</a></li>
+                    <li className="pl-0!"><a href="/massage" className="no-underline! block px-4 py-2 hover:bg-blue-50!">Massage & Cupping</a></li>
+                    <li className="pl-0!"><a href="/sound-therapy" className="no-underline! block px-4 py-2 hover:bg-blue-50!">Sound Therapy</a></li>
                   </ul>
                 </li>
 
