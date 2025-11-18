@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const steps = [
     { number: 1, title: "Listen – Your story, health history, and preferences." },
@@ -55,11 +56,11 @@ const SimpleAccess = () => {
 
                     {/* Button */}
                     <div className="mt-10 sm:mt-12">
-                        <a
-                            href="/courses"
-                            className="inline-flex items-center px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 border border-white rounded-full hover:bg-white text-white transition"
+                        <Link
+                            href="/book"
+                            className="inline-flex items-center px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 no-underline! border border-white rounded-full hover:bg-white text-white transition"
                         >
-                            <span className="text-base sm:text-lg md:text-[20px] text-white underline-none!">Find a Course</span>
+                            <span className="text-base sm:text-lg md:text-[20px] text-white underline-none!">Book an Appointment</span>
                             <span className="ml-2 text-white">
                                 <svg
                                     width="18"
@@ -74,7 +75,7 @@ const SimpleAccess = () => {
                                     />
                                 </svg>
                             </span>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

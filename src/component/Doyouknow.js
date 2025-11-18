@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import Script from "next/script";
+import Link from "next/link";
 
 const WEBFLOW_JS =
     "https://cdn.prod.website-files.com/6508af1b0b60370d434c9417/js/webflow.da86215c7.js";
@@ -104,12 +105,12 @@ export default function DoYouKnowSection() {
                                 <h2 className="heading-style-h5">
                                     Cupping marks are temporary and usually fade over several days.
                                 </h2>
-                                <a
-                                    href="/courses"
+                                <Link
+                                    href="/book"
                                     className="button is-tertiary is-icon w-inline-block make-an-appointment"
                                 >
                                     <div>Make an Appointment</div>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

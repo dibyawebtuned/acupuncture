@@ -3,6 +3,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ClarityBeforeCare = () => {
     return (
@@ -21,7 +22,9 @@ const ClarityBeforeCare = () => {
                                                 href="/courses"
                                                 className="button is-icon w-inline-block find-a-course"
                                             >
-                                                <div>Explore Treatments</div>
+                                                <div>
+                                                    <Link href="/book" className="text-white! no-underline!">Book an Appointment</Link>
+                                                </div>
                                                 <div className="icon-embed-xsmall w-embed">
                                                     <svg
                                                         width="14"
