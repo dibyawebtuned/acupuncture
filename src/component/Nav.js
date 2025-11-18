@@ -69,7 +69,7 @@ const Nav = () => {
                 </li>
 
                 <li><a href="/gallery" className="no-underline! text-[#0b3d91]!">Gallery</a></li>
-                <li><a href="/faq" className="no-underline! text-[#0b3d91]!">FAQ</a></li>
+                <li><Link href="/faq" className="no-underline! text-[#0b3d91]!">FAQ</Link></li>
                 <li><a href="/contact" className="no-underline! text-[#0b3d91]!">Contact Us</a></li>
               </ul>
             </div>

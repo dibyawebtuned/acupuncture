@@ -5,7 +5,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 import FaqFooter from "@/component/FaqFooter";
-import Faq from "@/component/Faq";
 import Banner from "@/component/Banner";
 
 const Page = ({ showHeader = true }) => {
