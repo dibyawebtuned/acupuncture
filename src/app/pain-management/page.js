@@ -116,7 +116,9 @@ const Page = () => {
                                     data-aos="fade-up"
                                     data-aos-delay="200"
                                 >
-                                    A targeted and restorative treatment designed to relieve pain, improve mobility, and support long-term musculoskeletal health. Whether your discomfort stems from posture, injury, chronic tension, or lifestyle habits, this therapy helps reset the body.
+                                    Acupuncture is used to support relief from musculoskeletal pain and promote recovery
+                                    from injury or chronic conditions. Treatment involves targeting specific points to
+                                    encourage circulation, reduce tension, and support natural healing.
                                 </div>
                             </div>
 
@@ -191,17 +193,16 @@ const Page = () => {
                                             data-aos="fade-up"
                                             data-aos-delay="150"
                                         >
-                                            During your session, we begin with a detailed assessment of your posture, pain patterns,
-                                            lifestyle habits, and daily movement.
-                                            This allows us to understand the underlying cause of your discomfort — whether it’s mechanical strain,
-                                            muscle imbalance, repetitive stress, or tension stored from emotional or physical stressors.
+                                            Individualized care plans are developed based on a thorough assessment of your
+                                            condition. Acupuncture can be part of a broader pain management approach partnered
+                                            with your general practitioner or specialist.
                                         </div>
 
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-0!">
                                             {[
-                                                "Deep cleansing to remove impurities and unclog pores",
-                                                "Hydration boost for smoother, plumper skin",
-                                                "Customized mask treatment based on your skin type",
+                                                "Assessment of pain and mobility limitations",
+                                                "Targeted acupuncture for affected areas",
+                                                "Safe treatment in a professional environment",
                                                 // "Gentle facial massage to improve circulation and glow",
                                                 // "Use of premium, skin-safe herbal and natural products",
                                                 // "Visible results — refreshed, balanced, and radiant skin",
@@ -251,7 +252,7 @@ const Page = () => {
                                     >
                                         Why Choose <span className="font-testSignifier"> Musculoskeletal Pain Management</span>
                                     </div>
-                                    <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                    {/* <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                                         data-aos="fade-up"
                                         data-aos-delay="150"
                                     >
@@ -260,10 +261,8 @@ const Page = () => {
                                         This treatment supports both immediate relief and long-term improvement by addressing
                                         both the painful area and the deeper physical imbalances that contribute to ongoing
                                         discomfort.
-                                    </div>
+                                    </div> */}
                                 </div>
-
-                                a quick brown fox jumps over the lazy dog. i am bored. i am at office right now. what to do as i still have one hour left to get home. aaghhhhhhh no what i do, i am bored as hell noooooooooo
 
                                 {/* Features */}
                                 <div className="flex flex-col gap-[20px]">
@@ -271,22 +270,22 @@ const Page = () => {
                                         {
                                             icon: <Leaf className="w-5 h-5 text-white" />,
                                             title: "Natural Ingredients",
-                                            text: "Our formulas use pure herbs, roots, and minerals — each selected for their natural healing properties and prepared with traditional care.",
+                                            text: "Encourages relief from pain and muscle tension",
                                         },
                                         {
                                             icon: <Heart className="w-5 h-5 text-white" />,
                                             title: "Holistic Healing",
-                                            text: "Rather than treating symptoms, our approach addresses the root causes of imbalance, helping the body heal from within.",
+                                            text: "Supports enhanced circulation and tissue repair",
                                         },
                                         {
                                             icon: <CheckCircle className="w-5 h-5 text-white" />,
                                             title: "Personalized Care",
-                                            text: "Every treatment plan is tailored to your unique needs, ensuring the most effective and comfortable experience possible.",
+                                            text: "Provides a complementary pain management option",
                                         },
                                     ].map((item, index) => (
                                         <div
                                             key={index}
-                                            className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                                            className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
                                             data-aos="zoom-out"
                                             data-aos-delay={200 + index * 150}
                                         >

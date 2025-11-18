@@ -190,18 +190,17 @@ const Page = () => {
                                             data-aos="fade-up"
                                             data-aos-delay="150"
                                         >
-                                            Rediscover your natural glow with our Signature Facials, expertly designed to cleanse, hydrate, and rejuvenate your skin.
-                                            Each facial is tailored to your unique skin type and concerns, combining high-performance skincare with gentle, therapeutic techniques.
-                                            From deep pore cleansing to collagen-boosting serums, we bring out your skin's healthiest, most radiant version.
-                                            Our experienced estheticians use only premium, skin-friendly products, ensuring a soothing and effective treatment with visible results.
-                                            Whether you are seeking age-defying care, hydration, or a calming reset, our Signature Facials offer a deeply relaxing experience
+                                            This approach focuses on your overall constitutional health as well as facial concerns,
+                                            working to enhance balance and relaxation. Treatments are tailored to your personal
+                                            health status and goals, supporting natural radiance without the use of invasive
+                                            procedures.
                                         </div>
 
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-0!">
                                             {[
-                                                "Deep cleansing to remove impurities and unclog pores",
-                                                "Hydration boost for smoother, plumper skin",
-                                                "Customized mask treatment based on your skin type",
+                                                "Gentle insertion of fine needles on face and body points",
+                                                "Calming, tailored sessions responding to health and aesthetic goals",
+                                                "Focus on constitutional health beyond cosmetic effects",
                                                 // "Gentle facial massage to improve circulation and glow",
                                                 // "Use of premium, skin-safe herbal and natural products",
                                                 // "Visible results — refreshed, balanced, and radiant skin",
@@ -251,7 +250,7 @@ const Page = () => {
                                     >
                                         Why Chinese <span className="font-testSignifier"> Constitutional Facial</span>
                                     </div>
-                                    <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                    {/* <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                                         data-aos="fade-up"
                                         data-aos-delay="150"
                                     >
@@ -259,40 +258,55 @@ const Page = () => {
                                         Rediscover your natural glow with our Signature Facials, expertly designed to cleanse, hydrate, and rejuvenate your skin.
                                         Each facial is tailored to your unique skin type and concerns, combining high-performance skincare with gentle, therapeutic techniques.
                                         From deep pore cleansing to collagen-boosting serums, we bring out your skin is healthiest, most radiant version.
-                                    </div>
+                                    </div> */}
                                 </div>
 
 
                                 {/* Features */}
                                 <div className="flex flex-col gap-[20px]">
-                                    {[1, 2, 3].map((i) => (
+                                    {[
+                                        {
+                                            icon: <Leaf className="w-5 h-5 text-white" />,
+                                            title: "Natural Ingredients",
+                                            text: "Enhances skin vitality and facial rejuvenation naturally",
+                                        },
+                                        {
+                                            icon: <Heart className="w-5 h-5 text-white" />,
+                                            title: "Holistic Healing",
+                                            text: "Promotes overall body balance and relaxation",
+                                        },
+                                        {
+                                            icon: <CheckCircle className="w-5 h-5 text-white" />,
+                                            title: "Deep Fertility Support",
+                                            text: "Non-invasive treatment promoting healthy circulation",
+                                        },
+                                    ].map((item, index) => (
                                         <div
-                                            key={i}
-                                            className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                                            key={index}
+                                            className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
                                             data-aos="zoom-out"
-                                            data-aos-delay={200 + i * 150} // staggered zoom-out
+                                            data-aos-delay={200 + index * 150}
                                         >
                                             <div className="flex items-start gap-5">
                                                 {/* Icon Circle */}
                                                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
-                                                    {i % 2 === 0 ? <Leaf className="w-5 h-5 text-white" /> : <Heart className="h-5 w-5 text-white" />}
+                                                    {item.icon}
                                                 </div>
 
                                                 {/* Text */}
                                                 <div>
                                                     <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
-                                                        {i === 1 ? "Natural Ingredients" : "Holistic Healing"}
+                                                        {item.title}
                                                     </div>
                                                     <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
-                                                        {i === 1
-                                                            ? "Our formulas use pure herbs, roots, and minerals — each selected for their natural healing properties and prepared with traditional care."
-                                                            : "Rather than treating symptoms, our approach addresses the root causes of imbalance, helping the body heal from within."}
+                                                        {item.text}
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
+
                             </div>
                         </div>
                     </div>

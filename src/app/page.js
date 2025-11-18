@@ -11,7 +11,6 @@ import TestimonialSlider from "@/component/Testimonial";
 import FAQs from "@/component/FaqSection";
 import Footer from "@/component/Footer";
 
-
 export default function Home() {
   return (
     <>
@@ -25,7 +24,7 @@ export default function Home() {
       </div>
       <MarqueeSection />
       <SimpleAccess />
-      {/* <TestimonialSlider /> */}
+      <TestimonialSlider />
       <FAQs />
     </>
   );

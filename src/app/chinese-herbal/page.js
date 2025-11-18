@@ -19,8 +19,6 @@ const Page = () => {
         let targetY = 0;
         let ease = 0.12;
 
-
-
         const updateCursor = () => {
             // Lerp (linear interpolation)
             x += (targetX - x) * ease;
@@ -117,7 +115,11 @@ const Page = () => {
                                     data-aos="fade-up"
                                     data-aos-delay="200"
                                 >
-                                    Rather than simply masking symptoms, Chinese Herbal Medicine targets the root causes of imbalance — helping your body return to a natural state of wellness. Each herbal formula is carefully crafted and customized to your individual constitution, lifestyle, and condition using pure, natural ingredients such as roots, bark, flowers, leaves, and minerals.
+                                    At Vantage Point Acupuncture, Chinese Herbal Medicine is offered as a personalized
+                                    therapeutic approach to support your wellness journey. Carefully selected herbs are
+                                    used to complement acupuncture treatments and enhance overall balance in the body.
+                                    Our practitioners assess individual health patterns and prescribe herbal formulations
+                                    tailored to your specific needs.
                                 </div>
                             </div>
 
@@ -171,12 +173,12 @@ const Page = () => {
                 </div>
 
                 {/* Two */}
-                <div className="flex flex-col lg:flex-row gap-[40px] max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15">
+                <div className="flex flex-col lg:flex-row gap-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15">
                     {/* Left (8/12 on large screens) */}
                     <div className="w-full lg:w-8/12 flex flex-col gap-15">
                         {/* What to expect */}
                         <div className="">
-                            <div className="flex flex-col gap-[20px]">
+                            <div className="flex flex-col gap-5">
                                 {/* Heading */}
                                 <div className="flex flex-col gap-[15px]">
                                     <div
@@ -192,21 +194,18 @@ const Page = () => {
                                             data-aos="fade-up"
                                             data-aos-delay="150"
                                         >
-                                            Rediscover your natural glow with our Signature Facials, expertly designed to cleanse, hydrate, and rejuvenate your skin.
-                                            Each facial is tailored to your unique skin type and concerns, combining high-performance skincare with gentle, therapeutic techniques.
-                                            From deep pore cleansing to collagen-boosting serums, we bring out your skin's healthiest, most radiant version.
-                                            Our experienced estheticians use only premium, skin-friendly products, ensuring a soothing and effective treatment with visible results.
-                                            Whether you are seeking age-defying care, hydration, or a calming reset, our Signature Facials offer a deeply relaxing experience
+                                            Chinese Herbal Medicine is used as an adjunct to conventional care and aims to support
+                                            your body is natural healing processes. All herbs are sourced from reputable suppliers
+                                            and compounded with safety and quality in mind. Please consult with your healthcare
+                                            providers before beginning any new herbal treatment to ensure optimal care
+                                            coordination.
                                         </div>
 
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-0!">
                                             {[
-                                                "Deep cleansing to remove impurities and unclog pores",
-                                                "Hydration boost for smoother, plumper skin",
-                                                "Customized mask treatment based on your skin type",
-                                                // "Gentle facial massage to improve circulation and glow",
-                                                // "Use of premium, skin-safe herbal and natural products",
-                                                // "Visible results — refreshed, balanced, and radiant skin",
+                                                "Comprehensive health assessment to understand your constitution",
+                                                "Customized herbal prescriptions considering other health factors",
+                                                "Consultation on herb usage and potential interactions",
                                             ].map((item, index) => (
                                                 <li
                                                     key={index}
@@ -243,7 +242,7 @@ const Page = () => {
 
                         {/* Why Choose */}
                         <div className="">
-                            <div className="flex flex-col gap-[20px]">
+                            <div className="flex flex-col gap-5">
                                 {/* Heading */}
                                 <div className="flex flex-col gap-[15px]">
                                     <div
@@ -253,7 +252,7 @@ const Page = () => {
                                     >
                                         Why Chinese <span className="font-testSignifier"> Herbal Medicine</span>
                                     </div>
-                                    <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                    {/* <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                                         data-aos="fade-up"
                                         data-aos-delay="150"
                                     >
@@ -261,34 +260,53 @@ const Page = () => {
                                         Rediscover your natural glow with our Signature Facials, expertly designed to cleanse, hydrate, and rejuvenate your skin.
                                         Each facial is tailored to your unique skin type and concerns, combining high-performance skincare with gentle, therapeutic techniques.
                                         From deep pore cleansing to collagen-boosting serums, we bring out your skin is healthiest, most radiant version.
-                                    </div>
+                                    </div> */}
                                 </div>
 
 
                                 {/* Features */}
-                                <div className="flex flex-col gap-[20px]">
-                                    {[1, 2, 3].map((i) => (
+                                <div className="flex flex-col gap-5">
+                                    {[
+                                        {
+                                            icon: <Leaf className="w-5 h-5 text-white" />,
+                                            title: "Natural Ingredients",
+                                            text: "Supports the body's natural balance and healing processes",
+                                        },
+                                        {
+                                            icon: <Heart className="w-5 h-5 text-white" />,
+                                            title: "Holistic Healing",
+                                            text: "Complements acupuncture and other healthcare treatments",
+                                        },
+                                        {
+                                            icon: <CheckCircle className="w-5 h-5 text-white" />,
+                                            title: "Deep Fertility Support",
+                                            text: "Personalized herbal formulations tailored to individual health",
+                                        },
+                                        {
+                                            icon: <CheckCircle className="w-5 h-5 text-white" />,
+                                            title: "Deep Fertility Support",
+                                            text: "Quality-controlled herbs for safety and effectiveness",
+                                        },
+                                    ].map((item, index) => (
                                         <div
-                                            key={i}
-                                            className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                                            key={index}
+                                            className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
                                             data-aos="zoom-out"
-                                            data-aos-delay={200 + i * 150} // staggered zoom-out
+                                            data-aos-delay={200 + index * 150}
                                         >
                                             <div className="flex items-start gap-5">
                                                 {/* Icon Circle */}
                                                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
-                                                    {i % 2 === 0 ? <Leaf className="w-5 h-5 text-white" /> : <Heart className="h-5 w-5 text-white" />}
+                                                    {item.icon}
                                                 </div>
 
                                                 {/* Text */}
                                                 <div>
                                                     <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
-                                                        {i === 1 ? "Natural Ingredients" : "Holistic Healing"}
+                                                        {item.title}
                                                     </div>
                                                     <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
-                                                        {i === 1
-                                                            ? "Our formulas use pure herbs, roots, and minerals — each selected for their natural healing properties and prepared with traditional care."
-                                                            : "Rather than treating symptoms, our approach addresses the root causes of imbalance, helping the body heal from within."}
+                                                        {item.text}
                                                     </div>
                                                 </div>
                                             </div>

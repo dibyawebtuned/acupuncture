@@ -116,11 +116,9 @@ const Page = () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  Cupping works by creating negative pressure on the skin and underlying tissues, allowing tight muscles to relax,
-                  toxins to be drawn out, and blood flow to increase in the affected areas. This makes it highly effective
-                  for people experiencing chronic pain, stiffness, or stress-related tension. Whether used alone or combined
-                  with other therapies, cupping provides deep, therapeutic relief that promotes long-term healing and
-                  improved mobility.
+                  Therapeutic massage and cupping are available as supportive treatments to promote
+                  muscular relaxation, improve circulation, and enhance wellbeing. These modalities are
+                  offered in conjunction with acupuncture therapies where appropriate.
                 </div>
               </div>
 
@@ -195,19 +193,18 @@ const Page = () => {
                       data-aos="fade-up"
                       data-aos-delay="150"
                     >
-                      During your session, glass or silicone cups are gently placed on specific areas of the body
-                      to create a controlled suction. This sensation is deeply relaxing, often described as a
-                      “reverse massage,” where tension is lifted rather than pressed down. Most clients feel
-                      immediate relief as tight muscles begin to soften and circulation increases.
+                      Our practitioners utilize techniques based on your individual needs to support relief from
+                      tension and improve mobility. Both massage and cupping are delivered in a safe and
+                      professional manner.
                     </div>
 
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-0!">
                       {[
-                        "Back, neck, and shoulder tightness",
-                        "Muscle soreness or strain",
-                        "Stress-related tension",
-                        "Poor circulation",
-                        "Headaches and migraine support",
+                        "Techniques tailored to your muscle health and goals",
+                        "Cupping therapy to stimulate skin and tissue circulation",
+                        "Relaxing sessions enhancing physical wellbeing",
+                        // "Poor circulation",
+                        // "Headaches and migraine support",
                         // "Gentle facial massage to improve circulation and glow",
                         // "Use of premium, skin-safe herbal and natural products",
                         // "Visible results — refreshed, balanced, and radiant skin",
@@ -261,10 +258,9 @@ const Page = () => {
                     data-aos="fade-up"
                     data-aos-delay="150"
                   >
-                    Cupping has been trusted for centuries because it delivers fast, noticeable results — especially
-                    for individuals managing muscle tension or chronic discomfort. By addressing stagnation in
-                    the muscles and fascia, it helps restore natural movement and reduce pain in a way that feels both
-                    therapeutic and calming.
+                    Our practitioners utilize techniques based on your individual needs to support relief from
+                    tension and improve mobility. Both massage and cupping are delivered in a safe and
+                    professional manner.
                   </div>
                 </div>
 
@@ -274,22 +270,22 @@ const Page = () => {
                     {
                       icon: <Leaf className="w-5 h-5 text-white" />,
                       title: "Natural, Non-Invasive Relief",
-                      text: "Cupping encourages the body’s own healing response without medication or harsh techniques.",
+                      text: "Promotes muscle relaxation and tension relief",
                     },
                     {
                       icon: <Heart className="w-5 h-5 text-white" />,
                       title: "Perfect for Pain & Stress",
-                      text: "Ideal for people who sit for long hours, athletes, or anyone with persistent tension.",
+                      text: "Improves local circulation",
                     },
                     {
                       icon: <CheckCircle className="w-5 h-5 text-white" />,
                       title: "Enhances Other Treatments",
-                      text: "Often combined with acupuncture or massage to amplify results and support whole-body balance.",
+                      text: "Complements acupuncture and other therapies",
                     },
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                      className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
                       data-aos="zoom-out"
                       data-aos-delay={200 + index * 150}
                     >

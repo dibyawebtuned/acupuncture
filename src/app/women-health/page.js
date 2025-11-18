@@ -110,14 +110,15 @@ const Page = () => {
                   data-aos="fade-up"
                   data-aos-delay="150"
                 >
-                  Women's <span className="font-testSignifier"> Health </span>
+                  Women’s<span className="font-testSignifier"> Health </span>
                 </div>
                 <div className="font-ppNeueMontreal text-gray-500 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  A supportive and holistic approach designed to nurture women through every stage of life. Our treatments help balance hormones, ease discomfort, regulate cycles, and support emotional well-being — offering gentle, natural relief for women’s unique health needs.
-                  Women’s health concerns often stem from hormonal imbalance, stress, or disrupted energy flow.
+                  We provide specialized acupuncture and herbal medicine to support women's health
+                  throughout different life stages. This includes menstrual health, menopause, hormonal
+                  balance, and general wellbeing.
                 </div>
               </div>
 
@@ -125,23 +126,23 @@ const Page = () => {
                 {[
                   {
                     icon: <Leaf size={20} className="text-white" />,
-                    title: "Hormonal Balance",
-                    text: "Regulates cycles, mood, and overall equilibrium.",
+                    title: "Balance",
+                    text: "Helps balance hormones, regulate menstrual cycles, and support healthy ovulation.",
                   },
                   {
                     icon: <Heart size={20} className="text-white" />,
-                    title: "Reproductive Support",
-                    text: "Helps fertility, PMS, and menstrual discomfort.",
+                    title: "Digestion",
+                    text: "Improves blood flow to the uterus and ovaries, enhancing egg quality and endometrial lining.",
                   },
                   {
                     icon: <CheckCircle size={20} className="text-white" />,
-                    title: "Stress Relief",
-                    text: "Calms the nervous system & supports emotional stability.",
+                    title: "Sleep",
+                    text: "Reduces anxiety, improves sleep, and promotes emotional resilience throughout your journey.",
                   },
                   {
                     icon: <Star size={20} className="text-white" />,
-                    title: "Energy & Vitality",
-                    text: "Boosts overall wellness and long-term resilience.",
+                    title: "Immunity",
+                    text: "Supports the body before egg retrieval, transfer, and throughout your IVF timeline.",
                   },
                 ].map((item, index) => (
                   <div key={index} className="w-full sm:w-1/2 px-5 mb-5 flex gap-4"
@@ -184,7 +185,7 @@ const Page = () => {
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
-                    What to expect <span className="font-testSignifier "> </span>
+                    What to expect from <span className="font-testSignifier "> this </span>
                   </div>
 
                   <div>
@@ -192,16 +193,16 @@ const Page = () => {
                       data-aos="fade-up"
                       data-aos-delay="150"
                     >
-                      During your session, we begin with a personalized consultation to understand your symptoms, cycle patterns, and lifestyle. Treatments focus on restoring harmony within the endocrine system while promoting circulation, relaxation, and emotional grounding.
+                      Our approach is tailored to each individual's constitution and health history, supporting
+                      natural regulation and symptom relief. These treatments complement conventional
+                      medical care and are delivered with compassionate and respectful care.
                     </div>
 
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-0!">
                       {[
-                        "Irregular or painful periods",
-                        "PMS and mood fluctuations",
-                        "Fertility and conception support",
-                        "Perimenopause & menopause symptoms",
-                        "Fatigue, stress, and emotional imbalance",
+                        "Detailed health and lifestyle evaluation",
+                        "Responsive acupuncture and/or herbal therapies",
+                        "Compassionate care respecting your unique needs",
                       ].map((item, index) => (
                         <li
                           key={index}
@@ -246,47 +247,67 @@ const Page = () => {
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
-                    Why Women Choose <span className="font-testSignifier"> This Treatment</span>
+                    Why Choose <span className="font-testSignifier"> Fertility & IVF Support</span>
                   </div>
-                  <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
-                    data-aos="fade-up"
-                    data-aos-delay="150"
-                  >
-                    Women’s bodies move through constant changes — and holistic care provides gentle but powerful support through every phase.
-                  </div>
+                  {/* <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                        data-aos="fade-up"
+                                        data-aos-delay="150"
+                                    >
+                                        Fertility journeys often require a combination of medical, emotional, and holistic care. This treatment is designed to work alongside your medical fertility plan by strengthening your body’s natural functions while reducing the impact of stress and hormonal fluctuations.
+                                    </div> */}
                 </div>
 
 
                 {/* Features */}
-                <div className="flex flex-col gap-[20px]">
-                  {[1, 2, 3].map((i) => (
+                <div className="flex flex-col gap-5">
+                  {[
+                    {
+                      icon: <Leaf className="w-5 h-5 text-white" />,
+                      title: "Natural Ingredients",
+                      text: "Supports menstrual health and hormonal balance",
+                    },
+                    {
+                      icon: <Heart className="w-5 h-5 text-white" />,
+                      title: "Holistic Healing",
+                      text: "Helps alleviate menopause-related symptoms",
+                    },
+                    {
+                      icon: <CheckCircle className="w-5 h-5 text-white" />,
+                      title: "Deep Fertility Support",
+                      text: "Complements conventional women’s health care",
+                    },
+                    {
+                      icon: <CheckCircle className="w-5 h-5 text-white" />,
+                      title: "Deep Fertility Support",
+                      text: "Personalized to individual constitution and history",
+                    },
+                  ].map((item, index) => (
                     <div
-                      key={i}
-                      className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                      key={index}
+                      className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
                       data-aos="zoom-out"
-                      data-aos-delay={200 + i * 150} // staggered zoom-out
+                      data-aos-delay={200 + index * 150}
                     >
                       <div className="flex items-start gap-5">
                         {/* Icon Circle */}
                         <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
-                          {i % 2 === 0 ? <Leaf className="w-5 h-5 text-white" /> : <Heart className="h-5 w-5 text-white" />}
+                          {item.icon}
                         </div>
 
                         {/* Text */}
                         <div>
                           <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
-                            {i === 1 ? "Natural Ingredients" : "Holistic Healing"}
+                            {item.title}
                           </div>
                           <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
-                            {i === 1
-                              ? "Treatments aim to support natural hormone regulation and reduce discomfort linked to cycle or life stage changes."
-                              : "We work with the entire system — emotional, physical, and energetic — to create long-lasting balance."}
+                            {item.text}
                           </div>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
+
               </div>
             </div>
           </div>

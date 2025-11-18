@@ -116,7 +116,10 @@ const Page = () => {
                                     data-aos="fade-up"
                                     data-aos-delay="200"
                                 >
-                                    A gentle, holistic approach designed to support your fertility journey — whether you’re trying to conceive naturally or undergoing IVF, IUI, or other assisted reproductive treatments. Our fertility-focused sessions help prepare and strengthen the body, balance hormones, regulate cycles, and reduce stress, creating an optimal internal environment for conception.
+                                    Vantage Point Acupuncture offers supportive care for fertility enhancement and IVF
+                                    preparation through acupuncture and complementary therapies. These treatments are
+                                    designed to promote balance and reduce stress, enhancing your body is readiness for
+                                    conception.
                                 </div>
                             </div>
 
@@ -191,17 +194,16 @@ const Page = () => {
                                             data-aos="fade-up"
                                             data-aos-delay="150"
                                         >
-                                            Your session begins with a detailed consultation to understand your fertility history, cycle patterns, medical treatments, lifestyle, and emotional needs. From there, your treatment plan is aligned with your natural cycle or IVF protocol — whether you’re in the stimulation phase, trigger phase, implantation window, or preparing for embryo transfer. Techniques used during the session focus on increasing pelvic circulation, improving uterine receptivity, balancing hormones, and reducing physical tension or stress.
+                                            All fertility care is provided to complement, not replace, your medical fertility treatments,
+                                            ensuring coordination with your healthcare team. Our practitioners focus on optimizing
+                                            your overall health and wellbeing during this important phase.
                                         </div>
 
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-0!">
                                             {[
-                                                "Deep cleansing to remove impurities and unclog pores",
-                                                "Hydration boost for smoother, plumper skin",
-                                                "Customized mask treatment based on your skin type",
-                                                // "Gentle facial massage to improve circulation and glow",
-                                                // "Use of premium, skin-safe herbal and natural products",
-                                                // "Visible results — refreshed, balanced, and radiant skin",
+                                                "Tailored sessions aligned with your fertility journey",
+                                                "Coordination with your healthcare providers",
+                                                "Focus on stress reduction and overall wellbeing",
                                             ].map((item, index) => (
                                                 <li
                                                     key={index}
@@ -248,45 +250,13 @@ const Page = () => {
                                     >
                                         Why Choose <span className="font-testSignifier"> Fertility & IVF Support</span>
                                     </div>
-                                    <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                    {/* <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                                         data-aos="fade-up"
                                         data-aos-delay="150"
                                     >
                                         Fertility journeys often require a combination of medical, emotional, and holistic care. This treatment is designed to work alongside your medical fertility plan by strengthening your body’s natural functions while reducing the impact of stress and hormonal fluctuations.
-                                    </div>
+                                    </div> */}
                                 </div>
-
-
-                                {/* Features */}
-                                {/* <div className="flex flex-col gap-[20px]">
-                                    {[1, 2, 3].map((i) => (
-                                        <div
-                                            key={i}
-                                            className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
-                                            data-aos="zoom-out"
-                                            data-aos-delay={200 + i * 150}
-                                        >
-                                            <div className="flex items-start gap-5">
-
-                                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
-                                                    {i % 2 === 0 ? <Leaf className="w-5 h-5 text-white" /> : <Heart className="h-5 w-5 text-white" />}
-                                                </div>
-
-
-                                                <div>
-                                                    <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
-                                                        {i === 1 ? "Natural Ingredients" : "Holistic Healing"}
-                                                    </div>
-                                                    <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
-                                                        {i === 1
-                                                            ? "Our formulas use pure herbs, roots, and minerals — each selected for their natural healing properties and prepared with traditional care."
-                                                            : "Rather than treating symptoms, our approach addresses the root causes of imbalance, helping the body heal from within."}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div> */}
 
 
                                 {/* Features */}
@@ -295,28 +265,18 @@ const Page = () => {
                                         {
                                             icon: <Leaf className="w-5 h-5 text-white" />,
                                             title: "Natural Ingredients",
-                                            text: "Our formulas use pure herbs, roots, and minerals — each selected for their natural healing properties and prepared with traditional care.",
+                                            text: "Supports mind-body relaxation and balance during fertility treatments",
                                         },
                                         {
                                             icon: <Heart className="w-5 h-5 text-white" />,
                                             title: "Holistic Healing",
-                                            text: "Rather than treating symptoms, our approach addresses the root causes of imbalance, helping the body heal from within.",
+                                            text: "Complements medical fertility care",
                                         },
                                         {
                                             icon: <CheckCircle className="w-5 h-5 text-white" />,
                                             title: "Deep Fertility Support",
-                                            text: "Enhances reproductive function by improving circulation, reducing inflammation, and supporting the endocrine system for healthier cycles and conception.",
+                                            text: "Aims to optimize physical readiness for conception",
                                         },
-                                        // {
-                                        //     icon: <Star className="w-5 h-5 text-white" />,
-                                        //     title: "Stress Relief & Emotional Balance",
-                                        //     text: "Supports emotional wellbeing by easing anxiety, balancing the nervous system, and creating a calmer internal environment for fertility.",
-                                        // },
-                                        // {
-                                        //     icon: <Leaf className="w-5 h-5 text-white" />,
-                                        //     title: "IVF-Friendly Approach",
-                                        //     text: "Designed to align with your IVF protocol — stimulation, retrieval, transfer — helping improve implantation and overall reproductive response.",
-                                        // },
                                     ].map((item, index) => (
                                         <div
                                             key={index}

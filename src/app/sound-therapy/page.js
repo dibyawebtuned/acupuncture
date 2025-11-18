@@ -116,11 +116,9 @@ const Page = () => {
                                     data-aos="fade-up"
                                     data-aos-delay="200"
                                 >
-                                    A soothing vibrational healing experience designed to calm the mind,
-                                    relax the body, and restore energy balance. Using therapeutic
-                                    instruments such as singing bowls, chimes, and tuning forks,
-                                    Sound Therapy helps release tension, reduce stress, and guide you
-                                    into a deep state of inner harmony.
+                                    Sound Therapy at Vantage Point Acupuncture uses specific tones and vibrations
+                                    designed to support relaxation and balance. This complementary therapy can enhance
+                                    the effects of acupuncture and other treatments by promoting a calm, restorative state.
                                 </div>
                             </div>
 
@@ -195,23 +193,15 @@ const Page = () => {
                                             data-aos="fade-up"
                                             data-aos-delay="150"
                                         >
-                                            Your session begins with a short consultation to understand your emotional and
-                                            physical needs. You will lie comfortably while therapeutic instruments
-                                            are played around and occasionally near the body, allowing sound
-                                            waves to gently wash over you. These vibrations help slow the heart rate,
-                                            deepen the breath, and guide the mind into a meditative state.
+                                            Sessions are tailored to individual preferences and health goals. Sound therapy is
+                                            offered as part of a holistic suite of supportive wellness services.
                                         </div>
 
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-0!">
                                             {[
-                                                "Stress and anxiety relief",
-                                                "Sleep and deep rest",
-                                                "Emotional release and grounding",
-                                                "Chakra and energy balancing",
-                                                "Overall energetic alignment",
-                                                // "Gentle facial massage to improve circulation and glow",
-                                                // "Use of premium, skin-safe herbal and natural products",
-                                                // "Visible results — refreshed, balanced, and radiant skin",
+                                                "Exposure to tailored therapeutic sound frequencies",
+                                                "Calm, peaceful treatment environment",
+                                                "Complementary to acupuncture and holistic care",
                                             ].map((item, index) => (
                                                 <li
                                                     key={index}
@@ -258,7 +248,7 @@ const Page = () => {
                                     >
                                         Why Clients Choose <span className="font-testSignifier"> Sound Therapy</span>
                                     </div>
-                                    <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                    {/* <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                                         data-aos="fade-up"
                                         data-aos-delay="150"
                                     >
@@ -266,7 +256,7 @@ const Page = () => {
                                         making it ideal for anyone who needs a moment of stillness in a
                                         fast-paced world. By harmonizing the body’s energetic and physical systems,
                                         this practice encourages both emotional balance and physical ease.
-                                    </div>
+                                    </div> */}
                                 </div>
 
                                 {/* Features */}
@@ -275,22 +265,22 @@ const Page = () => {
                                         {
                                             icon: <Leaf className="w-5 h-5 text-white" />,
                                             title: "Non-Invasive & Holistic",
-                                            text: "A therapeutic experience that works without pressure, needles, or manipulation.",
+                                            text: "Encourages deep relaxation and stress relief",
                                         },
                                         {
                                             icon: <Heart className="w-5 h-5 text-white" />,
                                             title: "Perfect for Stress & Emotional Wellness",
-                                            text: "Helps rebalance the mind, release stored tension, and support mental calm.",
+                                            text: "Enhances effects of other therapies through sound vibrations",
                                         },
                                         {
                                             icon: <CheckCircle className="w-5 h-5 text-white" />,
                                             title: "Enhances Other Modalities",
-                                            text: "Complements acupuncture, cupping, massage, and meditation practices.",
+                                            text: "Non-invasive supportive wellness modality",
                                         },
                                     ].map((item, index) => (
                                         <div
                                             key={index}
-                                            className="flex flex-col items-center justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                                            className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
                                             data-aos="zoom-out"
                                             data-aos-delay={200 + index * 150}
                                         >

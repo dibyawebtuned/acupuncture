@@ -66,15 +66,18 @@ export default function Testimonials() {
 
     return (
         <section className="bg-white py-24 text-[#0b3d91]">
-            <div className="max-w-6xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-6">
+
                 {/* Title */}
-                <h2 className="text-center text-4xl font-light mb-16">
+                <h2 className="text-left text-5xl md:text-6xl font-light mb-20">
                     Why People Choose <em className="italic font-serif">Vantage Point.</em>
                 </h2>
 
-                {/* Card */}
-                <div className="relative flex justify-center items-center">
-                    <div className="bg-white border border-gray-200 rounded-xl p-10 w-full sm:w-3/4 md:w-2/3 shadow-sm">
+                <div className="relative">
+
+                    {/* Card */}
+                    <div className="bg-white border border-gray-200 rounded-xl p-12 w-full max-w-[1100px] shadow-sm">
+
                         {/* Stars */}
                         <div className="flex mb-6 text-[#0b3d91]">
                             {[...Array(5)].map((_, i) => (
@@ -85,26 +88,26 @@ export default function Testimonials() {
                                     viewBox="0 0 20 20"
                                     className="w-6 h-6"
                                 >
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.19 3.674a1 1 0 00.95.69h3.862c.969 0 1.371 1.24.588 1.81l-3.126 2.27a1 1 0 00-.364 1.118l1.19 3.674c.3.921-.755 1.688-1.54 1.118l-3.126-2.27a1 1 0 00-1.175 0l-3.126 2.27c-.784.57-1.838-.197-1.54-1.118l1.19-3.674a1 1 0 00-.364-1.118L2.26 9.101c-.783-.57-.38-1.81.588-1.81h3.862a1 1 0 00.95-.69l1.19-3.674z" />
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.19 3.674a1 1 0 00.95.69h3.862c.969 0 1.371 1.24.588 1.81l-3.126 2.27a1 1 0 00-.364 1.118l1.19 3.674c.3.921-.755 1.688-1.57 1.118l-3.126-2.27a1 1 0 00-1.175 0l-3.126 2.27c-.784.57-1.838-.197-1.54-1.118l1.19-3.674a1 1 0 00-.364-1.118L2.26 9.101c-.783-.57-.38-1.81.588-1.81h3.862a1 1 0 00.95-.69l1.19-3.674z" />
                                 </svg>
                             ))}
                         </div>
 
                         {/* Text */}
-                        <p className="text-gray-700 text-lg leading-relaxed mb-10">
+                        <p className="text-gray-700 text-xl leading-relaxed mb-12 max-w-[900px]">
                             {testimonial.text}
                         </p>
 
                         {/* Author */}
                         <div className="flex items-center gap-4">
                             <div
-                                className="w-12 h-12 rounded-full flex items-center justify-center text-white text-lg font-semibold"
+                                className="w-14 h-14 rounded-full flex items-center justify-center text-white text-lg font-semibold"
                                 style={{ backgroundColor: testimonial.color }}
                             >
                                 {testimonial.initials}
                             </div>
                             <div>
-                                <p className="font-semibold text-black">
+                                <p className="font-semibold text-black text-lg">
                                     {testimonial.name}
                                 </p>
                                 <p className="text-gray-500 text-sm">{testimonial.date}</p>
@@ -112,8 +115,8 @@ export default function Testimonials() {
                         </div>
                     </div>
 
-                    {/* Navigation Arrows */}
-                    <div className="absolute bottom-[-4rem] right-1/2 translate-x-1/2 flex gap-6">
+                    {/* Arrows — bottom-right like the screenshot */}
+                    <div className="absolute right-0 -bottom-20 flex gap-4">
                         <button
                             onClick={prev}
                             className="p-3 border border-[#0b3d91] rounded-full text-[#0b3d91] hover:bg-[#0b3d91] hover:text-white transition"
@@ -131,8 +134,8 @@ export default function Testimonials() {
                     </div>
                 </div>
 
-                {/* Dots */}
-                <div className="flex justify-center mt-16 space-x-2">
+                {/* Dots — centered below card, like the screenshot */}
+                <div className="flex justify-center mt-24 space-x-3">
                     {testimonials.map((_, i) => (
                         <button
                             key={i}
@@ -145,4 +148,5 @@ export default function Testimonials() {
             </div>
         </section>
     );
+
 }
