@@ -11,6 +11,7 @@ export default function DoYouKnowSection() {
         const elements = document.querySelectorAll(".header80_image-wrapper");
 
         let ticking = false;
+
         const onScroll = () => {
             if (!ticking) {
                 window.requestAnimationFrame(() => {
@@ -34,8 +35,8 @@ export default function DoYouKnowSection() {
             className="section_header80 background-color-whitesmoke"
             style={{
                 position: "relative",
-                height: "100vh", // ✅ Prevent section from exceeding screen height
-                overflow: "hidden", // ✅ Prevent scroll spill from moving content
+                height: "100vh",
+                overflow: "hidden",
             }}
         >
             <Script src={WEBFLOW_JS} strategy="afterInteractive" />

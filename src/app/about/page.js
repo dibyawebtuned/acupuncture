@@ -154,9 +154,6 @@ const Page = () => {
                 {/* TailoredPlansSection */}
                 <TailoredPlansSection />
             </section>
-
-            {/* Banner */}
-            {/* <Banner /> */}
         </div>
     );
 };
