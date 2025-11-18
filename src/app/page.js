@@ -8,7 +8,7 @@ import MarqueeSection from "@/component/Marquee";
 import Services from "@/component/Services";
 import SimpleAccess from "@/component/SimpleAccess";
 import TestimonialSlider from "@/component/Testimonial";
-import FAQs from "@/component/Faq";
+import FAQs from "@/component/FaqSection";
 import Footer from "@/component/Footer";
 
 
