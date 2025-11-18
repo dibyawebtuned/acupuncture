@@ -51,7 +51,9 @@ const Page = () => {
         <div className="pt-[130px] bg-[#EAF0F0]">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col">
                 {/* Heading */}
-                <div data-scroll-section className="flex flex-col gap-3 text-left mb-10 md:mb-6">
+                <div
+                    data-scroll-section
+                    className="flex flex-col gap-3 text-left mb-10 md:mb-6">
                     {/* Section Label (AOS) */}
                     <div
                         className="text-[#6D6A5F] font-testsignifier uppercase text-xs sm:text-sm tracking-widest"
@@ -74,48 +76,63 @@ const Page = () => {
                 {/* Main Content: Images */}
                 <div className="flex flex-col gap-[60px]">
                     {/* Images */}
-                    <div data-scroll-section className="flex flex-col lg:flex-row gap-6">
-                        {/* First Image (bottom -> top) */}
+                    <div data-scroll-section>
+                        <div className="hidden sm:flex! flex-col lg:flex-row gap-6">
+                            {/* First Image (bottom -> top) */}
+                            <div
+                                ref={ref1}
+                                className="flex-1 w-full h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
+                                data-aos="reveal-up"
+                            >
+                                <Image
+                                    src="/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg"
+                                    alt="About 1"
+                                    fill
+                                    className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
+                                />
+                            </div>
+
+                            {/* Second and Third Images */}
+                            <div className="flex flex-1 flex-col sm:flex-row gap-6">
+                                <div
+                                    ref={ref2}
+                                    className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
+                                    data-aos="reveal-up"
+                                >
+                                    <Image
+                                        src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
+                                        alt="About 2"
+                                        fill
+                                        className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
+                                    />
+                                </div>
+
+                                <div
+                                    ref={ref3}
+                                    className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
+                                    data-aos="reveal-up"
+                                >
+                                    <Image
+                                        src="/assets/img/7515-1-Tuning-Forks.jpg"
+                                        alt="About 3"
+                                        fill
+                                        className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Mobile View - Single Image */}
                         <div
-                            ref={ref1}
-                            className="flex-1 w-full h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
-                            data-aos="reveal-up"
+                            className="block sm:hidden w-full h-80 relative overflow-hidden rounded-none!"
+                            data-aos="fade-up"
                         >
                             <Image
                                 src="/assets/img/469209709_17879239428197064_3445656581431711502_n.jpg"
-                                alt="About 1"
+                                alt="About Mobile"
                                 fill
                                 className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
                             />
-                        </div>
-
-                        {/* Second and Third Images */}
-                        <div className="flex flex-1 flex-col sm:flex-row gap-6">
-                            <div
-                                ref={ref2}
-                                className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
-                                data-aos="reveal-up"
-                            >
-                                <Image
-                                    src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
-                                    alt="About 2"
-                                    fill
-                                    className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
-                                />
-                            </div>
-
-                            <div
-                                ref={ref3}
-                                className="flex-1 h-64 sm:h-80 md:h-96 lg:h-[400px] relative overflow-hidden"
-                                data-aos="reveal-up"
-                            >
-                                <Image
-                                    src="/assets/img/7515-1-Tuning-Forks.jpg"
-                                    alt="About 3"
-                                    fill
-                                    className="object-cover transition-transform duration-700 hover:scale-105 rounded-none!"
-                                />
-                            </div>
                         </div>
                     </div>
 

@@ -118,7 +118,6 @@ const Page = ({ showHeader = true }) => {
                 </div>
             </div>
 
-            {/* <Banner /> */}
         </div>
     );
 };
