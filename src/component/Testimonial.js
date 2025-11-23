@@ -332,11 +332,10 @@ export default function Testimonials() {
                               <div
                                 class="text-size-medium text-style-less-copy no-scrollbar"
                               >
-                                Dr Marney is exceptional at what she does and
-                                helped both my teenage son with overcoming
-                                chronic asthma and me with a multitude of pain
-                                over the last 7 years. A very wise soul and
-                                wonderful caring being .
+                                Vantage Point Acupuncture has become an essential part of my wellness routine. 
+                                The practitioner took the time to understand my concerns and created a 
+                                treatment plan that felt truly personalized. Within a few sessions, 
+                                I noticed improvements in my energy, sleep, and overall balance.
                               </div>
                               <!-- Feedback Ends -->
                             </div>
@@ -452,13 +451,10 @@ export default function Testimonials() {
                               <div
                                 class="text-size-medium text-style-less-copy no-scrollbar"
                               >
-                                I was referred to Marney from a friend. I’ve had
-                                a long history of chronic pain and general
-                                health issues. Marney took the time to listen to
-                                my concerns and address them one at a time. She
-                                has helped me so much in the short time I have
-                                known her and her knowledge of the human body is
-                                amazing. Very keen for my next appointment!
+                                I began using Chinese Herbal Medicine alongside acupuncture, 
+                                and the results have been wonderful. The herbal formulas were 
+                                crafted specifically for my health needs, and everything was 
+                                explained clearly. I feel healthier and more grounded with each visit.
                               </div>
                             </div>
                           </div>
@@ -573,11 +569,10 @@ export default function Testimonials() {
                               <div
                                 class="text-size-medium text-style-less-copy no-scrollbar"
                               >
-                                Marney is incredible!! I have been seeing her
-                                since 2020 and she has helped balance my
-                                hormones and cleared my cystic acne completely.
-                                Very caring and always puts her patients first.
-                                Cannot recommend her enough.
+                                Constitutional Facial Acupuncture has been such a gentle and refreshing experience. 
+                                My skin feels more vibrant, and I love that this approach supports 
+                                my overall wellbeing—not just cosmetic changes. 
+                                Each session leaves me deeply relaxed.
                               </div>
                             </div>
                           </div>
@@ -694,13 +689,9 @@ export default function Testimonials() {
                               <div
                                 class="text-size-medium text-style-less-copy no-scrollbar"
                               >
-                                I've known Marney for quite a while and finally
-                                came in for acupuncture. She really is amazing!!
-                                Bells Palsy, doctor told me 3 months recovery!
-                                From the first visit with Marney I had
-                                substantial improvements and a full recovery
-                                within a few weeks! She's a lovely soul and
-                                brilliant at her craft, I highly recommend her!
+                                I truly appreciate the professionalism and compassion at Vantage Point Acupuncture. 
+                                Every session is thoughtfully conducted, and the treatments have helped me 
+                                feel more balanced and clear-headed. I always look forward to my appointments.
                               </div>
                             </div>
                           </div>
@@ -815,15 +806,11 @@ export default function Testimonials() {
                               <div
                                 class="text-size-medium text-style-less-copy no-scrollbar"
                               >
-                                I have been going to Marney for at least a year
-                                now! What a beautiful soul Marney is as well as
-                                an expert in her field and beyond! I recommend
-                                Marney with every cell in my body she is kind,
-                                considerate, patient and knows her stuff! If you
-                                go with a list or just want a general well being
-                                session… you will be delighted by your
-                                experience! Easy to recommend this extraordinary
-                                woman
+                                After receiving consistent treatments, 
+                                I’ve experienced meaningful improvements in stress levels, 
+                                digestion, and overall vitality. The practitioner 
+                                continuously reviews my progress and adjusts treatments as needed, 
+                                which makes me feel genuinely supported.
                               </div>
                             </div>
                           </div>
@@ -938,14 +925,11 @@ export default function Testimonials() {
                               <div
                                 class="text-size-medium text-style-less-copy no-scrollbar"
                               >
-                                Marney is amazing! She knows the body and all
-                                the inner workings so well! I used to not like
-                                Acupuncture after a terrible experience but
-                                after visiting Marney, Acupuncture is my first
-                                port of call to fix me when needed. She is so
-                                professional, knowledgeable, friendly and
-                                caring. I can not recommend her highly enough.
-                                You will not be disappointed!
+                                I had been dealing with ongoing tension and low energy for years. 
+                                After starting acupuncture at Vantage Point Acupuncture, 
+                                I felt a remarkable shift within weeks. The sessions are calming, 
+                                and the practitioner always explains what to expect. 
+                                I feel more balanced and mentally clear.
                               </div>
                             </div>
                           </div>
@@ -1060,11 +1044,12 @@ export default function Testimonials() {
                               <div
                                 class="text-size-medium text-style-less-copy no-scrollbar"
                               >
-                                I never knew how helpful acupuncture could be
-                                until now. Marney is so thoughtful. She listened
-                                closely to my needs and somehow managed to
-                                relieve my pain entirely. I cannot recommend her
-                                highly enough. Thank you!!
+                                What stood out to me most was the practitioner’s depth of 
+                                knowledge and ability to listen. My treatment plan felt 
+                                thoughtful and intentional. 
+                                The combination of acupuncture and herbal medicine 
+                                supported my recovery better than anything 
+                                I’ve tried before.
                               </div>
                             </div>
                           </div>
