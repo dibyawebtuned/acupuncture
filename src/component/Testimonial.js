@@ -1,10 +1,10 @@
 "use client";
 
 export default function Testimonials() {
-    return (
-        <div
-            dangerouslySetInnerHTML={{
-                __html: `
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `
 <!---------------------------------------------->
 <!-- EXACT HTML FROM YOUR FILE BELOW (UNTOUCHED) -->
 <!---------------------------------------------->
@@ -1122,9 +1122,9 @@ export default function Testimonials() {
     ></script>
 
 `,
-            }}
-        />
-    );
+      }}
+    />
+  );
 }
 
 

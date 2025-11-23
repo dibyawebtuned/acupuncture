@@ -26,7 +26,6 @@ const Footer = () => {
 
     return (
         <div className="footer-wrapper">
-            {/* --- Instagram Section --- */}
             <section
                 className="section_gallery4 text-color-darkteal bg-[#F9F5EE] py-16"
                 ref={containerRef}
@@ -61,7 +60,6 @@ const Footer = () => {
                         </a>
                     </p>
 
-                    {/* --- Interactive Image Grid --- */}
                     <div
                         className="flex flex-wrap justify-center gap-4 sm:gap-8 transition-transform duration-300 pt-15"
                         style={{
@@ -76,7 +74,6 @@ const Footer = () => {
                         ].map((src, idx) => {
                             const isEven = (idx + 1) % 2 === 0;
 
-                            // Desktop heights stay the same
                             const desktopHeight = isEven ? 400 : 300;
 
                             return (
@@ -91,7 +88,7 @@ const Footer = () => {
                                 sm:h-[unset]        /* → release mobile height */
         "
                                     style={{
-                                        height: ` ${desktopHeight}px`,     // desktop height override
+                                        height: ` ${desktopHeight}px`,
                                         transform: `rotate(${hoveredIndex === idx ? 0 : rotations[idx]}deg)`,
                                         transition: "transform 0.4s ease, height 0.4s ease",
                                     }}
@@ -119,16 +116,13 @@ const Footer = () => {
             </section>
 
 
-            {/* --- Main Footer --- */}
             <footer className="footer2_component">
                 <div className="padding-global">
                     <div className="container-extended">
                         <div className="padding-vertical padding-footer">
                             <div className="container-large">
-                                {/*  */}
                                 <div className="padding-bottom padding-xxlarge">
                                     <div className="w-layout-grid footer2_top-wrapper">
-                                        {/* Newsletter */}
                                         <div className="footer2_right-wrapper">
                                             <div className="margin-bottom margin-large">
                                                 <div className="text-size-xxlarge text-balance">
@@ -157,9 +151,7 @@ const Footer = () => {
                                             </div>
                                         </div>
 
-                                        {/* Footer Links */}
                                         <div className="w-layout-grid footer2_left-wrapper">
-                                            {/* Treatments */}
                                             <div className="footer2_link-list">
                                                 <div className="margin-bottom margin-xsmall">
                                                     <div className="text-size-regular">Treatments</div>
@@ -178,7 +170,6 @@ const Footer = () => {
                                                 </Link>
                                             </div>
 
-                                            {/* About */}
                                             <div className="footer2_link-list">
                                                 <div className="margin-bottom margin-xsmall">
                                                     <div className="text-size-regular">About</div>
@@ -191,7 +182,6 @@ const Footer = () => {
                                                 </Link>
                                             </div>
 
-                                            {/* Help */}
                                             <div className="footer2_link-list">
                                                 <div className="margin-bottom margin-xsmall">
                                                     <div className="text-size-regular">Help</div>
@@ -210,7 +200,6 @@ const Footer = () => {
                                                 </Link>
                                             </div>
 
-                                            {/* Social */}
                                             <div className="footer2_link-list">
                                                 <div className="margin-bottom margin-xsmall">
                                                     <div className="text-size-regular">Social</div>
@@ -232,13 +221,11 @@ const Footer = () => {
                                     </div>
                                 </div>
 
-                                {/* Divider */}
                                 <div className="divider-line-animation-wrapper">
                                     <div className="line-divider-vertical"></div>
                                     <div className="line-divider"></div>
                                 </div>
 
-                                {/* Logo */}
                                 <div style={{ paddingTop: "15px" }}>
                                     <div className="footer-logo-wrapper flex justify-center">
                                         <Link href="/" className="footer2_logo-link">
@@ -253,7 +240,6 @@ const Footer = () => {
                                     </div>
                                 </div>
 
-                                {/* Bottom Legal Section */}
                                 <div style={{ paddingBottom: "15px" }}>
                                     <div className="footer2_bottom-wrapper">
                                         <div className="w-layout-grid footer2_legal-list">
