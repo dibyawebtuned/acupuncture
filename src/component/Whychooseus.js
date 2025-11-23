@@ -52,16 +52,16 @@ const WhyChooseUs = () => {
                     {/* Features */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-[50px] sm:gap-5">
                         <div className="flex flex-col items-center justify-between gap-[30px] sm:gap-20">
-                            <div className="text-center px-[25px]"
+                            <div className="text-center px-[25px] flex flex-col justify-between"
                                 data-aos="zoom-out"
                                 data-aos-duration="600"
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-offset="100"
                             >
                                 {icons.treatment}
-                                <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">Personalized Treatments</div>
+                                <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">Personalized Approach</div>
                                 <div className="text-gray-500 font-ppNeueMontreal text-[16px]">
-                                    Each guest receives a custom experience designed to meet their specific needs, ensuring you get the most effective and relaxing treatments.
+                                    We go beyond symptoms to understand your full health picture, creating treatment plans tailored specifically to your needs and wellness goals.
                                 </div>
                             </div>
 
@@ -79,16 +79,16 @@ const WhyChooseUs = () => {
 
 
                         <div className="flex flex-col items-center justify-between gap-[30px] sm:gap-20">
-                            <div className="text-center px-[25px]"
+                            <div className="text-center px-[25px]  flex flex-col justify-between"
                                 data-aos="zoom-out"
                                 data-aos-duration="600"
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-offset="100"
                             >
                                 {icons.environment}
-                                <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">Tranquil Environment</div>
+                                <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">Integrative Care</div>
                                 <div className="text-gray-500 font-ppNeueMontreal text-[16px]">
-                                    Our spa is a peaceful oasis designed to help you unwind, with soothing surroundings and a calming atmosphere that ensures you feel relaxed from the moment you step inside.
+                                    Our services—including Acupuncture and Chinese Herbal Medicine—are designed to work harmoniously with your current healthcare.
                                 </div>
                             </div>
 
@@ -106,16 +106,16 @@ const WhyChooseUs = () => {
 
 
                         <div className="flex flex-col items-center justify-between gap-[30px] sm:gap-20">
-                            <div className="text-center px-[25px]"
+                            <div className="text-center px-[25px]  flex flex-col justify-between"
                                 data-aos="zoom-out"
                                 data-aos-duration="600"
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-offset="100"
                             >
                                 {icons.therapist}
-                                <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">Expert Therapists</div>
+                                <div className="text-[22px] mb-2 font-ppneuemontreal font-medium">High-Quality Formulations</div>
                                 <div className="text-gray-500 font-ppNeueMontreal text-[16px]">
-                                    Our team of highly trained professionals is dedicated to your wellness, using the latest techniques and the finest products to provide exceptional care.
+                                    All herbs are sourced from trusted, reputable suppliers and selected for purity, safety, and effectiveness.
                                 </div>
                             </div>
 
