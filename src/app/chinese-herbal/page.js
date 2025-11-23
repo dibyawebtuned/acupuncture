@@ -42,7 +42,6 @@ const Page = () => {
     }, []);
 
 
-
     useEffect(() => {
         const dot = document.querySelector(".cursor-dot");
 
@@ -61,7 +60,6 @@ const Page = () => {
             });
         };
     }, []);
-
 
 
     useEffect(() => {

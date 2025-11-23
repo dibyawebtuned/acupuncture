@@ -10,7 +10,7 @@ const Nav = () => {
 
 
   return (
-    <header className="w-full fixed top-0 left-0 z-[9999]">
+    <header className="w-full fixed top-0 left-0 z-9999">
 
       {/* Top Banner (Dismissible) */}
       {showBanner && (
