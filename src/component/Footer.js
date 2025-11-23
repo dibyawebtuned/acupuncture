@@ -207,18 +207,15 @@ const Footer = () => {
                                                 <div className="margin-bottom margin-xsmall">
                                                     <div className="text-size-regular">Social</div>
                                                 </div>
-                                                <a href="#" target="_blank" className="footer2_link">
+                                                <a href="https://www.instagram.com" target="_blank" className="footer2_link">
                                                     Instagram
                                                 </a>
-                                                <a href="#" target="_blank" className="footer2_link">
+                                                <a href="https://www.facebook.com" target="_blank" className="footer2_link">
                                                     Facebook
                                                 </a>
-                                                <a href="#" target="_blank" className="footer2_link">
+                                                <a href="https://www.pinterest.com" target="_blank" className="footer2_link">
                                                     Pinterest
                                                 </a>
-                                                {/* <a href="#" target="_blank" className="footer2_link">
-                                                    About Marney
-                                                </a> */}
                                             </div>
                                         </div>
                                     </div>
