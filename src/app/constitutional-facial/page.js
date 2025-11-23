@@ -79,7 +79,7 @@ const Page = () => {
             <div className="pt-[130px] bg-[#EAF0F0]">
                 {/* Top Section */}
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-15">
-                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
+                    <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-14 items-center">
                         {/* Left Image */}
                         <div className="flex-1 w-full"
                             data-aos="fade-right"
