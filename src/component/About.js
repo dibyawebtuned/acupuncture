@@ -46,9 +46,8 @@ const About = () => {
                         data-aos-duration="1200"
                         data-aos-delay="200"
                     >
-                        Step into a world where tranquility and luxury blend seamlessly.
-                        Our spa offers a range of rejuvenating treatments designed to restore balance,
-                        calm your mind, and invigorate your body.
+                        At Vantage Point Acupuncture, we believe that true wellness begins with understanding the whole person—body,
+                        mind, and spirit. Our clinic offers a calm, supportive environment.
                     </div>
                 </div>
             </div>
@@ -76,10 +75,10 @@ const About = () => {
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="400">
-                                At our spa, we are dedicated to creating an oasis of peace and relaxation
-                                where you can truly unwind. With a passion for wellness and self-care, our
-                                team of skilled therapists and specialists are committed to offering you the
-                                highest quality treatments, tailored to meet your individual needs.
+                                Our practitioners take a personalized approach, focusing on your unique constitution and health patterns.
+                                Every treatment plan is thoughtfully curated to support the body’s natural healing processes while ensuring safety,
+                                comfort, and clarity at every step. With a commitment to holistic care, we strive to empower individuals to
+                                reconnect with their health and feel supported throughout their wellness journey.
                             </p>
                         </div>
                     </div>
