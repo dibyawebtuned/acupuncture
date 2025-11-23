@@ -298,6 +298,7 @@ const Page = () => {
                             </div>
                         </div> */}
 
+                        {/* Feature Section */}
                         <div className="w-full flex flex-col gap-10 justify-center bg-gray-50 py-10 rounded-lg">
                             <div className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppNeueMontreal font-medium leading-snug px-10">
                                 Process <span className="font-testSignifier"> Overview </span>
@@ -350,7 +351,7 @@ const Page = () => {
 
                         {/* Why Choose */}
                         <div className="">
-                            <div className="flex flex-col gap-[20px]">
+                            <div className="flex flex-col gap-5">
                                 {/* Heading */}
                                 <div className="flex flex-col gap-[15px]">
                                     <div
