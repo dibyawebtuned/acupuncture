@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import MarqueeSection from "@/component/Marquee";
 import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star, Stethoscope, FlaskRound, RefreshCw } from "lucide-react";
 import AOS from "aos";
@@ -73,15 +74,15 @@ const Page = () => {
         <div>
             <div className="pt-[130px] bg-[#EAF0F0]">
                 {/* Top Section */}
-                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15">
-                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-15">
+                    <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-14 items-center">
                         {/* Left Image */}
                         <div className="flex-1 w-full"
                             data-aos="fade-right"
                         >
                             <div className="relative w-full min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden rounded-md shadow-md">
                                 <Image
-                                    src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
+                                    src="/assets/img/Traditional-Chinese-Medicine-is-diagnosing-women's-pulse-.webp"
                                     alt="Facial Acupuncture"
                                     fill
                                     className="object-cover"
@@ -107,7 +108,7 @@ const Page = () => {
                                 >
                                     Chinese Herbal <span className="font-testSignifier"> Medicine </span>
                                 </div>
-                                <div className="font-ppNeueMontreal text-gray-500 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                <div className="font-ppNeueMontreal text-justify text-gray-500 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                                     data-aos="fade-up"
                                     data-aos-delay="200"
                                 >
@@ -119,7 +120,15 @@ const Page = () => {
                                 </div>
                             </div>
 
-                            <div className="w-full flex flex-wrap mt-6 -mx-5">
+
+                            <div className="flex pt-5 sm:pt-10">
+                                <Link href="/book"
+                                    className="bg-[#0b3d91]! text-white! text-[14px] py-2.5 px-14 rounded-full font-medium no-underline!">
+                                    Book an Appointment
+                                </Link>
+                            </div>
+
+                            {/* <div className="w-full flex flex-wrap mt-6 -mx-5">
                                 {[
                                     {
                                         icon: <Leaf size={20} className="text-white" />,
@@ -146,7 +155,6 @@ const Page = () => {
                                         data-aos="fade-up"
                                         data-aos-delay={250 + index * 100}
                                     >
-                                        {/* Square icon */}
                                         <div className="w-10 h-10 flex items-center justify-center rounded-md shrink-0 bg-[#0B3D91]">
                                             {item.icon}
                                         </div>
@@ -157,8 +165,7 @@ const Page = () => {
                                         </div>
                                     </div>
                                 ))}
-                            </div>
-
+                            </div> */}
 
                         </div>
                     </div>
@@ -223,7 +230,7 @@ const Page = () => {
                                             data-aos-delay="400"
                                         >
                                             <Image
-                                                src="/assets/img/footer_one.jpg"
+                                                src="/assets/img/ImageForNews_765936_1701383544529230.webp"
                                                 alt="Chinese Herbal Medicine"
                                                 fill
                                                 className="object-cover"
@@ -235,8 +242,6 @@ const Page = () => {
                                 </div>
                             </div>
                         </div>
-
-
 
                         {/* Features Section */}
                         {/* <div className="px-4 md:px-0 max-w-6xl mx-auto bg-gray-50 py-10 rounded-lg">
@@ -277,7 +282,7 @@ const Page = () => {
 
 
                         {/* Feature Section */}
-                        <div className="w-full flex flex-col gap-[40px] justify-center bg-gray-50 py-10 rounded-lg">
+                        <div className="w-full flex flex-col gap-10 justify-center bg-gray-50 py-10 rounded-lg">
                             <div className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppNeueMontreal font-medium leading-snug px-10">
                                 Process Overview
                             </div>

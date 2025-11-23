@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import MarqueeSection from "@/component/Marquee";
-import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star } from "lucide-react";
+import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star, Stethoscope, FlaskRound, RefreshCw } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ServiceGallery from "@/component/ServiceGallery";
@@ -164,6 +164,7 @@ const Page = () => {
                     </div>
                 </div>
 
+                {/* MarqueeSection */}
                 <div className="pb-15">
                     <MarqueeSection />
                 </div>
@@ -237,6 +238,58 @@ const Page = () => {
                                 </div>
                             </div>
                         </div>
+
+
+                        {/* Feature Section */}
+                        <div className="w-full flex flex-col gap-10 justify-center bg-gray-50 py-10 rounded-lg">
+                            <div className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppNeueMontreal font-medium leading-snug px-10">
+                                Process Overview
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-24">
+                                <div className="text-center w-48">
+                                    <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                                        <span className="">
+                                            <Stethoscope size={40} className="text-[#0B3D91]" />
+                                        </span>
+                                    </div>
+
+                                    <div className="text-[24px] font-semibold mt-4 text-gray-700">01</div>
+                                    <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                                        Initial evaluationand pattern diagnosis
+                                    </p>
+                                </div>
+
+                                <div className="text-center w-48 relative">
+                                    <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                                    <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                                        <span className="">
+                                            <FlaskRound size={40} className="text-[#0B3D91]" />
+                                        </span>
+                                    </div>
+
+                                    <div className="text-[24px] font-semibold mt-4 text-gray-700">02</div>
+                                    <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                                        Formulationof a herbal prescriptionfrom qualityherbs
+                                    </p>
+                                </div>
+
+                                <div className="text-center w-48 relative">
+                                    <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                                    <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                                        <span className="">
+                                            <RefreshCw size={40} className="text-[#0B3D91]" />
+                                        </span>
+                                    </div>
+
+                                    <div className="text-[24px] font-semibold mt-4 text-gray-700">03</div>
+                                    <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                                        Ongoingmonitoring andadjustments madeas needed
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
 
                         {/* Why Choose */}
                         <div className="">
