@@ -9,7 +9,6 @@ import ServiceGallery from "@/component/ServiceGallery";
 
 const Page = () => {
 
-
     useEffect(() => {
         const dot = document.querySelector(".cursor-dot");
 
@@ -20,7 +19,6 @@ const Page = () => {
         let ease = 0.12;
 
         const updateCursor = () => {
-            // Lerp (linear interpolation)
             x += (targetX - x) * ease;
             y += (targetY - y) * ease;
 
@@ -171,7 +169,7 @@ const Page = () => {
                 </div>
 
                 {/* Two */}
-                <div className="flex flex-col lg:flex-row gap-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15">
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15 flex flex-col lg:flex-row gap-10 items-start">
                     {/* Left (8/12 on large screens) */}
                     <div className="w-full lg:w-8/12 flex flex-col gap-15">
                         {/* What to expect */}
@@ -316,9 +314,9 @@ const Page = () => {
                     </div>
 
                     {/* Right (4/12 on large screens) wewe */}
-                    <div className="w-full lg:w-4/12 flex items-center justify-center">
+                    <div className="w-full lg:w-4/12">
                         {/* Sticky Sidebar with Hover Animations */}
-                        <div className="lg:sticky lg:top-28 self-start transition-transform duration-300 ease-out">
+                        <div className="md:sticky md:top-28 self-start transition-transform duration-300 ease-out">
                             <div className="bg-[#0B3D91] text-white rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                                 {/* Decorative Leaf */}
                                 <div className="absolute top-0 right-0 opacity-20 pointer-events-none">
@@ -368,7 +366,7 @@ const Page = () => {
 
                                 {/* Button */}
                                 <a
-                                    href="/appointment"
+                                    href="/book"
                                     className="block text-center no-underline! bg-white! text-[#0B3D91] py-3 rounded-full font-medium hover:bg-gray-200 transition"
                                 >
                                     Book an Appointment
