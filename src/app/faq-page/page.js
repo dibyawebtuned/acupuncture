@@ -12,24 +12,29 @@ const Page = ({ showHeader = true }) => {
 
     const faqs = [
         {
-            question: "Is acupuncture safe?",
+            question: "What can I expect during my first visit?",
             answer:
-                "When performed by a registered practitioner using sterile, single-use needles, acupuncture is generally considered safe. We’ll discuss benefits and risks for you before any treatment.",
+                "During your initial appointment, our practitioner will conduct a comprehensive health assessment, reviewing your concerns, medical history, lifestyle factors, and wellness goals. This helps us understand your overall constitution and design a treatment plan that best supports your needs.",
         },
         {
-            question: "How should I prepare for my appointment?",
+            question: "How does acupuncture work?",
             answer:
-                "Have a light snack, wear comfortable clothing, and bring a list of medicines, supplements, and allergies.",
+                "Acupuncture uses fine, sterile needles to stimulate specific points on the body. This supports circulation, encourages balance within the body's systems, and promotes natural healing responses. Most clients find treatment deeply relaxing and restorative.",
         },
         {
-            question: "What if I’m pregnant or planning pregnancy?",
+            question: "Are the treatments painful?",
             answer:
-                "Please tell us. Techniques and point choices are adjusted, and we’ll check suitability for you. Always follow your maternity care team’s advice.",
+                "Acupuncture needles are extremely thin, and sensations are generally minimal. Many people feel a gentle warmth, light pressure, or a mild tingling sensation during treatment. Constitutional Facial Acupuncture and body acupuncture are designed to be comfortable and soothing.",
         },
         {
-            question: "Do you offer Chinese herbal medicine?",
+            question: "What is Chinese Herbal Medicine?",
             answer:
-                "Yes, where appropriate. Formulas are selected individually. Always tell us about medicines and supplements so we can check for potential interactions.",
+                "Chinese Herbal Medicine uses carefully selected herbal formulations to support the body’s natural healing processes. Herbs are customized to your health patterns and may be used alongside acupuncture for enhanced effectiveness. All herbs at our clinic are quality-controlled and sourced from trusted suppliers.",
+        },
+        {
+            question: "How many treatments will I need?",
+            answer:
+                "The number of sessions depends on your health condition, goals, and how your body responds. Some clients feel improvements within a few sessions, while others benefit from a longer treatment plan. We regularly evaluate progress and adjust as needed.",
         },
     ];
 
@@ -47,7 +52,7 @@ const Page = ({ showHeader = true }) => {
 
     return (
         <div className="pt-[130px] bg-[#EAF0F0]">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-15">
 
                 <div className="flex flex-col gap-3 text-left">
                     <div
@@ -67,7 +72,7 @@ const Page = ({ showHeader = true }) => {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-10 pt-7">
+                <div className="flex flex-col md:flex-row gap-10 pt-4">
                     <div className="w-full md:w-1/2" data-aos="fade-right">
                         <div className="space-y-4">
                             {faqs.map((faq, index) => (
@@ -76,11 +81,11 @@ const Page = ({ showHeader = true }) => {
                                     className="border-b-[1.6px] border-[#0b3d91] pb-3 cursor-pointer"
                                     onClick={() => toggleFAQ(index)}
                                 >
-                                    <div className="flex justify-between items-center p-6">
-                                        <div className="text-[28px] font-ppneuemontreal">
+                                    <div className="flex justify-between items-center py-6 px-3">
+                                        <div className="text-[20px] sm:text-[24px] md:text-[28px] font-ppneuemontreal">
                                             {faq.question}
                                         </div>
-                                        <span className="text-gray-500 text-2xl leading-none">
+                                        <span className="text-gray-500 text-xl sm:text-2xl leading-none">
                                             {openIndex === index ? "−" : "+"}
                                         </span>
                                     </div>
@@ -89,7 +94,7 @@ const Page = ({ showHeader = true }) => {
                                         className={`px-6 overflow-hidden transition-all duration-300 ${openIndex === index ? "max-h-40 mt-2" : "max-h-0"
                                             }`}
                                     >
-                                        <p className="text-[18px] text-gray-600 leading-8 tracking-wide">
+                                        <p className="text-[16px] sm:text-[18px] text-gray-600 leading-8 tracking-wide text-justify">
                                             {faq.answer}
                                         </p>
                                     </div>
