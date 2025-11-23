@@ -80,12 +80,12 @@ const Page = () => {
                         <div className="flex-1 w-full"
                             data-aos="fade-right"
                         >
-                            <div className="relative w-full min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden rounded-md shadow-md">
+                            <div className="relative w-full min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden rounded-lg shadow-md">
                                 <Image
                                     src="/assets/img/Traditional-Chinese-Medicine-is-diagnosing-women's-pulse-.webp"
                                     alt="Facial Acupuncture"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover rounded-none!"
                                     priority
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                                 />
@@ -225,7 +225,7 @@ const Page = () => {
                                         </ul>
 
 
-                                        <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-md shadow-md"
+                                        <div className="relative w-full h-[200px] sm:h-[300px] lg:h-[350px] overflow-hidden rounded-lg"
                                             data-aos="fade-up"
                                             data-aos-delay="400"
                                         >
@@ -233,7 +233,7 @@ const Page = () => {
                                                 src="/assets/img/ImageForNews_765936_1701383544529230.webp"
                                                 alt="Chinese Herbal Medicine"
                                                 fill
-                                                className="object-cover"
+                                                className="object-cover rounded-none!"
                                                 priority
                                             />
                                         </div>
@@ -279,7 +279,6 @@ const Page = () => {
                                 ))}
                             </div>
                         </div> */}
-
 
                         {/* Feature Section */}
                         <div className="w-full flex flex-col gap-10 justify-center bg-gray-50 py-10 rounded-lg">
