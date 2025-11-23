@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import MarqueeSection from "@/component/Marquee";
-import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star } from "lucide-react";
+import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star, Stethoscope, FlaskRound, RefreshCw } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ServiceGallery from "@/component/ServiceGallery";
@@ -235,6 +235,97 @@ const Page = () => {
                                 </div>
                             </div>
                         </div>
+
+
+
+                        {/* Features Section */}
+                        {/* <div className="px-4 md:px-0 max-w-6xl mx-auto bg-gray-50 py-10 rounded-lg">
+                            <div className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppNeueMontreal font-medium leading-snug px-10">
+                                Process Overview
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                                {[
+                                    {
+                                        icon: <Heart size={36} className="text-[#0B3D91]" />,
+                                        title: "Initial evaluationand pattern diagnosis",
+                                    },
+                                    {
+                                        icon: <Leaf size={36} className="text-[#0B3D91]" />,
+                                        title: "Formulationof a herbal prescriptionfrom qualityherbs",
+                                    },
+                                    {
+                                        icon: <ArrowRight size={36} className="text-[#0B3D91]" />,
+                                        title: "Ongoingmonitoring andadjustments madeas needed",
+                                    },
+                                ].map((feature, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-gray-50 transition-all duration-300"
+                                        data-aos="fade-up"
+                                        data-aos-delay={index * 150}
+                                    >
+                                        <div className="text-4xl mb-4">{feature.icon}</div>
+                                        <div className="text-xl font-testSignifier font-semibold text-gray-700 mb-2">
+                                            {feature.title}
+                                        </div>
+                                        <p className="text-gray-500 text-sm sm:text-base">{feature.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div> */}
+
+
+                        {/* Feature Section */}
+                        <div className="w-full flex flex-col gap-[40px] justify-center bg-gray-50 py-10 rounded-lg">
+                            <div className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppNeueMontreal font-medium leading-snug px-10">
+                                Process Overview
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-24">
+                                <div className="text-center w-48">
+                                    <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                                        <span className="">
+                                            <Stethoscope size={40} className="text-[#0B3D91]" />
+                                        </span>
+                                    </div>
+
+                                    <div className="text-[24px] font-semibold mt-4 text-gray-700">01</div>
+                                    <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                                        Initial evaluationand pattern diagnosis
+                                    </p>
+                                </div>
+
+                                <div className="text-center w-48 relative">
+                                    <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                                    <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                                        <span className="">
+                                            <FlaskRound size={40} className="text-[#0B3D91]" />
+                                        </span>
+                                    </div>
+
+                                    <div className="text-[24px] font-semibold mt-4 text-gray-700">02</div>
+                                    <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                                        Formulationof a herbal prescriptionfrom qualityherbs
+                                    </p>
+                                </div>
+
+                                <div className="text-center w-48 relative">
+                                    <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                                    <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                                        <span className="">
+                                            <RefreshCw size={40} className="text-[#0B3D91]" />
+                                        </span>
+                                    </div>
+
+                                    <div className="text-[24px] font-semibold mt-4 text-gray-700">03</div>
+                                    <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                                        Ongoingmonitoring andadjustments madeas needed
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
 
                         {/* Why Choose */}
                         <div className="">
