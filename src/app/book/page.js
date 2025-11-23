@@ -37,10 +37,9 @@ const BookAppointment = () => {
     }, []);
 
 
-
     return (
         <div className="pt-[130px] bg-[#EAF0F0]">
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15 flex flex-col">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-15 flex flex-col">
                 {/* Header Section */}
                 <div className="flex flex-col gap-3 text-left mb-10 md:mb-6">
                     <div
@@ -55,9 +54,6 @@ const BookAppointment = () => {
                         data-aos-delay="300">
                         Book an Appointment
                     </div>
-                    {/* <p className="text-gray-600 mt-2 text-[15px]">
-                        Fill in the form below and our team will contact you shortly.
-                    </p> */}
                 </div>
 
 
@@ -142,11 +138,6 @@ const BookAppointment = () => {
                     </div>
                 </div>
 
-                {/* Contact Info Footer */}
-                {/* <div className="mt-8 text-center text-gray-600 text-sm">
-                    <p>Need help? Call us at <span className="text-[#0B3D91] font-semibold">0417 794 279</span></p>
-                    <p>Email: <span className="text-[#0B3D91] font-semibold">vantage@gmail.com</span></p>
-                </div> */}
             </div>
         </div>
     );

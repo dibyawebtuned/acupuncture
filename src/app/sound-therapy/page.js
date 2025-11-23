@@ -174,10 +174,10 @@ const Page = () => {
                 </div>
 
                 <div className="pb-15">
-                    <MarqueeSection />
+                    <MarqueeSection /> 
                 </div>
 
-                {/* Two */}
+                {/* Two - 2 */}
                 <div className="flex flex-col lg:flex-row gap-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15">
                     {/* Left (8/12 on large screens) */}
                     <div className="w-full lg:w-8/12 flex flex-col gap-15">
