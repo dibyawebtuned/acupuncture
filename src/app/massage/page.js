@@ -2,10 +2,11 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import MarqueeSection from "@/component/Marquee";
-import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star } from "lucide-react";
+import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star, Stethoscope, FlaskRound, RefreshCw, Handshake, Droplet, Waves } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ServiceGallery from "@/component/ServiceGallery";
+import Link from "next/link";
 
 const Page = () => {
 
@@ -79,14 +80,14 @@ const Page = () => {
       <div className="pt-[130px] bg-[#EAF0F0]">
         {/* Top Section */}
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15">
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
+          <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-14 items-center">
             {/* Left Image */}
             <div className="flex-1 w-full"
               data-aos="fade-right"
             >
               <div className="relative w-full min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden rounded-md shadow-md">
                 <Image
-                  src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
+                  src="/assets/img/massage_cupping.jpg"
                   alt="Facial Acupuncture"
                   fill
                   className="object-cover"
@@ -112,17 +113,27 @@ const Page = () => {
                 >
                   Massage & <span className="font-testSignifier"> Cupping </span>
                 </div>
-                <div className="font-ppNeueMontreal text-gray-500 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                <div className="font-ppNeueMontreal text-justify text-gray-500 text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
                   Therapeutic massage and cupping are available as supportive treatments to promote
                   muscular relaxation, improve circulation, and enhance wellbeing. These modalities are
                   offered in conjunction with acupuncture therapies where appropriate.
+                  <br />
+                  Our practitioners utilize techniques based on your individual needs to support relief from tension and improve mobility. Both massage and cupping are delivered in a safe and professional manner.
                 </div>
               </div>
 
-              <div className="w-full flex flex-wrap mt-6 -mx-5">
+
+              <div className="flex pt-5 sm:pt-10">
+                <Link href="/book"
+                  className="bg-[#0b3d91]! text-white! text-[14px] py-2.5 px-14 rounded-full font-medium no-underline!">
+                  Book an Appointment
+                </Link>
+              </div>
+
+              {/* <div className="w-full flex flex-wrap mt-6 -mx-5">
                 {[
                   {
                     icon: <Leaf size={20} className="text-white" />,
@@ -149,7 +160,6 @@ const Page = () => {
                     data-aos="fade-up"
                     data-aos-delay={250 + index * 100}
                   >
-                    {/* Square icon */}
                     <div className="w-10 h-10 flex items-center justify-center rounded-md shrink-0 bg-[#0B3D91]">
                       {item.icon}
                     </div>
@@ -160,7 +170,7 @@ const Page = () => {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
 
             </div>
@@ -203,11 +213,6 @@ const Page = () => {
                         "Techniques tailored to your muscle health and goals",
                         "Cupping therapy to stimulate skin and tissue circulation",
                         "Relaxing sessions enhancing physical wellbeing",
-                        // "Poor circulation",
-                        // "Headaches and migraine support",
-                        // "Gentle facial massage to improve circulation and glow",
-                        // "Use of premium, skin-safe herbal and natural products",
-                        // "Visible results — refreshed, balanced, and radiant skin",
                       ].map((item, index) => (
                         <li
                           key={index}
@@ -224,15 +229,15 @@ const Page = () => {
                     </ul>
 
 
-                    <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-md shadow-md"
+                    <div className="relative w-full h-[200px] sm:h-[300px] lg:h-[350px] overflow-hidden rounded-lg"
                       data-aos="fade-up"
                       data-aos-delay="400"
                     >
                       <Image
-                        src="/assets/img/footer_one.jpg"
+                        src="/assets/img/three.jpg"
                         alt="Chinese Herbal Medicine"
                         fill
-                        className="object-cover"
+                        className="object-cover rounded-none!"
                         priority
                       />
                     </div>
@@ -242,9 +247,60 @@ const Page = () => {
               </div>
             </div>
 
+
+            {/* Feature Section */}
+            <div className="w-full flex flex-col gap-10 justify-center bg-gray-50 py-10 rounded-lg">
+              <div className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppNeueMontreal font-medium leading-snug px-10">
+                Process <span className="font-testSignifier"> Overview </span>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-24">
+                <div className="text-center w-48">
+                  <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                    <span className="">
+                      <Stethoscope size={40} className="text-[#0B3D91]" />
+                    </span>
+                  </div>
+
+                  <div className="text-[24px] font-semibold mt-4 text-gray-700">01</div>
+                  <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                    Assessment of muscle condition and overall health
+                  </p>
+                </div>
+
+                <div className="text-center w-48 relative">
+                  <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                  <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                    <span className="">
+                      <FlaskRound size={40} className="text-[#0B3D91]" />
+                    </span>
+                  </div>
+
+                  <div className="text-[24px] font-semibold mt-4 text-gray-700">02</div>
+                  <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                    Individualized treatment planning
+                  </p>
+                </div>
+
+                <div className="text-center w-48 relative">
+                  <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                  <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                    <span className="">
+                      <RefreshCw size={40} className="text-[#0B3D91]" />
+                    </span>
+                  </div>
+
+                  <div className="text-[24px] font-semibold mt-4 text-gray-700">03</div>
+                  <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                    Integration with acupuncture sessions as appropriate
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Why Choose */}
             <div className="">
-              <div className="flex flex-col gap-[20px]">
+              <div className="flex flex-col gap-5">
                 {/* Heading */}
                 <div className="flex flex-col gap-[15px]">
                   <div
@@ -265,42 +321,42 @@ const Page = () => {
                 </div>
 
                 {/* Features */}
-                <div className="flex flex-col gap-[20px]">
+                <div className="flex flex-col gap-10 bg-gray-50 px-6 py-10 rounded-lg">
                   {[
                     {
-                      icon: <Leaf className="w-5 h-5 text-white" />,
-                      title: "Natural, Non-Invasive Relief",
+                      icon: <Waves className="w-5 h-5 text-white" />,
+                      title: "Muscle Relaxation Support",
                       text: "Promotes muscle relaxation and tension relief",
                     },
                     {
-                      icon: <Heart className="w-5 h-5 text-white" />,
-                      title: "Perfect for Pain & Stress",
+                      icon: <Droplet className="w-5 h-5 text-white" />,
+                      title: "Blood Flow Support",
                       text: "Improves local circulation",
                     },
                     {
-                      icon: <CheckCircle className="w-5 h-5 text-white" />,
-                      title: "Enhances Other Treatments",
+                      icon: <Handshake className="w-5 h-5 text-white" />,
+                      title: "Holistic Treatment Synergy",
                       text: "Complements acupuncture and other therapies",
                     },
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                      className="group flex flex-col items-start justify-between gap-8 bg-gray-50 rounded-lg"
                       data-aos="zoom-out"
                       data-aos-delay={200 + index * 150}
                     >
-                      <div className="flex items-start gap-5">
+                      <div className="flex items-center gap-5">
                         {/* Icon Circle */}
-                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
+                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] shrink-0 transition-all duration-300 group-hover:bg-[#062B6A] group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(11,61,145,0.5)]">
                           {item.icon}
                         </div>
 
                         {/* Text */}
-                        <div>
-                          <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
+                        <div className="flex flex-col -gap-1">
+                          <div className="text-[22px] font-testSignifier font-semibold text-gray-600">
                             {item.title}
                           </div>
-                          <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
+                          <div className="text-gray-500 font-ppNeueMontreal text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[16px] leading-relaxed">
                             {item.text}
                           </div>
                         </div>

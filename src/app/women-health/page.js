@@ -2,9 +2,10 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import MarqueeSection from "@/component/Marquee";
-import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star } from "lucide-react";
+import { CheckCircle, BadgeCheck, Heart, Leaf, ArrowRight, Star, Stethoscope, FlaskRound, RefreshCw, Droplets, Sun, Flower2, Target } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 import ServiceGallery from "@/component/ServiceGallery";
 
 const Page = () => {
@@ -79,14 +80,14 @@ const Page = () => {
       <div className="pt-[130px] bg-[#EAF0F0]">
         {/* Top Section */}
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 py-15">
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-center">
+          <div className="flex flex-col-reverse lg:flex-row gap-10 lg:gap-14 items-center">
             {/* Left Image */}
             <div className="flex-1 w-full"
               data-aos="fade-right"
             >
               <div className="relative w-full min-h-[280px] sm:min-h-[400px] lg:min-h-[500px] overflow-hidden rounded-md shadow-md">
                 <Image
-                  src="/assets/img/469245827_17879239419197064_4235272167280555836_n.jpg"
+                  src="/assets/img/three.jpg"
                   alt="Facial Acupuncture"
                   fill
                   className="object-cover"
@@ -122,7 +123,14 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="w-full flex flex-wrap mt-6 -mx-5">
+              <div className="flex pt-5 sm:pt-10">
+                <Link href="/book"
+                  className="bg-[#0b3d91]! text-white! text-[14px] py-2.5 px-14 rounded-full font-medium no-underline!">
+                  Book an Appointment
+                </Link>
+              </div>
+
+              {/* <div className="w-full flex flex-wrap mt-6 -mx-5">
                 {[
                   {
                     icon: <Leaf size={20} className="text-white" />,
@@ -149,7 +157,6 @@ const Page = () => {
                     data-aos="fade-up"
                     data-aos-delay={250 + index * 100}
                   >
-                    {/* Square icon */}
                     <div className="w-10 h-10 flex items-center justify-center rounded-md shrink-0 bg-[#0B3D91]">
                       {item.icon}
                     </div>
@@ -160,7 +167,7 @@ const Page = () => {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
 
             </div>
@@ -172,12 +179,12 @@ const Page = () => {
         </div>
 
         {/* Two */}
-        <div className="flex flex-col lg:flex-row gap-[40px] max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15">
+        <div className="flex flex-col lg:flex-row gap-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15">
           {/* Left (8/12 on large screens) */}
           <div className="w-full lg:w-8/12 flex flex-col gap-15">
             {/* What to expect */}
             <div className="">
-              <div className="flex flex-col gap-[20px]">
+              <div className="flex flex-col gap-5">
                 {/* Heading */}
                 <div className="flex flex-col gap-[15px]">
                   <div
@@ -219,12 +226,12 @@ const Page = () => {
                     </ul>
 
 
-                    <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-md shadow-md"
+                    <div className="relative w-full h-[200px] sm:h-[300px] lg:h-[350px] overflow-hidden rounded-lg"
                       data-aos="fade-up"
                       data-aos-delay="400"
                     >
                       <Image
-                        src="/assets/img/footer_one.jpg"
+                        src="/assets/img/trauma-informed-therapist,-somatic-trauma-coaching-and-speaker-abi-blake-9.webp"
                         alt="Chinese Herbal Medicine"
                         fill
                         className="object-cover"
@@ -237,9 +244,59 @@ const Page = () => {
               </div>
             </div>
 
+            {/* Feature Section */}
+            <div className="w-full flex flex-col gap-10 justify-center bg-gray-50 py-10 rounded-lg">
+              <div className="text-[32px] md:text-[38px] lg:text-[38px] text-gray-700 font-ppNeueMontreal font-medium leading-snug px-10">
+                Process <span className="font-testSignifier"> Overview </span>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-24">
+                <div className="text-center w-48">
+                  <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                    <span className="">
+                      <Stethoscope size={40} className="text-[#0B3D91]" />
+                    </span>
+                  </div>
+
+                  <div className="text-[24px] font-semibold mt-4 text-gray-700">01</div>
+                  <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                    Comprehensive initial health assessment
+                  </p>
+                </div>
+
+                <div className="text-center w-48 relative">
+                  <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                  <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                    <span className="">
+                      <FlaskRound size={40} className="text-[#0B3D91]" />
+                    </span>
+                  </div>
+
+                  <div className="text-[24px] font-semibold mt-4 text-gray-700">02</div>
+                  <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                    Customized acupuncture treatment plans
+                  </p>
+                </div>
+
+                <div className="text-center w-48 relative">
+                  <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                  <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
+                    <span className="">
+                      <RefreshCw size={40} className="text-[#0B3D91]" />
+                    </span>
+                  </div>
+
+                  <div className="text-[24px] font-semibold mt-4 text-gray-700">03</div>
+                  <p className="text-[16px] text-gray-500 mt-2 font-ppNeueMontreal">
+                    Regular reviews and adaptations of treatments
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Why Choose */}
             <div className="">
-              <div className="flex flex-col gap-[20px]">
+              <div className="flex flex-col gap-5">
                 {/* Heading */}
                 <div className="flex flex-col gap-[15px]">
                   <div
@@ -249,57 +306,57 @@ const Page = () => {
                   >
                     Why Choose <span className="font-testSignifier"> Fertility & IVF Support</span>
                   </div>
-                  {/* <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
-                                        data-aos="fade-up"
-                                        data-aos-delay="150"
-                                    >
-                                        Fertility journeys often require a combination of medical, emotional, and holistic care. This treatment is designed to work alongside your medical fertility plan by strengthening your body’s natural functions while reducing the impact of stress and hormonal fluctuations.
-                                    </div> */}
+                  <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                  >
+                    Women’s Health journeys often require a combination of medical, emotional, and holistic care. This treatment is designed to work alongside your medical fertility plan by strengthening your body’s natural functions while reducing the impact of stress and hormonal fluctuations.
+                  </div>
                 </div>
 
 
                 {/* Features */}
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-10 bg-gray-50 px-6 py-10 rounded-lg">
                   {[
                     {
-                      icon: <Leaf className="w-5 h-5 text-white" />,
-                      title: "Natural Ingredients",
+                      icon: <Droplets className="w-5 h-5 text-white" />,
+                      title: "Hormonal & Menstrual Balance",
                       text: "Supports menstrual health and hormonal balance",
                     },
                     {
-                      icon: <Heart className="w-5 h-5 text-white" />,
-                      title: "Holistic Healing",
+                      icon: <Sun className="w-5 h-5 text-white" />,
+                      title: "Midlife Wellness Care",
                       text: "Helps alleviate menopause-related symptoms",
                     },
                     {
-                      icon: <CheckCircle className="w-5 h-5 text-white" />,
-                      title: "Deep Fertility Support",
+                      icon: <Flower2 className="w-5 h-5 text-white" />,
+                      title: "Holistic Women’s Care",
                       text: "Complements conventional women’s health care",
                     },
                     {
-                      icon: <CheckCircle className="w-5 h-5 text-white" />,
-                      title: "Deep Fertility Support",
+                      icon: <Target className="w-5 h-5 text-white" />,
+                      title: "Constitution-Based Care",
                       text: "Personalized to individual constitution and history",
                     },
                   ].map((item, index) => (
                     <div
                       key={index}
-                      className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                      className="group flex flex-col items-start justify-between gap-8 bg-gray-50 rounded-lg"
                       data-aos="zoom-out"
                       data-aos-delay={200 + index * 150}
                     >
                       <div className="flex items-start gap-5">
                         {/* Icon Circle */}
-                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
+                        <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] shrink-0 transition-all duration-300 group-hover:bg-[#062B6A] group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(11,61,145,0.5)]">
                           {item.icon}
                         </div>
 
                         {/* Text */}
-                        <div>
-                          <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
+                        <div className="flex flex-col -gap-1">
+                          <div className="text-[22px] font-testSignifier font-semibold text-gray-600">
                             {item.title}
                           </div>
-                          <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
+                          <div className="text-gray-500 font-ppNeueMontreal text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[16px] leading-relaxed">
                             {item.text}
                           </div>
                         </div>
