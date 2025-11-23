@@ -156,17 +156,17 @@ const Footer = () => {
                                                 <div className="margin-bottom margin-xsmall">
                                                     <div className="text-size-regular">Treatments</div>
                                                 </div>
-                                                <Link href="/time-to-talk" className="footer2_link">
+                                                <Link href="/acupuncture" className="footer2_link">
                                                     Acupuncture
                                                 </Link>
-                                                <Link href="/talk-on-track" className="footer2_link">
+                                                <Link href="/chinese-herbal" className="footer2_link">
                                                     Chinese Herbal Medicine
                                                 </Link>
-                                                <Link href="/tiny-articulators" className="footer2_link">
-                                                    Facial Acupuncture
-                                                </Link>
-                                                <Link href="/courses" className="footer2_link">
+                                                <Link href="/women-health" className="footer2_link">
                                                     Women’s Health
+                                                </Link>
+                                                <Link href="/sound-therapy" className="footer2_link">
+                                                    Sound Therapy
                                                 </Link>
                                             </div>
 
@@ -174,11 +174,14 @@ const Footer = () => {
                                                 <div className="margin-bottom margin-xsmall">
                                                     <div className="text-size-regular">About</div>
                                                 </div>
-                                                <Link href="/about-us" className="footer2_link">
+                                                <Link href="/about" className="footer2_link">
                                                     Our Story
                                                 </Link>
-                                                <Link href="/therapy" className="footer2_link">
+                                                <Link href="/about" className="footer2_link">
                                                     Why Choose Us
+                                                </Link>
+                                                <Link href="/gallery" className="footer2_link">
+                                                    Gallery
                                                 </Link>
                                             </div>
 
@@ -189,14 +192,14 @@ const Footer = () => {
                                                 <Link href="/faq" className="footer2_link">
                                                     Help & FAQs
                                                 </Link>
-                                                <Link href="/speech-sound-screener" className="footer2_link">
+                                                <Link href="/book" className="footer2_link">
                                                     Appointment
                                                 </Link>
-                                                <Link href="/free-resources" className="footer2_link">
-                                                    Free Resources
+                                                <Link href="/termsconditions" className="footer2_link">
+                                                    Terms of Services
                                                 </Link>
-                                                <Link href="/blog" className="footer2_link">
-                                                    Blog
+                                                <Link href="/privacypolicy" className="footer2_link">
+                                                    Privacy Policy
                                                 </Link>
                                             </div>
 
@@ -213,9 +216,9 @@ const Footer = () => {
                                                 <a href="#" target="_blank" className="footer2_link">
                                                     Pinterest
                                                 </a>
-                                                <a href="#" target="_blank" className="footer2_link">
+                                                {/* <a href="#" target="_blank" className="footer2_link">
                                                     About Marney
-                                                </a>
+                                                </a> */}
                                             </div>
                                         </div>
                                     </div>
