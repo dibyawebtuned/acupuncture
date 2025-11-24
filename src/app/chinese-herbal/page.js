@@ -69,7 +69,7 @@ const Page = () => {
             offset: 100,
         });
     }, []);
-    x
+
     return (
         <div>
             <div className="pt-[130px] bg-[#EAF0F0]">
@@ -176,7 +176,7 @@ const Page = () => {
                 </div>
 
                 {/* Two */}
-                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15 flex flex-col lg:flex-row gap-10 items-start">
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pb-15 flex flex-col lg:flex-row gap-10 items-start relative">
                     {/* Left (8/12 on large screens) */}
                     <div className="w-full lg:w-8/12 flex flex-col gap-15">
                         {/* What to expect */}
@@ -343,7 +343,7 @@ const Page = () => {
                                     >
                                         Why Chinese <span className="font-testSignifier"> Herbal Medicine</span>
                                     </div>
-                                    {/* <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
+                                    <div className="text-gray-500 font-ppNeueMontreal text-justify text-[15px] sm:text-[16px] md:text-[17px] leading-relaxed"
                                         data-aos="fade-up"
                                         data-aos-delay="150"
                                     >
@@ -351,12 +351,12 @@ const Page = () => {
                                         Rediscover your natural glow with our Signature Facials, expertly designed to cleanse, hydrate, and rejuvenate your skin.
                                         Each facial is tailored to your unique skin type and concerns, combining high-performance skincare with gentle, therapeutic techniques.
                                         From deep pore cleansing to collagen-boosting serums, we bring out your skin is healthiest, most radiant version.
-                                    </div> */}
+                                    </div>
                                 </div>
 
 
                                 {/* Features */}
-                                <div className="flex flex-col gap-5">
+                                <div className="flex flex-col gap-10 bg-gray-50 px-6 py-10 rounded-lg">
                                     {[
                                         {
                                             icon: <Leaf className="w-5 h-5 text-white" />,
@@ -381,22 +381,22 @@ const Page = () => {
                                     ].map((item, index) => (
                                         <div
                                             key={index}
-                                            className="flex flex-col items-start justify-between gap-8 bg-gray-50 py-7 px-6 rounded-lg"
+                                            className="group flex flex-col items-start justify-between gap-8 bg-gray-50 rounded-lg"
                                             data-aos="zoom-out"
                                             data-aos-delay={200 + index * 150}
                                         >
-                                            <div className="flex items-start gap-5">
+                                            <div className="flex items-center gap-5">
                                                 {/* Icon Circle */}
-                                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] flex-shrink-0">
+                                                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-[#0B3D91] shrink-0 transition-all duration-300 group-hover:bg-[#062B6A] group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(11,61,145,0.5)]">
                                                     {item.icon}
                                                 </div>
 
                                                 {/* Text */}
-                                                <div>
-                                                    <div className="text-[22px] mb-2 font-testSignifier font-semibold text-gray-600">
+                                                <div className="flex flex-col -gap-1">
+                                                    <div className="text-[22px] font-testSignifier font-semibold text-gray-600">
                                                         {item.title}
                                                     </div>
-                                                    <div className="text-gray-500 font-ppNeueMontreal text-[16px] leading-relaxed">
+                                                    <div className="text-gray-500 font-ppNeueMontreal text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[16px] leading-relaxed">
                                                         {item.text}
                                                     </div>
                                                 </div>
@@ -410,62 +410,64 @@ const Page = () => {
 
                     {/* Right (4/12 on large screens) wewe */}
                     <div className="w-full lg:w-4/12">
-                        {/* Sticky Sidebar with Hover Animations */}
-                        <div className="md:sticky md:top-28 self-start transition-transform duration-300 ease-out">
-                            <div className="bg-[#0B3D91] text-white rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
-                                {/* Decorative Leaf */}
-                                <div className="absolute top-0 right-0 opacity-20 pointer-events-none">
-                                    <img
-                                        src="/assets/img/leaf.png"
-                                        alt=""
-                                        className="w-24 sm:w-32 invert brightness-90 -scale-x-100"
-                                    />
-                                </div>
-
-                                {/* Heading */}
-                                <div className="text-2xl sm:text-3xl mb-4 font-ppneuemontreal font-medium">
-                                    Service Details
-                                </div>
-
-                                {/* Description */}
-                                <div className="text-sm sm:text-base leading-relaxed mb-6 opacity-90">
-                                    Discover the healing power of traditional Chinese herbal medicine, designed to
-                                    restore balance and promote overall well-being.
-                                </div>
-
-                                {/* Duration */}
-                                <div className="mb-5">
-                                    <div className="text-lg sm:text-xl font-medium">Duration</div>
-                                    <div className="mt-1 text-sm sm:text-base opacity-90">45–60 minutes per session</div>
-                                </div>
-
-                                {/* Price */}
-                                <div className="mb-5">
-                                    <div className="text-lg sm:text-xl font-medium">Price</div>
-                                    <div className="mt-1 text-sm sm:text-base opacity-90">$80 per session</div>
-                                </div>
-
-                                {/* Schedule */}
-                                <div className="mb-8">
-                                    <div className="text-lg sm:text-xl font-medium">Schedule</div>
-                                    <div className="mt-1 text-sm sm:text-base opacity-90">
-                                        Monday – Friday: 9:00 AM – 6:00 PM
+                        <div className="sticky top-28">
+                            {/* Sticky Sidebar with Hover Animations */}
+                            <div className="md:sticky md:top-28 self-start transition-transform duration-300 ease-out">
+                                <div className="bg-[#0B3D91] text-white rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+                                    {/* Decorative Leaf */}
+                                    <div className="absolute top-0 right-0 opacity-20 pointer-events-none">
+                                        <img
+                                            src="/assets/img/leaf.png"
+                                            alt=""
+                                            className="w-24 sm:w-32 invert brightness-90 -scale-x-100"
+                                        />
                                     </div>
-                                    <div className="text-sm sm:text-base opacity-90">
-                                        Saturday: 9:00 AM – 2:00 PM
-                                    </div>
-                                    <div className="text-sm sm:text-base opacity-90">
-                                        Sunday: Closed
-                                    </div>
-                                </div>
 
-                                {/* Button */}
-                                <a
-                                    href="/book"
-                                    className="block text-center no-underline! bg-white! text-[#0B3D91] py-3 rounded-full font-medium hover:bg-gray-200 transition"
-                                >
-                                    Book an Appointment
-                                </a>
+                                    {/* Heading */}
+                                    <div className="text-2xl sm:text-3xl mb-4 font-ppneuemontreal font-medium">
+                                        Service Details
+                                    </div>
+
+                                    {/* Description */}
+                                    <div className="text-sm sm:text-base leading-relaxed mb-6 opacity-90">
+                                        Discover the healing power of traditional Chinese herbal medicine, designed to
+                                        restore balance and promote overall well-being.
+                                    </div>
+
+                                    {/* Duration */}
+                                    <div className="mb-5">
+                                        <div className="text-lg sm:text-xl font-medium">Duration</div>
+                                        <div className="mt-1 text-sm sm:text-base opacity-90">45–60 minutes per session</div>
+                                    </div>
+
+                                    {/* Price */}
+                                    <div className="mb-5">
+                                        <div className="text-lg sm:text-xl font-medium">Price</div>
+                                        <div className="mt-1 text-sm sm:text-base opacity-90">$80 per session</div>
+                                    </div>
+
+                                    {/* Schedule */}
+                                    <div className="mb-8">
+                                        <div className="text-lg sm:text-xl font-medium">Schedule</div>
+                                        <div className="mt-1 text-sm sm:text-base opacity-90">
+                                            Monday – Friday: 9:00 AM – 6:00 PM
+                                        </div>
+                                        <div className="text-sm sm:text-base opacity-90">
+                                            Saturday: 9:00 AM – 2:00 PM
+                                        </div>
+                                        <div className="text-sm sm:text-base opacity-90">
+                                            Sunday: Closed
+                                        </div>
+                                    </div>
+
+                                    {/* Button */}
+                                    <a
+                                        href="/book"
+                                        className="block text-center no-underline! bg-white! text-[#0B3D91] py-3 rounded-full font-medium hover:bg-gray-200 transition"
+                                    >
+                                        Book an Appointment
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -174,7 +174,7 @@ const Page = () => {
                 </div>
 
                 <div className="pb-15">
-                    <MarqueeSection /> 
+                    <MarqueeSection />
                 </div>
 
                 {/* Two - 2 */}
