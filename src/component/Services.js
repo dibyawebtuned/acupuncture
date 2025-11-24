@@ -8,7 +8,7 @@ const servicesData = [
     {
         icon: <FaLeaf size={32} />,
         title: "Acupuncture",
-        description: "A gentle approach that uses fine, single-use sterile needles.",
+        description: "Acupuncture is an ancient practice that stimulates specific points on the body using fine, sterile needles to promote natural healing and restore balance.",
         features: ["Fine, sterile needles", "Comfort-first approach"],
         link: "/acupuncture",
     },
@@ -24,16 +24,16 @@ const servicesData = [
         icon: <FaGem size={32} />,
         title: "Sound Therapy",
         description:
-            "A whole-person approach that includes facial points alongside body points.",
-        features: ["Needle-only (no fillers)", "Whole-person focus"],
+            "Sound Therapy employs vibrations and tones to harmonize the body and mind, reduce stress, and support emotional and physical well-being.",
+        features: ["Uses tuning forks", "bowls for therapy"],
         link: "/sound-therapy",
     },
     {
         icon: <FaCircleNotch size={32} />,
         title: "Massage & Cupping",
         description:
-            "Manual techniques that many people use for relaxation and short-term relief of muscle tightness.",
-        features: ["Relaxation-focused options", "Clear consent & aftercare"],
+            "Massage & Cupping uses hands-on techniques and suction therapy to relieve muscle tension, improve circulation, and promote deep relaxation.",
+        features: ["Relieves muscle tension and soreness", "Cupping therapy for deep tissue support"],
         link: "/massage",
     },
 ];

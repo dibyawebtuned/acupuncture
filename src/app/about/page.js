@@ -155,13 +155,13 @@ const Page = () => {
                     {/* Services */}
                     <Services
                         bgClass="bg-[#e8f2ec]"
-                        cardTheme={{
-                            baseBg: "bg-white",
-                            baseText: "text-[#355342]",
-                            icon: "text-[#5b8a6e]",
-                            hoverBg: "hover:bg-[#5b8a6e]",
-                            hoverText: "group-hover:text-white",
-                        }}
+                        // cardTheme={{
+                        //     baseBg: "bg-white",
+                        //     baseText: "text-[#355342]",
+                        //     icon: "text-[#5b8a6e]",
+                        //     hoverBg: "hover:bg-[#5b8a6e]",
+                        //     hoverText: "group-hover:text-white",
+                        // }}
                     />
                 </div>
             </section>
