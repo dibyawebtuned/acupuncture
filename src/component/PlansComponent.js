@@ -84,11 +84,11 @@ export default function TailoredPlansSection() {
 
                     </div>
 
-                    <div className="mt-7" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    {/* <div className="mt-7" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                         <button className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0B3D91] text-black hover:bg-gray-300 transition">
                             View all →
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

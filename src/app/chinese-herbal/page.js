@@ -301,7 +301,8 @@ const Page = () => {
                                 </div>
 
                                 <div className="text-center w-48 relative">
-                                    <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                                    <div className="hidden sm:block! absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+
                                     <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
                                         <span className="">
                                             <FlaskRound size={40} className="text-[#0B3D91]" />
@@ -315,7 +316,8 @@ const Page = () => {
                                 </div>
 
                                 <div className="text-center w-48 relative">
-                                    <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                                    <div className="hidden sm:block! absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+
                                     <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
                                         <span className="">
                                             <RefreshCw size={40} className="text-[#0B3D91]" />
@@ -410,7 +412,7 @@ const Page = () => {
 
                     {/* Right (4/12 on large screens) wewe */}
                     <div className="w-full lg:w-4/12">
-                        <div className="sticky top-28">
+                        <div className="sticky! top-28">
                             {/* Sticky Sidebar with Hover Animations */}
                             <div className="md:sticky md:top-28 self-start transition-transform duration-300 ease-out">
                                 <div className="bg-[#0B3D91] text-white rounded-2xl p-6 sm:p-8 relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">

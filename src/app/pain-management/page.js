@@ -269,7 +269,7 @@ const Page = () => {
                                 </div>
 
                                 <div className="text-center w-48 relative">
-                                    <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                                    <div className="hidden sm:block! absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
                                     <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
                                         <span className="">
                                             <FlaskRound size={40} className="text-[#0B3D91]" />
@@ -283,7 +283,7 @@ const Page = () => {
                                 </div>
 
                                 <div className="text-center w-48 relative">
-                                    <div className="absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
+                                    <div className="hidden sm:block! absolute -left-20 top-10 w-20 h-8 border-dashed border-b-2 border-gray-300"></div>
                                     <div className="mx-auto w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center shadow-md">
                                         <span className="">
                                             <RefreshCw size={40} className="text-[#0B3D91]" />
