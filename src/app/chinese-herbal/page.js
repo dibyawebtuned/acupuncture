@@ -69,7 +69,7 @@ const Page = () => {
             offset: 100,
         });
     }, []);
-
+    x
     return (
         <div>
             <div className="pt-[130px] bg-[#EAF0F0]">
